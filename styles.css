@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&display=swap');
+
+:root{
+
+
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background:#e3e9f7;
+    overflow-x: hidden;
+}
+
+.logo{
+    padding:2%; /* !Modificar */
+}
+
+nav ul{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:20vw;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#2B2A2E ;
+}
+
+nav ul li{
+    list-style:none;
+}
+
+nav .container{
+
+    inset: 0;
+}
+
+
+nav ul li a{
+    display:block;
+    text-decoration:none;
+    text-transform:capitalize;
+    font-size:1.3rem;
+    color:#fff;
+    position:relative;
+    padding:3% 3% 3% 3% ;
+    transition:all 0.5s;
+    font-weight: 600;
+}
+
+nav ul li h1{
+
+    display:block;
+    text-decoration:none;
+    text-transform:capitalize;
+    font-size:2rem;
+    color:#fff;
+    position:relative;
+    padding:3% 3% 3% 3% ;
+    font-weight: 700;
+}
+
+nav ul li h2{
+
+    display:block;
+    text-decoration:none;
+    text-transform:capitalize;
+    font-size:1rem;
+    color:#fff;
+    position:relative;
+    padding:3% 3% 3% 3% ;
+}
+
+nav ul li a:before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:100%;
+    background:#4D4C53;
+    z-index:-1;
+    transition:all 1s;
+    font-weight: 600;
+
+}
+
+nav ul li a:hover{
+    color:white;
+     /* background-color: #4D4C53; */
+}
+
+nav ul li a:hover:before{
+    width:95%;
+}
+
+.logo img{
+
+    width: 70%;
+}
+
+
+.wrapper{
+    margin-left:20vw;
+}
+
+.section{
+    display:grid;
+    place-items:center;
+    min-height:100vh;
+    text-align:center;
+}
+
+.wrapper h2{
+    text-transform:uppercase;
+    font-size:30px;
+    color: aqua;
+}
+
+
+#banner{
+
+    margin: 0px;
+    padding: 0px;
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    margin-left: 20vw;
+    max-width: 80vw;
+    top: 0;
+    left: 0;
+}
+
+#banner img{
+}
+
+#titulo{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+
+
+}
+
+.container{
+
+    padding: 0px;
+    margin: 0px !important;
+}
