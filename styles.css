@@ -3,9 +3,17 @@
 
 :root{
 
-
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
     font-family: 'Montserrat', sans-serif;
+}
+
+a{
+
     text-decoration: none;
+
 }
 
 body{
@@ -16,7 +24,7 @@ body{
 }
 
 .logo{
-    padding:2%; /* !Modificar */
+    padding:2vw;
 }
 
 nav ul{
@@ -45,12 +53,12 @@ nav ul li a{
     display:block;
     text-decoration:none;
     text-transform:capitalize;
-    font-size:1.3rem;
+    font-size:1.5vw;
     color:#fff;
     position:relative;
     padding:3% 3% 3% 3% ;
     transition:all 0.5s;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 nav ul li h1{
@@ -58,7 +66,7 @@ nav ul li h1{
     display:block;
     text-decoration:none;
     text-transform:capitalize;
-    font-size:2rem;
+    font-size:2vw;
     color:#fff;
     position:relative;
     padding:3% 3% 3% 3% ;
@@ -70,10 +78,10 @@ nav ul li h2{
     display:block;
     text-decoration:none;
     text-transform:capitalize;
-    font-size:1rem;
+    font-size:1vw;
     color:#fff;
     position:relative;
-    padding:3% 3% 3% 3% ;
+    padding:1vw 3vw 2vw 1vw ;
 }
 
 nav ul li a:before{
@@ -91,11 +99,10 @@ nav ul li a:before{
 
 nav ul li a:hover{
     color:white;
-     /* background-color: #4D4C53; */
 }
 
 nav ul li a:hover:before{
-    width:95%;
+    width:100%;
 }
 
 .logo img{
@@ -108,57 +115,81 @@ nav ul li a:hover:before{
     margin-left:20vw;
 }
 
-.section{
-    display:grid;
-    place-items:center;
+.body{
+    
     min-height:100vh;
-    text-align:center;
-}
-
-.wrapper h2{
-    text-transform:uppercase;
-    font-size:30px;
-    color: red;
 }
 
 
-#banner{
+
+
+.header .container-fluid{
 
     margin: 0px;
-    padding: 0px;
-    z-index: -1;
+    padding: 0px ;
+}
+
+
+.header img {
     width: 100%;
-    position: absolute;
-    margin-left: 20vw;
-    max-width: 80vw;
-    top: 0;
-    left: 0;
+    height: 50%;
 }
 
-#banner img{
-}
-
-#titulo{
+.header {
     position: relative;
-    z-index: 2;
-    margin-top: 15%;
 }
 
-#titulo h1{
-    color: #fff;
-    font-size: 4rem;
 
+.header #header-text {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+
+    color: aliceblue;
 }
 
-#titulo h2{
-    color: #fff;
-    font-size: 2rem;
-
-
+.header #header-text h1{
+    
+    font-size: 4vw;
 }
 
-.container{
+.header #header-text h2{
+    
+    font-size: 2vw;
+}
 
-    /* padding: 0px;
-    margin: 0px !important; */
+.body{
+
+    padding-top: 2vw;
+}
+
+.body h2{
+
+    font-weight: 700;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.body h2,h3{
+
+    margin-bottom: 5vw;
+}
+
+.body h3{
+
+    margin-top: 3vw;
+}
+
+nav #socialmedia{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+
+
 }

@@ -10,7 +10,7 @@ if (history.scrollRestoration) {
 
 /* AJUSTE BANNER CON PORTFOLIO */
 
-const banner = document.getElementById("banner-img");
+/* const banner = document.getElementById("banner-img");
 const portfolio = document.getElementById("portfolio");
 const titulo = document.getElementById("titulo");
 
@@ -37,7 +37,7 @@ var style = window.getComputedStyle(portfolio);
 var marginTop_portfolio = style.getPropertyValue('margin-top'); 
 
 console.log("marginTop_portfolio ")
-console.log(marginTop_portfolio)
+console.log(marginTop_portfolio) */
 
 
 
