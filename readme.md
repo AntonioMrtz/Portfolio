@@ -7,3 +7,5 @@
 * animacion desplegar navbar
 * cerrar navbar despues de clickar seccion navbar
 * no mostrar opcion cerrar navbar en pc
+* transicion navbar
+* boton como mayor optica para abrir navbar movil
