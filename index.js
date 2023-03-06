@@ -76,3 +76,52 @@ console.log(marginTop_portfolio) */
 
 }, true);
  */
+
+
+
+
+
+const div = document.querySelector('div');
+div.classList.contains('secondary'); // true
+
+function toogleNavbar(){
+
+    let toogler = document.getElementById("navbar-toogler")
+    let navbar =  document.getElementById("navbar")
+    let wrapper =  document.getElementById("wrapper")
+
+
+    if(navbar.classList.contains('toogle')){
+
+        navbar.classList.remove("toogle");
+        wrapper.classList.remove("toogle-wrapper");
+
+
+    }
+    else{
+
+        navbar.classList.add("toogle");
+        wrapper.classList.add("toogle-wrapper");
+    }
+
+    console.log(navbar.classList)
+
+}
+
+
+
+
+
+/* 
+
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+      document.body.style.backgroundColor = "yellow";
+    } else {
+      document.body.style.backgroundColor = "pink";
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 990px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes */
