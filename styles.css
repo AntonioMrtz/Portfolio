@@ -190,7 +190,7 @@ nav ul li a:hover:before{
     flex-direction: column;
 }
 
-#wrapper p{
+.wrapper p{
     font-size: 1.5vw !important;
 }
 
@@ -207,17 +207,31 @@ nav ul li a:hover:before{
     
 }
 
-nav{
 
-    display: none;
-}
 
-.wrapper{
+/* MEDIA QUERIES */
 
-    margin-left: 0px;
-}
+@media (max-width:990px) {
+    
+    nav{
+    
+        display: none;
+    }
+    
+    .wrapper{
+    
+        margin-left: 0px;
+    }
+    
+    .header{
+    
+        width: 100svw;
+    }
 
-.header{
+    #header-text{
 
-    width: 100svw;
+        margin-right: 0px !important;
+        width: 50%;
+    }
+
 }
