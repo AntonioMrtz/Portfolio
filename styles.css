@@ -115,11 +115,6 @@ nav ul li a:hover:before{
     margin-left:20vw;
 }
 
-.body{
-    
-    min-height:100vh;
-}
-
 
 
 
@@ -195,6 +190,10 @@ nav ul li a:hover:before{
     flex-direction: column;
 }
 
+#wrapper p{
+    font-size: 1.5vw !important;
+}
+
 #socialmedia {
     display: flex;
     flex-direction: row;
@@ -206,4 +205,19 @@ nav ul li a:hover:before{
     flex-direction: column-reverse;
     padding-bottom: 1.5vw;
     
+}
+
+nav{
+
+    display: none;
+}
+
+.wrapper{
+
+    margin-left: 0px;
+}
+
+.header{
+
+    width: 100svw;
 }
