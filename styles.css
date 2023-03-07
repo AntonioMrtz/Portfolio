@@ -238,10 +238,11 @@ nav ul .fa{
 
 
     nav{
-
-
-        -webkit-transition: width 0.2s;
+        
+        -webkit-transition: all 0.2s;
         transition: all 0.2s;
+
+            
     }
     
     nav ul{
@@ -265,12 +266,7 @@ nav ul .fa{
  
     }
 
-/*     .logo{
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
 
     nav ul li a {
 

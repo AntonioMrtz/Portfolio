@@ -107,25 +107,72 @@ function toogleNavbar(){
         wrapper.classList.add("toogle-wrapper");
     }
 
-    console.log(navbar.classList)
 
 }
 
 
 
+var body = document.getElementById('body')
+var clickerFn = function () {
+  
+    let toogler = document.getElementById("navbar-toogler")
+    let navbar =  document.getElementById("navbar")
+    let wrapper =  document.getElementById("wrapper")
 
 
-/* 
+    if(!navbar.classList.contains('hidden')){
+
+        navbar.classList.add("hidden");
+        wrapper.classList.add("toogle-wrapper");
+
+
+    }
+
+
+
+}
+
+body.onclick = clickerFn
+
+
+
+var nav = document.getElementById('navbar')
+var clickerFn = function () {
+  
+    let navbar =  document.getElementById("navbar")
+    let wrapper =  document.getElementById("wrapper")
+
+
+    if(!navbar.classList.contains('hidden')){
+
+        navbar.classList.add("hidden");
+        wrapper.classList.add("toogle-wrapper");
+
+
+    }
+
+
+
+}
+nav.onclick = clickerFn
+
+
+
+
 
 function myFunction(x) {
+
+    let navbar =  document.getElementById("navbar")
+    let wrapper =  document.getElementById("wrapper")
+
     if (x.matches) { // If media query matches
-      document.body.style.backgroundColor = "yellow";
-    } else {
-      document.body.style.backgroundColor = "pink";
-    }
+      
+        navbar.classList.add("hidden");
+        wrapper.classList.add("toogle-wrapper");
+
   }
   
-  var x = window.matchMedia("(max-width: 990px)")
-  myFunction(x) // Call listener function at run time
-  x.addListener(myFunction) // Attach listener function on state changes */
-
+}
+var x = window.matchMedia("(max-width: 990px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
