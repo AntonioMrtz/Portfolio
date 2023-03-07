@@ -1,4 +1,22 @@
 
+
+const mql = window.matchMedia("(max-width: 990px)");
+
+function screenTest(e) {
+  if (e.matches) {
+    let navbar =  document.getElementById("navbar")
+    let wrapper =  document.getElementById("wrapper")
+    
+   
+        
+        navbar.classList.add("hidden");
+        wrapper.classList.add("toogle-wrapper");
+  }
+}
+
+mql.addEventListener("change", screenTest(mql));
+
+
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 } else {
@@ -163,21 +181,6 @@ nav.onclick = clickerFn
 
 
 
-const mql = window.matchMedia("(max-width: 990px)");
-
-function screenTest(e) {
-  if (e.matches) {
-    let navbar =  document.getElementById("navbar")
-    let wrapper =  document.getElementById("wrapper")
-    
-   
-        
-        navbar.classList.add("hidden");
-        wrapper.classList.add("toogle-wrapper");
-  }
-}
-
-mql.addEventListener("change", screenTest(mql));
 
 
 
