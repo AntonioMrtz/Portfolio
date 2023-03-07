@@ -342,6 +342,14 @@ nav ul .fa{
 
 }
 
+@media (min-width:991px) {
+
+    .logo a{
+
+        display: none;
+    }
+}
+
 
 .toogle{
     
