@@ -160,19 +160,26 @@ nav.onclick = clickerFn
 
 
 
-function myFunction(x) {
 
+
+
+const mql = window.matchMedia("(max-width: 990px)");
+
+function screenTest(e) {
+  if (e.matches) {
     let navbar =  document.getElementById("navbar")
     let wrapper =  document.getElementById("wrapper")
-
-    if (x.matches) { // If media query matches
-      
+    
+   
+        
         navbar.classList.add("hidden");
         wrapper.classList.add("toogle-wrapper");
-
   }
-  
 }
-var x = window.matchMedia("(max-width: 990px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+
+mql.addEventListener("change", screenTest(mql));
+
+
+
+
+
