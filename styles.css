@@ -234,6 +234,15 @@ nav ul .fa{
 /* MEDIA QUERIES */
 
 @media (max-width:990px) {
+     
+
+
+    nav{
+
+
+        -webkit-transition: width 0.2s;
+        transition: all 0.2s;
+    }
     
     nav ul{
 
@@ -375,3 +384,11 @@ nav ul .fa{
 
 
 }
+
+
+.hidden{
+
+    visibility: hidden;
+    opacity: 0;
+}
+

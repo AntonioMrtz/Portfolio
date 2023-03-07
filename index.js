@@ -91,16 +91,19 @@ function toogleNavbar(){
     let wrapper =  document.getElementById("wrapper")
 
 
-    if(navbar.classList.contains('toogle')){
+    if(navbar.classList.contains('hidden')){
 
-        navbar.classList.remove("toogle");
+        /* navbar.classList.remove("toogle"); */
         wrapper.classList.remove("toogle-wrapper");
+        navbar.classList.remove("hidden");
+
 
 
     }
     else{
 
-        navbar.classList.add("toogle");
+        /* navbar.classList.add("toogle"); */
+        navbar.classList.add("hidden");
         wrapper.classList.add("toogle-wrapper");
     }
 
@@ -125,3 +128,4 @@ function myFunction(x) {
   var x = window.matchMedia("(max-width: 990px)")
   myFunction(x) // Call listener function at run time
   x.addListener(myFunction) // Attach listener function on state changes */
+
