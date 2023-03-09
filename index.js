@@ -81,14 +81,86 @@ function hideNavBar() {
 }
 
 
+/* NAVBAR LI SELECCIONADO */
 
-function getEventTarget(e) {
+/* function getEventTarget(e) {
     e = e || window.event;
     return e.target || e.srcElement;
 }
 
 var ul = document.getElementById('ul-navbar');
 
+
+var navbar_lis=getLis();
+setUpListenersLi(navbar_lis) */
+
+/* document.getElementsByClassName("navbar-items-phone").addEventListener("click",function(clicked_li) {
+   
+
+    navbar_lis=getLis()
+
+
+    for(let li of navbar_lis){
+
+
+        li.classList.remove("li-active")
+
+    }
+
+    clicked_li.classList.add(li)
+
+
+});
+
+function getLis(){
+    
+    let lis = document.getElementsByClassName('navbar-items-phone');
+    return lis;
+
+} */
+
+/* function setUpListenersLi(lis){
+
+
+    for(li of lis){
+
+
+        if(li.classList.contains("navbar-items-phone")){
+
+            li.addEventListener("click", selectLi(li),false);
+
+        }
+
+    }
+
+} */
+
+
+
+
+/* function selectLi(this_li){
+
+
+    
+    let lis = document.getElementById('ul-navbar').getElementsByTagName('li');
+    
+
+    for(li of lis){
+
+        if(li.classList.contains("li-active")){
+                
+            
+            li.classList.remove("li-active")
+        }
+        
+    }
+
+    console.log(this_li)
+    this_li.classList.add("li-active")
+
+} */
+
+/* 
 ul.onclick = function (event) {
     
     
@@ -98,6 +170,8 @@ ul.onclick = function (event) {
 
         
         let as = li.getElementsByTagName('a')
+
+        
         
         for(a of as){
             
@@ -109,11 +183,16 @@ ul.onclick = function (event) {
             }
             
         }
+
+
         
         
     }
+
+    target.pare
     
     let target = getEventTarget(event);
     target.classList.add("li-active")
 };
 
+ */
