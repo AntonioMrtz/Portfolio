@@ -1,21 +1,5 @@
 
-
-const mql = window.matchMedia("(max-width: 990px)");
-
-function screenTest(e) {
-  if (e.matches) {
-    let navbar =  document.getElementById("navbar")
-    let wrapper =  document.getElementById("wrapper")
-    
-   
-        
-        navbar.classList.add("hidden");
-        wrapper.classList.add("toogle-wrapper");
-  }
-}
-
-mql.addEventListener("change", screenTest(mql));
-
+// When reloading it realocates the view of the user to the top of the screen
 
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
@@ -26,92 +10,48 @@ if (history.scrollRestoration) {
 }
 
 
-/* AJUSTE BANNER CON PORTFOLIO */
+// Global VARS
 
-/* const banner = document.getElementById("banner-img");
-const portfolio = document.getElementById("portfolio");
-const titulo = document.getElementById("titulo");
-
-
-var style = window.getComputedStyle(titulo);
-var marginTop_titulo = style.getPropertyValue('margin-top'); 
+const PHONE_MEDIA_QUERY = window.matchMedia("(max-width: 990px)");
+const PC_MEDIA_QUERY = window.matchMedia("(min-width: 991px)");
 
 
-
-console.log("marginTop_titulo ")
-console.log(marginTop_titulo)
-
-console.log("height")
-console.log(banner.clientHeight)
-
-
-marginTop_titulo=marginTop_titulo.split(".")[0]
-
-
-
-portfolio.style.marginTop = parseInt(titulo.clientHeight) + "px"
-
-var style = window.getComputedStyle(portfolio);
-var marginTop_portfolio = style.getPropertyValue('margin-top'); 
-
-console.log("marginTop_portfolio ")
-console.log(marginTop_portfolio) */
+var navbar =  document.getElementById("navbar")
+var wrapper =  document.getElementById("wrapper")
+var body = document.getElementById('body')
 
 
 
 
+// Hide navbar on phone
 
-
-
-
-/* window.addEventListener('resize', function (event) {
-
-    const banner = document.getElementById("banner-img");
-    const portfolio = document.getElementById("portfolio");
-    const titulo = document.getElementById("titulo");
-    
-    
-    var h = banner.getBoundingClientRect().height
-    
-    var style = window.getComputedStyle(document.getElementById('titulo'));
-    var marginTop = style.getPropertyValue('margin-top'); 
-    
-    console.log("altura tyitulo ")
-    console.log(marginTop)
-    
-    
-    console.log("altura banner ")
-    console.log(h)
-    
-    
-    
-    portfolio.style.marginTop = banner.clientHeight + "px"-marginTop;
-    
-    
-    console.log("Altura portfolio ")
-    console.log(portfolio.getBoundingClientRect().height)
-
-
-}, true);
- */
-
-
-
-
-
-const div = document.querySelector('div');
-div.classList.contains('secondary'); // true
-
-function toogleNavbar(){
-
-    let toogler = document.getElementById("navbar-toogler")
+function hideNavBarOnMobile() {
+  if (PHONE_MEDIA_QUERY.matches) {
     let navbar =  document.getElementById("navbar")
     let wrapper =  document.getElementById("wrapper")
+    
+   
+        
+        navbar.classList.add("hidden");
+        wrapper.classList.add("toogle-wrapper");
+  }
+}
+
+PHONE_MEDIA_QUERY.addEventListener("change", hideNavBarOnMobile());
+
+
+
+
+
+
+// Turns navbar hidden into visible & margin of body between 0-20vw and viceversa
+
+
+function toogleNavbar(){
 
 
     if(navbar.classList.contains('hidden')){
 
-        /* navbar.classList.remove("toogle"); */
         wrapper.classList.remove("toogle-wrapper");
         navbar.classList.remove("hidden");
 
@@ -120,7 +60,6 @@ function toogleNavbar(){
     }
     else{
 
-        /* navbar.classList.add("toogle"); */
         navbar.classList.add("hidden");
         wrapper.classList.add("toogle-wrapper");
     }
@@ -129,16 +68,15 @@ function toogleNavbar(){
 }
 
 
+// Hides navbar on phone if clicking body
 
-var body = document.getElementById('body')
+
 var clickerFn = function () {
   
-    let toogler = document.getElementById("navbar-toogler")
-    let navbar =  document.getElementById("navbar")
-    let wrapper =  document.getElementById("wrapper")
+   
 
 
-    if(!navbar.classList.contains('hidden')){
+    if(!navbar.classList.contains('hidden') && PHONE_MEDIA_QUERY.matches){
 
         navbar.classList.add("hidden");
         wrapper.classList.add("toogle-wrapper");
@@ -154,14 +92,14 @@ body.onclick = clickerFn
 
 
 
-var nav = document.getElementById('navbar')
+// hides navBar if its the phone version , navbar is not hidden and the user clicks on one li of it 
+
 var clickerFn = function () {
   
-    let navbar =  document.getElementById("navbar")
-    let wrapper =  document.getElementById("wrapper")
+   
 
 
-    if(!navbar.classList.contains('hidden')){
+    if(!navbar.classList.contains('hidden') && PHONE_MEDIA_QUERY.matches){
 
         navbar.classList.add("hidden");
         wrapper.classList.add("toogle-wrapper");
@@ -172,7 +110,7 @@ var clickerFn = function () {
 
 
 }
-nav.onclick = clickerFn
+navbar.onclick = clickerFn
 
 
 
