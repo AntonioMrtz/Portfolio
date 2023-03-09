@@ -1,11 +1,7 @@
 # TODO
 
-* Boton cerrar no se ilumine entero
 * Organizar codigo css
 * Elegir fotos banner fondo
-* animacion desplegar navbar
-* cerrar navbar despues de clickar seccion navbar
-* no mostrar opcion cerrar navbar en pc
 * transicion navbar
 * Hacer que se marque la seccion en la que esta navbar
 * boton como mayor optica para abrir navbar movil
