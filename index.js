@@ -81,118 +81,51 @@ function hideNavBar() {
 }
 
 
-/* NAVBAR LI SELECCIONADO */
-
-/* function getEventTarget(e) {
-    e = e || window.event;
-    return e.target || e.srcElement;
-}
-
-var ul = document.getElementById('ul-navbar');
+document.addEventListener("scroll", (event) => {
+    
 
 
-var navbar_lis=getLis();
-setUpListenersLi(navbar_lis) */
+    if(checkVisible(document.getElementById("portfolio"))){
 
-/* document.getElementsByClassName("navbar-items-phone").addEventListener("click",function(clicked_li) {
-   
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
 
-    navbar_lis=getLis()
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
 
-
-    for(let li of navbar_lis){
-
-
-        li.classList.remove("li-active")
+        document.getElementsByClassName("navbar-items-phone")[1].classList.add("li-active");
 
     }
 
-    clicked_li.classList.add(li)
+    else if(checkVisible(document.getElementById("conoceme"))){
 
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
 
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
+
+        document.getElementsByClassName("navbar-items-phone")[2].classList.add("li-active");
+
+    }
+
+    else if(checkVisible(document.getElementById("contacto"))){
+
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
+
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
+
+        document.getElementsByClassName("navbar-items-phone")[3].classList.add("li-active");
+
+    }
+    
 });
 
-function getLis(){
-    
-    let lis = document.getElementsByClassName('navbar-items-phone');
-    return lis;
 
-} */
-
-/* function setUpListenersLi(lis){
-
-
-    for(li of lis){
-
-
-        if(li.classList.contains("navbar-items-phone")){
-
-            li.addEventListener("click", selectLi(li),false);
-
-        }
-
-    }
-
-} */
-
-
-
-
-/* function selectLi(this_li){
-
-
-    
-    let lis = document.getElementById('ul-navbar').getElementsByTagName('li');
-    
-
-    for(li of lis){
-
-        if(li.classList.contains("li-active")){
-                
-            
-            li.classList.remove("li-active")
-        }
-        
-    }
-
-    console.log(this_li)
-    this_li.classList.add("li-active")
-
-} */
-
-/* 
-ul.onclick = function (event) {
-    
-    
-    let lis = document.getElementById('ul-navbar').getElementsByTagName('li');
-    
-    for(li of lis){
-
-        
-        let as = li.getElementsByTagName('a')
-
-        
-        
-        for(a of as){
-            
-            
-            if(a.classList.contains("li-active")){
-                
-                
-                a.classList.remove("li-active")
-            }
-            
-        }
-
-
-        
-        
-    }
-
-    target.pare
-    
-    let target = getEventTarget(event);
-    target.classList.add("li-active")
-};
-
- */
+function checkVisible(elm) {
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+  }
