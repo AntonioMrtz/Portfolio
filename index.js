@@ -79,3 +79,41 @@ function hideNavBar() {
     navbar.classList.add("hidden");
     wrapper.classList.add("toogle-wrapper");
 }
+
+
+
+function getEventTarget(e) {
+    e = e || window.event;
+    return e.target || e.srcElement;
+}
+
+var ul = document.getElementById('ul-navbar');
+
+ul.onclick = function (event) {
+    
+    
+    let lis = document.getElementById('ul-navbar').getElementsByTagName('li');
+    
+    for(li of lis){
+
+        
+        let as = li.getElementsByTagName('a')
+        
+        for(a of as){
+            
+            
+            if(a.classList.contains("li-active")){
+                
+                
+                a.classList.remove("li-active")
+            }
+            
+        }
+        
+        
+    }
+    
+    let target = getEventTarget(event);
+    target.classList.add("li-active")
+};
+
