@@ -25,6 +25,61 @@ var body = document.getElementById("body");
 
 /* FUNCTIONS */
 
+/* ON SCROLL detectar que seccion es visible y subrayarla en navbar */
+
+
+document.addEventListener("scroll", (event) => {
+    
+
+
+    if(checkVisible(document.getElementById("portfolio"))){
+
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
+
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
+
+        document.getElementsByClassName("navbar-items-phone")[1].classList.add("li-active");
+
+    }
+
+    else if(checkVisible(document.getElementById("conoceme"))){
+
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
+
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
+
+        document.getElementsByClassName("navbar-items-phone")[2].classList.add("li-active");
+
+    }
+
+    else if(checkVisible(document.getElementById("contacto"))){
+
+        console.log("hola")
+
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
+
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
+
+        document.getElementsByClassName("navbar-items-phone")[3].classList.add("li-active");
+
+    }
+    
+});
+
+
+function checkVisible(elm) {
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+  }
+
+
 function showNavBarOnPC() {
     if (PC_MEDIA_QUERY.matches) showNavBar();
 }
@@ -81,51 +136,5 @@ function hideNavBar() {
 }
 
 
-document.addEventListener("scroll", (event) => {
-    
 
 
-    if(checkVisible(document.getElementById("portfolio"))){
-
-        let previous_selected_item =document.getElementsByClassName("li-active")[0];
-
-        if (previous_selected_item!==undefined)
-        
-            previous_selected_item.classList.remove("li-active")        
-
-        document.getElementsByClassName("navbar-items-phone")[1].classList.add("li-active");
-
-    }
-
-    else if(checkVisible(document.getElementById("conoceme"))){
-
-        let previous_selected_item =document.getElementsByClassName("li-active")[0];
-
-        if (previous_selected_item!==undefined)
-        
-            previous_selected_item.classList.remove("li-active")        
-
-        document.getElementsByClassName("navbar-items-phone")[2].classList.add("li-active");
-
-    }
-
-    else if(checkVisible(document.getElementById("contacto"))){
-
-        let previous_selected_item =document.getElementsByClassName("li-active")[0];
-
-        if (previous_selected_item!==undefined)
-        
-            previous_selected_item.classList.remove("li-active")        
-
-        document.getElementsByClassName("navbar-items-phone")[3].classList.add("li-active");
-
-    }
-    
-});
-
-
-function checkVisible(elm) {
-    var rect = elm.getBoundingClientRect();
-    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-  }
