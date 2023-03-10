@@ -173,6 +173,14 @@ nav .navbar-items-phone i{
 .logo img {
 
     width: 70%;
+    
+
+}
+
+#logo-img{
+
+    border : 1px solid #696969;
+    border-width: 0.01px ;
 }
 
 .wrapper-nav {
