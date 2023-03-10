@@ -40,7 +40,7 @@ body {
 .li-active{
 
     background-color: var(--bright-dark-blue);
-    border: 1px solid var(--blanco-tenue-brillante);
+    border: 0.1px solid var(--naranja);
 }
 
 
@@ -48,6 +48,7 @@ body {
 i{
 
     border-radius: 12px;
+
 }
 
 i:hover{
@@ -58,6 +59,7 @@ i:hover{
 .header i:hover{
 
     color: var(--blanco-tenue-brillante); /* COLOR PRINCIPAL */
+
 }
 
 
@@ -84,10 +86,12 @@ nav ul {
     left: 0;
     background-color: #2B2A2E;
     padding-left: 2%;
+    
 }
 
 nav ul li {
     list-style: none;
+    
 }
 
 nav .container {
@@ -159,6 +163,11 @@ nav ul .fa {
     font-size: 0.73em !important;
 }
 
+nav .navbar-items-phone i{
+
+    pointer-events: none;
+}
+
 .logo img {
 
     width: 70%;
@@ -189,6 +198,7 @@ nav ul .fa {
     padding-bottom: 1.5vw;
 
 }
+
 
 .toogle {
 

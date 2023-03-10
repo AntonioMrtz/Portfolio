@@ -30,9 +30,19 @@ var body = document.getElementById("body");
 
 document.addEventListener("scroll", (event) => {
     
+    if(checkVisible(document.getElementById("header"))){
 
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
 
-    if(checkVisible(document.getElementById("portfolio"))){
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
+
+        document.getElementsByClassName("navbar-items-phone")[0].classList.add("li-active");
+
+    }
+
+    else if(checkVisible(document.getElementById("portfolio"))){
 
         let previous_selected_item =document.getElementsByClassName("li-active")[0];
 
