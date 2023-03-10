@@ -16,7 +16,7 @@ const PC_MEDIA_QUERY = window.matchMedia("(min-width: 991px)");
 // Global ELEMENTS
 
 var navbar = document.getElementById("navbar");
-var wrapper = document.getElementById("wrapper");
+var wrapper = document.getElementById("body");
 var body = document.getElementById("body");
 
 
@@ -41,6 +41,7 @@ document.addEventListener("scroll", (event) => {
         document.getElementsByClassName("navbar-items-phone")[0].classList.add("li-active");
 
     }
+    
 
     else if(checkVisible(document.getElementById("portfolio"))){
 
@@ -51,6 +52,19 @@ document.addEventListener("scroll", (event) => {
             previous_selected_item.classList.remove("li-active")        
 
         document.getElementsByClassName("navbar-items-phone")[1].classList.add("li-active");
+
+    }
+    else if(checkVisible(document.getElementById("contacto"))){
+
+        console.log("hola")
+
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
+
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
+
+        document.getElementsByClassName("navbar-items-phone")[3].classList.add("li-active");
 
     }
 
@@ -66,19 +80,7 @@ document.addEventListener("scroll", (event) => {
 
     }
 
-    else if(checkVisible(document.getElementById("contacto"))){
 
-        console.log("hola")
-
-        let previous_selected_item =document.getElementsByClassName("li-active")[0];
-
-        if (previous_selected_item!==undefined)
-        
-            previous_selected_item.classList.remove("li-active")        
-
-        document.getElementsByClassName("navbar-items-phone")[3].classList.add("li-active");
-
-    }
     
 });
 

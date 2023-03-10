@@ -86,6 +86,8 @@ nav ul {
     left: 0;
     background-color: #2B2A2E;
     padding-left: 2%;
+    border : 1px solid #676767;
+
     
 }
 
@@ -280,10 +282,16 @@ h3 {
 
 }
 
+
+
 .wrapper p {
     font-size: 1.25vw !important;
 }
 
+#home section p{
+
+    font-size: 1vw !important;
+}
 
 /* HEADER */
 
@@ -462,5 +470,6 @@ h3 {
         margin-right: 10px !important;
     }
 }
+
 
 
