@@ -433,6 +433,12 @@ h3 {
 
 }
 
+.container-proyecto .img-resize img{
+
+    width: 60%;
+
+}
+
 .container-proyecto h4{
 
     text-transform: uppercase;
@@ -479,10 +485,7 @@ h3 {
 
 /* FOOTER */
 
-footer p{
 
-    text-align: center !important;
-}
 
 /* MEDIA QUERIES */
 
