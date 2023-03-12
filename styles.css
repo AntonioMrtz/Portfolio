@@ -684,6 +684,15 @@ h3 {
     }
 }
 
+@media (max-width:782px) {
+
+
+    footer p{
+
+        text-align: center !important;
+    }
+    
+}
 
 
 
