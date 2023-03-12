@@ -19,7 +19,7 @@
     --lila:#4B455B;
     --lila-titulos:#474159;
     --azul-titulos:#313132;
-    --white-body:#e3e9f7;
+    --white-body:#eceff7;
 
 
 
@@ -34,7 +34,7 @@ a {
 body {
     margin: 0;
     padding: 0;
-    background: #eceff7;
+    background: var(--white-body);
     overflow-x: hidden;
 }
 
