@@ -483,6 +483,12 @@ h3 {
    background-color: var(--dark-blue);
 }
 
+.container-button button:active{
+
+    background-color: var(--bright-dark-blue) !important;
+    border-color: var(--bright-dark-blue) !important;
+ }
+
 /* FOOTER */
 
 
