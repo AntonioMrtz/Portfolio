@@ -504,9 +504,6 @@ footer p{
         padding-left: 3vw;
         padding-right: 3vw;
         border : 1px solid #676767;
-
-
-        /*TODO Ajustar a full para movil */
     }
 
     .navbar-items-phone {
@@ -588,7 +585,15 @@ footer p{
 
     .body h3 {
 
-        font-size: 3.5vw;
+        font-size: 5vw;
+        margin-top: 10%;
+        margin-bottom: 7%;
+    }
+
+    #portfolio p{
+        
+        font-size: 3.5vw !important;
+
     }
 
     #tecnologias-parent{
@@ -599,6 +604,7 @@ footer p{
     #tecnologias{
 
         margin-bottom: 8% !important;
+        padding-left: 5% !important;
 
     }
 
@@ -611,6 +617,11 @@ footer p{
     .container-proyecto{
 
         flex-direction: column !important;
+        padding-right: 0% !important;
+        padding-left: 0% !important;
+        margin-bottom: 15%;
+
+
     }
 
     .container-text{
@@ -627,6 +638,8 @@ footer p{
 
         order: 1;
         margin-bottom: 4%;
+        padding-top: 3%;
+        padding-bottom: 3%;
 
 
     }
