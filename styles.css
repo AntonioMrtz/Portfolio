@@ -477,7 +477,12 @@ h3 {
    background-color: var(--dark-blue);
 }
 
+/* FOOTER */
 
+footer p{
+
+    text-align: center !important;
+}
 
 /* MEDIA QUERIES */
 
