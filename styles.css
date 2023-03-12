@@ -19,6 +19,7 @@
     --lila:#4B455B;
     --lila-titulos:#474159;
     --azul-titulos:#313132;
+    --white-body:#e3e9f7;
 
 
 
@@ -253,53 +254,7 @@ nav .navbar-items-phone i{
 
 
 
-/* BODY */
-
-.wrapper {
-    margin-left: 20vw;
-}
-
-
-.body {
-
-    padding-top: 2vw;
-}
-
-.body h2 {
-
-    font-weight: 700;
-    font-size: 2.5vw;
-    text-align: center;
-    color: var(--azul-titulos);
-
-}
-
-
-
-.body h2,
-h3 {
-
-    margin-bottom: 5vw;
-    
-}
-
-.body h3 {
-
-    margin-top: 3vw;
-    color: var(--lila-titulos);
-
-}
-
-
-
-.wrapper p {
-    font-size: 1.25vw !important;
-}
-
-#home section p{
-
-    font-size: 1vw !important;
-}
+/** BODY **/
 
 /* HEADER */
 
@@ -344,6 +299,124 @@ h3 {
 
     font-size: 2vw;
 }
+
+.wrapper {
+    margin-left: 20vw;
+}
+
+
+.body {
+
+    padding-top: 2vw;
+}
+
+.body h2 {
+
+    font-weight: 700;
+    font-size: 2.5vw;
+    text-align: center;
+    color: var(--azul-titulos);
+
+}
+
+
+
+.body h2,
+h3 {
+
+    margin-bottom: 5vw;
+    
+}
+
+.body h3 {
+
+    margin-top: 3vw;
+    color: var(--lila-titulos);
+
+}
+
+
+
+.wrapper p {
+    font-size: 1.25vw !important;
+}
+
+#home section p{
+
+    font-size: 1.1rem !important;
+}
+
+
+/* PORTFOLIO */
+
+#tecnologias-parent{
+
+    margin-bottom: 5vw;
+
+}
+
+#tecnologias-parent .container{
+
+    padding: 4%;
+    padding-right: 0% !important;
+
+    
+}
+
+#tecnologias-parent h4{
+
+    padding-bottom: 5%;
+}
+
+#portfolio .container-md{
+
+    padding: 2%;
+    margin: 2%;
+    border-radius: 8px;
+}
+
+#tecnologias{
+
+    background-color: var(--lila-titulos);
+    order: 1;
+
+
+}
+
+#tecnologias h4{
+
+    color: var(--naranja);
+    font-weight: 700;
+    font-size: 1.8rem;
+
+}
+
+#tecnologias h5{
+
+    color: var(--blanco-tenue-brillante);
+}
+
+#otras{
+
+    order: 2;
+    border: 1px solid var(--dark-blue)
+
+
+}
+
+#otras h4{
+
+    font-weight: 700;
+    font-size: 1.8rem;
+
+}
+
+#otras h5{
+
+    color: var(--dark-blue);
+}
+
+
 
 
 
@@ -458,6 +531,38 @@ h3 {
         font-size: 3.5vw;
     }
 
+    #tecnologias-parent{
+
+        flex-direction: column !important;
+    }
+
+    #tecnologias{
+
+        margin-bottom: 8% !important;
+
+    }
+
+    #otras{
+
+        margin-bottom: 8% !important;
+
+    }
+
+    .container-proyecto{
+
+        flex-direction: column;
+    }
+
+    .container-text{
+
+        order: 2;
+    }
+
+    .container-img{
+
+        order: 1;
+
+    }
 
 
 }
@@ -478,6 +583,8 @@ h3 {
         margin-right: 10px !important;
     }
 }
+
+
 
 
 
