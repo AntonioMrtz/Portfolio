@@ -20,6 +20,7 @@
     --lila-titulos:#474159;
     --azul-titulos:#313132;
     --white-body:#f2f4f7;
+    --white-darker-body:#F4F3F6;
 
 
 
@@ -469,7 +470,7 @@ h3 {
     margin: 8%;
 }
 
-.container-button button{
+.container-button a{
 
     margin: 1%;
     background-color: var(--lila);
@@ -478,12 +479,12 @@ h3 {
     font-size: 1.25rem;
 }
 
-.container-button button:hover{
+.container-button a:hover{
 
    background-color: var(--dark-blue);
 }
 
-.container-button button:active{
+.container-button a:active{
 
     background-color: var(--bright-dark-blue) !important;
     border-color: var(--bright-dark-blue) !important;
@@ -658,7 +659,7 @@ h3 {
         margin-bottom: 0px !important;
     }
 
-    .container-button button{
+    .container-button a{
 
         margin-bottom: 2%;
     }

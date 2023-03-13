@@ -11,3 +11,4 @@
 
 
 * Poner sticky en version movil
+* Cambiar imagen header en movil para que pille mas altura
