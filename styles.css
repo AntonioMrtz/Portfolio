@@ -503,6 +503,51 @@ h3 {
     padding-top: 5%;
 }
 
+#parent-conoceme-photos{
+
+    padding-bottom: 5%;
+}
+
+#parent-conoceme-photos .row{
+
+    padding:2%;
+}
+
+
+/* CONTACTO */
+
+#contacto{
+
+    background-color: white;
+    padding: 5%;
+}
+
+
+#contacto h2{
+
+    padding-top: 5%;
+}
+
+#contacto button{
+
+    margin: 1%;
+    background-color: var(--lila-titulos);
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+}
+
+#contacto button:hover{
+
+   background-color: var(--dark-blue);
+}
+
+#contacto button:active{
+
+    background-color: var(--bright-dark-blue) !important;
+    border-color: var(--bright-dark-blue) !important;
+}
+
 
 /* FOOTER */
 
