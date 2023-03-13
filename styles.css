@@ -35,8 +35,9 @@ a {
 body {
     margin: 0;
     padding: 0;
-    background: var(--white-body);
-    overflow-x: hidden;
+/*     background: var(--white-body);
+ */    overflow-x: hidden;
+    background-color: white;
 }
 
 .li-active{
@@ -488,7 +489,20 @@ h3 {
 
     background-color: var(--bright-dark-blue) !important;
     border-color: var(--bright-dark-blue) !important;
- }
+}
+
+/* CONÓCENOS */
+
+#conoceme{
+
+    background-color: var(--white-body);
+}
+
+#conoceme h2{
+
+    padding-top: 5%;
+}
+
 
 /* FOOTER */
 
