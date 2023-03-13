@@ -56,7 +56,6 @@ document.addEventListener("scroll", (event) => {
     }
     else if(checkVisible(document.getElementById("contacto"))){
 
-        console.log("hola")
 
         let previous_selected_item =document.getElementsByClassName("li-active")[0];
 
