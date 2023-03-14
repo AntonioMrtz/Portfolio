@@ -513,6 +513,23 @@ h3 {
     padding:2%;
 }
 
+#conoceme img{
+
+    
+}
+
+#conoceme .col{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#conoceme .col img{
+
+    padding-top: 3%;
+}
+
 
 /* CONTACTO */
 
