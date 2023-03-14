@@ -513,6 +513,10 @@ h3 {
     padding:2%;
 }
 
+.top-row img{
+
+    max-height: 80% !important;
+}
 .mid-row img{
 
     max-height: 70% !important;
