@@ -1,6 +1,5 @@
 # TODO
 
-* Elegir fotos banner fondo
 * boton como mayor optica para abrir navbar movil
 * cuando focus box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
 * meter linea alrededor del boton
@@ -12,3 +11,4 @@
 
 * Poner sticky en version movil
 * Cambiar imagen header en movil para que pille mas altura
+* Poner textos correctos
