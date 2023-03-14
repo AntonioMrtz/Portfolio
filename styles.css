@@ -513,9 +513,14 @@ h3 {
     padding:2%;
 }
 
-#conoceme img{
+.mid-row img{
 
-    
+    max-height: 70% !important;
+}
+
+.bottom-row img{
+
+    max-height: 90% !important;
 }
 
 #conoceme .col{
