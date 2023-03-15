@@ -36,12 +36,23 @@ document.addEventListener("scroll", (event) => {
 
         if (previous_selected_item!==undefined)
         
-            previous_selected_item.classList.remove("li-active")        
-
+        previous_selected_item.classList.remove("li-active")        
+        
         document.getElementsByClassName("navbar-items-phone")[0].classList.add("li-active");
 
     }
     
+    else if(checkVisible(document.getElementById("conoceme"))){
+
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
+
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
+
+        document.getElementsByClassName("navbar-items-phone")[2].classList.add("li-active");
+
+    }
 
     else if(checkVisible(document.getElementById("portfolio"))){
 
@@ -67,17 +78,6 @@ document.addEventListener("scroll", (event) => {
 
     }
 
-    else if(checkVisible(document.getElementById("conoceme"))){
-
-        let previous_selected_item =document.getElementsByClassName("li-active")[0];
-
-        if (previous_selected_item!==undefined)
-        
-            previous_selected_item.classList.remove("li-active")        
-
-        document.getElementsByClassName("navbar-items-phone")[2].classList.add("li-active");
-
-    }
 
 
     
