@@ -383,9 +383,14 @@ h3 {
 
     background-color: var(--lila-titulos);
     order: 1;
+    border-radius: 13px;
+    background: linear-gradient(145deg, #4c465f, #403b50);
+    box-shadow:  5px 5px 0px #1c1a24,
+                 -5px -5px 0px #72688e;
 
 
 }
+
 
 #tecnologias h4{
 
@@ -400,10 +405,17 @@ h3 {
     color: var(--blanco-tenue-brillante);
 }
 
+
+
 #otras{
 
     order: 2;
-    border: 1px solid var(--dark-blue)
+    border: 1px solid var(--dark-blue);
+
+    border-radius: 13px;
+    background: linear-gradient(145deg, #ffffff, #dadcde);
+    box-shadow:  5px 5px 0px #616263,
+             -5px -5px 0px #ffffff;
 
 
 }
@@ -425,8 +437,20 @@ h3 {
     border: 1px solid var(--dark-blue);
     margin-bottom: 4%;
     padding: 3%;
-    border-radius: 8px;
+    border-radius: 13px;
+    background: #f2f4f7;
+    box-shadow:  5px 5px 0px #616263,
+                 -5px -5px 0px #ffffff;
 
+
+}
+
+.left-proyecto{
+
+    border-radius: 13px;
+    background: #f2f4f7;
+    box-shadow:  -5px 5px 0px #616263,
+                 5px -5px 0px #ffffff;
 }
 
 .container-proyecto img{
@@ -512,7 +536,7 @@ h3 {
 
 #parent-conoceme-photos .row{
 
-    padding:2%;
+    /* padding:2%; */
 }
 
 .top-row img{
