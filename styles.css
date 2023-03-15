@@ -54,7 +54,7 @@ i{
 
 }
 
-i:hover{
+nav i:hover{
 
     color: var(--naranja); /* COLOR PRINCIPAL */
 }
