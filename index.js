@@ -42,6 +42,18 @@ document.addEventListener("scroll", (event) => {
 
     }
     
+    else if(checkVisible(document.getElementById("contacto"))){
+
+
+        let previous_selected_item =document.getElementsByClassName("li-active")[0];
+
+        if (previous_selected_item!==undefined)
+        
+            previous_selected_item.classList.remove("li-active")        
+
+        document.getElementsByClassName("navbar-items-phone")[3].classList.add("li-active");
+
+    }
     else if(checkVisible(document.getElementById("conoceme"))){
 
         let previous_selected_item =document.getElementsByClassName("li-active")[0];
@@ -63,18 +75,6 @@ document.addEventListener("scroll", (event) => {
             previous_selected_item.classList.remove("li-active")        
 
         document.getElementsByClassName("navbar-items-phone")[1].classList.add("li-active");
-
-    }
-    else if(checkVisible(document.getElementById("contacto"))){
-
-
-        let previous_selected_item =document.getElementsByClassName("li-active")[0];
-
-        if (previous_selected_item!==undefined)
-        
-            previous_selected_item.classList.remove("li-active")        
-
-        document.getElementsByClassName("navbar-items-phone")[3].classList.add("li-active");
 
     }
 
