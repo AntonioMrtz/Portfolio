@@ -529,15 +529,16 @@ h3 {
     padding-top: 5%;
 }
 
+#conoceme p{
+
+    padding: 4%;
+}
+
 #parent-conoceme-photos{
 
     padding-bottom: 5%;
 }
 
-#parent-conoceme-photos .row{
-
-    /* padding:2%; */
-}
 
 .top-row img{
 
