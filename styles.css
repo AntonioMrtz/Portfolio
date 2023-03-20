@@ -271,6 +271,8 @@ nav .navbar-items-phone i{
 .header img {
     width: 100%;
     height: 50%;
+    opacity: 2;
+    filter: brightness(60%);
 }
 
 .header {
@@ -285,6 +287,7 @@ nav .navbar-items-phone i{
     left: 5%;
 
     color: aliceblue;
+    pointer-events: none;
 }
 
 
