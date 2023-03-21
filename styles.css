@@ -672,6 +672,11 @@ h3 {
         width: 100svw;
     }
 
+    .header img {
+       
+        filter: brightness(80%);
+    }
+
     #header-text {
 
         padding-right: 0px;
