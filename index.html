@@ -2,529 +2,544 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página web Portfolio del desarrollador Software Antonio Martinez">
-    <meta name="keywords" content="desarrollador , web , Antonio Martinez , software , desarrollador software, portfolio">
-    <meta name="author" content="Antonio Martínez Fernández">
-    <title>Antonio Martínez Fernández Portafolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="icon" href="assets/images/icons/logoAM.png">
-    <script src="index.js" defer></script>
-
-
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página web Portfolio del desarrollador Software Antonio Martinez" />
+  <meta name="keywords"
+    content="desarrollador , web , Antonio Martinez , software , desarrollador software, portfolio" />
+  <meta name="author" content="Antonio Martínez Fernández" />
+  <title>Antonio Martínez Fernández Portafolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link rel="icon" href="assets/images/thumbnails/logoAM.png" />
+  <script src="index.js" defer></script>
 </head>
 
 <body>
-    <nav id="navbar">
-        <ul id="ul-navbar">
+  <nav id="navbar">
+    <ul id="ul-navbar">
+      <div class="wrapper-nav">
+        <div id="sections">
+          <li class="logo">
+            <div class="d-flex flex-row">
+              <img class="img-fluid rounded" src="assets/images/bio/logo_portfolio.webp" id="logo-img" />
 
-            <div class="wrapper-nav">
-                <div id="sections">
-                    <li class="logo">
-
-                        <div class="d-flex flex-row">
-                            <img class="img-fluid rounded" src="assets/images/photos/logo_portfolio.webp" id="logo-img">
-
-                            <a onclick="toogleNavbar()">
-
-                                <img clas="img-fluid rounded" src="assets/images/icons/xmark-solid.png" id="xmark"
-                                    alt=""></a>
-                        </div>
-
-
-
-                    </li>
-
-                    <li>
-                        <h1>Antonio Martínez Fernández</h1>
-                    </li>
-                    <li>
-                        <h2>Software Developer 💻</h2>
-                    </li>
-
-                    <li class="navbar-items-phone"><a href="#home"><i class="fa fa-home fa-fw"></i>Home</a></li>
-                    <li class="navbar-items-phone"><a href="#portfolio"><i class="fa fa-book fa-fw"></i>Portfolio</a>
-                    </li>
-                    <li class="navbar-items-phone"><a href="#conoceme"><i class="fa fa-users fa-fw"></i>Conóceneme</a>
-                    </li>
-                    <li class="navbar-items-phone"><a href="#contacto"><i class="fa fa-message fa-fw"></i>Contacto</a>
-                    </li>
-                </div>
-
-                <div id="socialmedia">
-
-                    <div>
-                        <a href="https://github.com/AntonioMrtz" class="text-white me-4">
-                            <i class="fab fa-github fa-l"></i>
-                        </a>
-                        <a href="https://www.instagram.com/antonio_martin3z/" class="text-white me-4">
-                            <i class="fab fa-instagram fa-l"></i>
-                        </a>
-                        <a href="mailto:antoniomartinezfernandez17@gmail.com" class="text-white me-4">
-                            <i class="fas fa-envelope  fa-l"></i>
-                        </a>
-                    </div>
-                </div>
+              <a onclick="toogleNavbar()">
+                <img clas="img-fluid rounded" src="assets/images/thumbnails/xmark-solid.png" id="xmark" alt="" /></a>
             </div>
-
-        </ul>
-
-
-    </nav>
-
-    <div class="wrapper" id="home">
-
-
-        <figure class="header" id="header">
-            <div class="container-fluid">
-                <img class="img-fluid w-100" src="assets/images/backgrounds/header.webp" alt="background">
-
-            </div>
-            <div class="container" id="header-text">
-                <h1>Transformando ideas en Software</h1><br>
-                <h2>&nbsp; En continuo aprendizaje</h2>
-            </div>
-
-            <div id="container-nav-toogler">
-                <a class="text-white me-4" onclick="toogleNavbar()" id="navbar-toogler"><i
-                        class="fa-solid fa-bars fa-2xl"></i></a>
-
-            </div>
-
-        </figure>
-
-        <div class="body" id="body">
-
-
-            <div class="container-fluid">
-
-
-                <div class="container-fluid" id="portfolio">
-
-                    <h2>Portfolio</h2>
-                    <div class="container">
-                        <p>Mi nombre es Antonio Martínez Fernández, desarrollador de software, he cursado el grado de ingeniería
-                            informática en la Universidad de Murcia con mención en desarrollo Software.
-                            <br>
-                            En este portfolio mostraré las tecnologías y herramientas con las que he trabajado,
-                            proyectos que he realizado y una sección personal en la que me podrás conocer mejor además de
-                            distintos enlaces a través de los cuales me podrás contactar.
-
-
-                        <h3>Tecnologías</h3>
-
-                        <div class="container d-flex flex-row" id="tecnologias-parent">
-
-                            <div class="container-md d-flex flex-column justify-content-center align-items-center"
-                                id="tecnologias">
-
-
-
-                                <div class="container d-flex flex-column ">
-
-                                    <h4>Tecnologías principales</h4>
-
-                                    <h5>Python</h5>
-                                    <h5>Java</h5>
-                                    <h5>JavaScript</h5>
-                                    <h5>C / C++</h5>
-                                    <h5>PHP</h5>
-                                    <h5>HTML / CSS / BOOSTRAP</h5>
-                                    <h5>MySQL Database</h5>
-                                    <h5>Mongo DB</h5>
-                                    <h5>Java Server Faces</h5>
-                                    <h5>API REST</h5>
-
-
-
-
-                                </div>
-
-                            </div>
-
-                            <div class="container-md d-flex flex-column align-items-center" id="otras">
-
-
-                                <div class="container d-flex flex-column">
-
-                                    <h4>Otras tecnologías</h4>
-
-                                    <h5>Git / Github</h5>
-                                    <h5>Markdown</h5>
-                                    <h5>Figma</h5>
-                                    <h5>Desing patterns</h5>
-                                    <h5>Notion</h5>
-                                    <h5>Java Primefaces</h5>
-
-
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <h3>Proyectos</h3>
-
-                        <div class="container d-flex flex-column">
-
-                            <div class="container d-flex flex-row container-proyecto">
-
-                                <div class="container container-img">
-                                    <img src="assets/images/icons/aoc2020.webp" class="img-fluid rounded-4"
-                                        alt="advent of code 2020">
-                                </div>
-
-                                <div class="container container-text">
-                                    <h4>Advent of code 2020</h4>
-                                    <h5>25 exigentes retos de programación desarrollados por la comunidad anualmente.
-                                        Los retos han sido resueltos con Python y C++.
-                                    </h5>
-                                    <div class="d-flex align-items-center justify-content-center container-button">
-
-                                        <a href="https://github.com/AntonioMrtz/adventOfCode_2020"
-                                            class="btn btn-primary" href="https://github.com/AntonioMrtz/B-Baka_Bot"
-                                            target="_blank" role="button">Repositorio Github</a>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="container d-flex flex-row container-proyecto left-proyecto">
-
-                                <div class="container container-text">
-                                    <h4>B-Baka Bot Discord</h4>
-                                    <h5>Un bot de Discord desarrollado usando la libreria DiscordJS y el lenguaje
-                                        de programación JavaScript. Contiene funciones tales como Web Scrapping y acceso a 
-                                        Apis desde la línea de comandos.<br>
-                                        Contiene además una página web de información totalmente responsiva para promocionar
-                                        el producto y ofrecer soporte a este mismo.
-                                    </h5>
-                                    <div class="d-flex align-items-center justify-content-center container-button">
-
-                                        <a class="btn btn-primary" href="https://github.com/AntonioMrtz/B-Baka_Bot"
-                                        target="_blank" role="button">Repositorio Github</a>
-                                        <a class="btn btn-primary"
-                                            href="https://antoniomrtz.github.io/B-Baka-Bot-Web-Boostrap/"
-                                            target="_blank" role="button">Página Web</a>
-
-                                    </div>
-                                </div>
-
-                                <div class="container container-img img-resize d-flex justify-content-center">
-                                    <img src="assets/images/icons/baka_bot_profile_img.webp" class="img-fluid rounded-4"
-                                        alt="advent of code 2020">
-                                </div>
-
-                            </div>
-
-
-                            <div class="container d-flex flex-row container-proyecto">
-
-                                <div class="container container-img img-resize d-flex justify-content-center">
-                                    <img src="assets/images/icons/mayorOptica.webp" class="img-fluid rounded-4"
-                                        alt="advent of code 2020">
-                                </div>
-
-                                <div class="container container-text">
-                                    <h4>Web Mayor Óptica</h4>
-                                    <h5> Página web de la óptica murciana Mayor Óptica usando HTML, CSS y Boostrap. Una 
-                                        página totalmente original conservando la paleta de colores de la empresa y sirviendo
-                                        como punto de información a los clientes. Es totalmente responsiva e incluye una 
-                                        versión adaptada para dispositivos móviles.
-                                    </h5>
-                                    <div class="d-flex align-items-center justify-content-center container-button">
-
-
-                                        <a class="btn btn-primary" href="https://github.com/AntonioMrtz/MayorOpticaWeb"
-                                        target="_blank" role="button">Repositorio Github</a>
-                                        <a class="btn btn-primary" href="https://antoniomrtz.github.io/MayorOpticaWeb/"
-                                        target="_blank" role="button">Página Web</a>
-
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="container d-flex flex-row container-proyecto left-proyecto">
-
-                                <div class="container container-text">
-                                    <h4>Advent of code 2021</h4>
-                                    <h5> Edición 2021 del reto de programación por excelencia anual. Los problemas 
-                                        fueron solucionados mediante el uso de Python , JavaScript, TypeScript y C++.
-                                    </h5>
-                                    <div class="d-flex align-items-center justify-content-center container-button">
-
-                                        <a class="btn btn-primary"
-                                        target="_blank" href="https://github.com/AntonioMrtz/adventOfCode_2021"
-                                            role="button">Repositorio Github</a>
-
-                                    </div>
-                                </div>
-
-                                <div class="container container-img ">
-                                    <img src="assets/images/icons/aoc2021.webp" class="img-fluid rounded-4"
-                                        alt="advent of code 2020">
-                                </div>
-
-                            </div>
-
-                            <div class="container d-flex flex-row container-proyecto">
-
-                                <div class="container container-img d-flex justify-content-center img-resize">
-                                    <img src="assets/images/icons/logoImageToPdf.webp" class="img-fluid rounded-4"
-                                        alt="advent of code 2020">
-                                </div>
-    
-                                <div class="container container-text">
-                                    <h4>Image To PDF</h4>
-                                    <h5> Aplicación desarrollada en Python con la ayuda de SimpleGui que permite
-                                        agrupar diferentes fotografías con una jerarquía directamente en un documento PDF.
-                                        Es de gran utilidad a la hora de juntar apuntes, libros o cualquier otro elemento separado
-                                        en fotografías individuales.
-                                    </h5>
-                                    <div class="d-flex align-items-center justify-content-center container-button">
-    
-                                        <a class="btn btn-primary" href="https://github.com/AntonioMrtz/ImageToPdf"
-                                        target="_blank" role="button">Repositorio Github</a>
-    
-    
-                                    </div>
-                                </div>
-    
-                            </div>
-
-                        </div>
-
-                        
-
-
-
-                    </div>
-
-
-
-
-
-
-
-                </div>
-
-
-            </div>
-
-            <div class="container-fluid" id="conoceme">
-
-                <h2>Conóceme</h2>
-
-                <div class="container">
-                    <p> 📍 Actualmente resido en la ciudad de Murcia, situada en la Región de Murcia.
-                        
-                        <br><br>
-
-                        
-                        🔨 Una de las razones principales por las que cursé el grado de ingeniería informática fue
-                        el gran interés que tenía en poder crear las ideas que se me ocurrían. Desde construir un bot de discord hasta una 
-                        aplicación que automatice mis tareas son algunas de las cosas que soñaba con poder hacer antes de comenzar la carrera.
-                        <br><br>
-
-                        🏃‍♂️🚴‍♀️ Practico trail running y participo en carreras regionales, anteriormente realicé ciclismo de carretera participando también en varias carreras en Murcia. 
-                        
-                        <br><br>
-
-                        🎵 Uno de mis pasatiempos favoritos es escuchar música, estoy constantemente escuchando y buscando nuevas canciones y géneros por descubrir.
-                        <br><br>
-                        🎮Jugar videojuegos y dar una vuelta con mis amigos son dos de mis maneras preferidas de desconectar y tomar un descanso. 🪁
-
-
-
-                    </p>
-
-
-                    <div class="container-fluid d-flex flex-column" id="parent-conoceme-photos">
-
-                        
-                        <div class="row top-row">
-                            
-                            <div class="col">
-                                <img src="assets/images/photos/posando_muro.webp" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="col">
-                                <img src="assets/images/photos/arbol_1.webp" class="img-fluid rounded" alt="">
-
-                            </div>
-                            
-                            
-                        </div>
-                        
-                        <div class="row mid-row">
-
-                            <div class="col">
-                                <img src="assets/images/photos/torrevieja.webp" class="img-fluid img-resize rounded" alt="">
-                            </div>
-                            <div class="col">
-                                <img src="assets/images/photos/alhama_trail.webp" class="img-fluid rounded" alt="">
-                            </div>
-                            <div class="col">
-                                <img src="assets/images/photos/traje_balcon.webp" class="img-fluid rounded" alt="">
-                            </div>
-
-
-                        </div>
-                        <div class="row bottom-row">
-
-                            <div class="col ">
-                                <img src="assets/images/photos/puerto cartagena.webp" class="img-fluid rounded" alt="">
-
-                            </div>
-                            <div class="col ">
-                                <img src="assets/images/photos/frente2.webp" class="img-fluid rounded" alt="">
-
-                            </div>
-
-
-
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="container-fluid" id="contacto">
-
-
-                <h2 class="formulario-contacto-header">
-                    Formulario de contacto
-                </h2>
-
-
-
-                <form id="contact_form" name="contact_form" action="https://formspree.io/f/moqrwpev" method="POST">
-                    <div class="mb-5 row">
-                        <div class="col">
-                            <label>Primer Nombre</label>
-                            <input type="text" required maxlength="50" class="form-control" id="first_name"
-                                name="first_name">
-                        </div>
-                        <div class="col">
-                            <label>Apellidos</label>
-                            <input type="text" required maxlength="50" class="form-control" id="last_name"
-                                name="last_name">
-                        </div>
-                    </div>
-                    <div class="mb-5 row">
-                        <div class="col">
-                            <label for="email_addr">Email</label>
-                            <input type="email" required maxlength="50" class="form-control" id="email_addr"
-                                name="email" placeholder="email@ejemplo.com">
-                        </div>
-                        <div class="col">
-                            <label for="phone_input">Teléfono</label>
-                            <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="Phone"
-                                placeholder="Phone">
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <label for="message">Mensaje</label>
-                        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary px-4 btn-lg">Enviar</button>
-                </form>
-            </div>
-
-
-
-
-
-
-
-
-
+          </li>
+
+          <li>
+            <h1>Antonio Martínez Fernández</h1>
+          </li>
+          <li>
+            <h2>Software Developer 💻</h2>
+          </li>
+
+          <li class="navbar-items-phone">
+            <a href="#home"><i class="fa fa-home fa-fw"></i>Home</a>
+          </li>
+          <li class="navbar-items-phone">
+            <a href="#portfolio"><i class="fa fa-book fa-fw"></i>Portfolio</a>
+          </li>
+          <li class="navbar-items-phone">
+            <a href="#conoceme"><i class="fa fa-users fa-fw"></i>Conóceneme</a>
+          </li>
+          <li class="navbar-items-phone">
+            <a href="#contacto"><i class="fa fa-message fa-fw"></i>Contacto</a>
+          </li>
         </div>
 
+        <div id="socialmedia">
+          <div>
+            <a href="https://github.com/AntonioMrtz" class="text-white me-4">
+              <i class="fab fa-github fa-l"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/antonio-martinez-fern%C3%A1ndez-7b2a3224b/" class="text-white me-4">
+              <i class="fab fa-linkedin fa-l"></i>
+            </a>
+            <a href="mailto:antoniomartinezfernandez17@gmail.com" class="text-white me-4">
+              <i class="fas fa-envelope fa-l"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </nav>
 
+  <div class="wrapper" id="home">
+    <figure class="header" id="header">
+      <div class="container-fluid">
+        <img class="img-fluid w-100" src="assets/images/background/header.webp" alt="background" />
+      </div>
+      <div class="container" id="header-text">
+        <h1>Transformando ideas en Software</h1>
+        <br />
+        <h2>&nbsp; En continuo aprendizaje</h2>
+      </div>
 
+      <div id="container-nav-toogler">
+        <a class="text-white me-4" onclick="toogleNavbar()" id="navbar-toogler"><i
+            class="fa-solid fa-bars fa-2xl"></i></a>
+      </div>
+    </figure>
 
+    <div class="body p-4" id="body">
+      <div class="container-fluid">
+        <div class="container-fluid p-0" id="portfolio">
+          <h2>Antonio Martínez Fernández</h2>
+          <h2>Desarrollador Software</h2>
 
+          <div class="container">
+            <p>
+              Mi nombre es Antonio Martínez Fernández,
+              desarrollador de software, he cursado el grado
+              de ingeniería informática en la Universidad de
+              Murcia con mención en desarrollo Software.
+            </p>
+            <p>
+              En este portfolio mostraré las tecnologías y
+              herramientas con las que he trabajado, proyectos
+              que he realizado y una sección personal en la
+              que me podrás conocer mejor además de distintos
+              enlaces a través de los cuales me podrás
+              contactar.
+            </p>
 
+            <div class="d-flex flex-column">
+              <h3>Tecnologías</h3>
+              <div class="container d-flex flex-row p-1" id="tecnologias-parent">
+                <div class="container-md d-flex flex-column justify-content-center align-items-center" id="tecnologias">
+                  <div class="container d-flex flex-column">
+                    <h4>Tecnologías principales</h4>
 
-        <footer class="text-center text-lg-start text-white" style="background-color:#2B2A2E">
-            <section class="d-flex justify-content-between p-4" style="background-color:#4D4C53">
-                <div class="me-5">
-                    <span>Conecta con nosotros :</span>
+                    <span>
+                      <img src="assets/icons/python.png" alt="python-icon" />
+                      <h5>Python</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/java.png" alt="python-icon" />
+                      <h5>Java</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/javascript.png" alt="python-icon" />
+                      <h5>JavaScript</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/typescript.png" alt="python-icon" />
+                      <h5>TypeScript</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/c++.png" alt="python-icon" />
+                      <h5>C / C++</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/php.png" alt="python-icon" />
+                      <h5>PHP</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/html.png" alt="python-icon" />
+                      <h5>HTML</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/css.png" alt="python-icon" />
+                      <h5>Css</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/boostrap.png" alt="python-icon" />
+                      <h5>Boostrap</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/mongodb.png" alt="python-icon" />
+                      <h5>Mongo DB</h5>
+                    </span>
+
+                    <span>
+                      <img src="assets/icons/python.png" alt="python-icon" />
+                      <h5>MySQL Database</h5>
+                    </span>
+                  </div>
                 </div>
 
-            </section>
+                <div class="container-md d-flex flex-column align-items-center" id="otras">
+                  <div class="container d-flex flex-column">
+                    <h4>Otras tecnologías</h4>
 
-            <section class="">
-                <div class="container text-center text-md-start mt-5">
-                    <div class="row mt-3">
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold">Antonio Martínez Fernández</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #DAD9DB; height: 2px" />
-                            <p>Transformando ideas en Software.
-                                <br>Desarrollador de software localizado en Murcia.
-                            </p>
-                        </div>
-
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold ">Otros enlaces útiles</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color:#DAD9DB; height: 2px" />
-                            <p><i class="fab fa-instagram fa-xs"></i>
-                                <a href="https://www.instagram.com/antonio_martin3z/"
-                                    target="_blank" class="text-white">ㅤInstagram</a>
-                            </p>
-
-                        </div>
-
-
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <h6 class="text-uppercase fw-bold">Contacto</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #DAD9DB; height: 2px" />
-                            <p><i class="fab fa-github fa-xs"></i>                                <a href="https://github.com/AntonioMrtz/"
-                                target="_blank" class="text-white">ㅤAntonioMrtz</a></p>
-                            <p><i class="fas fa-envelope fa-xs"></i>ㅤantoniomartinezfernandez17@gmail.com</p>
-
-                        </div>
-
-                    </div>
-
+                    <h5>Git / Github</h5>
+                    <h5>Markdown</h5>
+                    <h5>Figma</h5>
+                    <h5>Desing patterns</h5>
+                    <h5>Notion</h5>
+                    <h5>Java Primefaces</h5>
+                  </div>
                 </div>
-            </section>
-
-            <div class="text-center p-3" style="background-color: #1f1f22">
-                © 2022 Copyright:
-                <a class="text-white" href="https://github.com/AntonioMrtz">Antonio
-                    Martínez
-                    Fernández</a>
+              </div>
             </div>
-        </footer>
 
+            <div class="d-flex flex-column">
+              <h3>Proyectos</h3>
+              <div class="container d-flex flex-column p-0">
+                <div class="container d-flex flex-row container-proyecto">
+                  <div class="container d-flex container-img justify-content-center">
+                    <img src="assets/images/thumbnails/SpotifyElectronLogo.webp" class="img-fluid img-resize rounded-4"
+                      alt="advent of code 2020" />
+                  </div>
+
+                  <div class="container container-text">
+                    <h4>Spotify Electron</h4>
+                    <h5>
+                      25 exigentes retos de
+                      programación desarrollados por
+                      la comunidad anualmente. Los
+                      retos han sido resueltos con
+                      Python y C++.
+                    </h5>
+                    <div class="d-flex align-items-center justify-content-start container-button">
+                      <a href="https://github.com/AntonioMrtz/SpotifyElectron" class="btn btn-primary" target="_blank"
+                        role="button">Repositorio
+                        <i class="fa-brands fa-github"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container d-flex flex-row container-proyecto">
+                  <div class="container d-flex container-img justify-content-center">
+                    <img src="assets/images/thumbnails/aoc2020.webp" class="img-fluid rounded-4"
+                      alt="advent of code 2020" />
+                  </div>
+
+                  <div class="container container-text">
+                    <h4>Advent of code 2020</h4>
+                    <h5>
+                      25 exigentes retos de
+                      programación desarrollados por
+                      la comunidad anualmente. Los
+                      retos han sido resueltos con
+                      Python y C++.
+                    </h5>
+                    <div class="d-flex align-items-center justify-content-start container-button">
+                      <a href="https://github.com/AntonioMrtz/adventOfCode_2020" class="btn btn-primary" target="_blank"
+                        role="button">Repositorio
+                        <i class="fa-brands fa-github"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container d-flex flex-row container-proyecto left-proyecto">
+                  <div class="container container-text">
+                    <h4>B-Baka Bot Discord</h4>
+                    <h5>
+                      Un bot de Discord desarrollado
+                      usando la libreria DiscordJS y
+                      el lenguaje de programación
+                      JavaScript. Contiene funciones
+                      tales como Web Scrapping y
+                      acceso a Apis desde la línea de
+                      comandos.
+                    </h5>
+                    <h5>
+                      Contiene además una página web
+                      de información totalmente
+                      responsiva para promocionar el
+                      producto y ofrecer soporte a
+                      este mismo.
+                    </h5>
+
+                    <div class="d-flex align-items-center justify-content-start container-button">
+                      <a class="btn btn-primary" href="https://github.com/AntonioMrtz/B-Baka_Bot" target="_blank"
+                        role="button">Repositorio
+                        <i class="fa-brands fa-github"></i></a>
+                      <a class="btn btn-primary" href="https://antoniomrtz.github.io/B-Baka-Bot-Web-Boostrap/"
+                        target="_blank" role="button">Página Web</a>
+                    </div>
+                  </div>
+
+                  <div class="container container-img img-resize d-flex justify-content-center">
+                    <img src="assets/images/thumbnails/baka_bot_profile_img.webp" class="rounded-4 img-resize"
+                      alt="advent of code 2020" />
+                  </div>
+                </div>
+
+                <div class="container d-flex flex-row container-proyecto">
+                  <div class="container container-img img-resize d-flex justify-content-center">
+                    <img src="assets/images/thumbnails/mayorOptica.webp" class="img-fluid rounded-4 img-resize"
+                      alt="advent of code 2020" />
+                  </div>
+
+                  <div class="container container-text">
+                    <h4>Web Mayor Óptica</h4>
+                    <h5>
+                      Página web de la óptica murciana
+                      Mayor Óptica usando HTML, CSS y
+                      Boostrap. Una página totalmente
+                      original conservando la paleta
+                      de colores de la empresa y
+                      sirviendo como punto de
+                      información a los clientes.
+                    </h5>
+                    <h5>
+                      Es totalmente responsiva e
+                      incluye una versión adaptada
+                      para dispositivos móviles.
+                    </h5>
+                    <div class="d-flex align-items-center justify-content-start container-button">
+                      <a class="btn btn-primary" href="https://github.com/AntonioMrtz/MayorOpticaWeb" target="_blank"
+                        role="button">Repositorio
+                        <i class="fa-brands fa-github"></i></a>
+                      <a class="btn btn-primary" href="https://antoniomrtz.github.io/MayorOpticaWeb/" target="_blank"
+                        role="button">Página Web</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container d-flex flex-row container-proyecto left-proyecto">
+                  <div class="container d-flex flex-column container-text">
+                    <h4>Advent of code 2021</h4>
+                    <h5>
+                      Edición 2021 del reto de
+                      programación por excelencia
+                      anual. Los problemas fueron
+                      solucionados mediante el uso de
+                      Python , JavaScript, TypeScript
+                      y C++.
+                    </h5>
+                    <div class="d-flex align-items-center justify-content-start container-button">
+                      <a class="btn btn-primary" target="_blank" href="https://github.com/AntonioMrtz/adventOfCode_2021"
+                        role="button">Repositorio
+                        <i class="fa-brands fa-github"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="container d-flex container-img justify-content-center">
+                    <img src="assets/images/thumbnails/aoc2021.webp" class="img-fluid rounded-4"
+                      alt="advent of code 2020" />
+                  </div>
+                </div>
+
+                <div class="container d-flex flex-row container-proyecto">
+                  <div class="container container-img d-flex justify-content-center img-resize">
+                    <img src="assets/images/thumbnails/logoImageToPdf.webp" class="img-fluid rounded-4 img-resize"
+                      alt="advent of code 2020" />
+                  </div>
+
+                  <div class="container container-text">
+                    <h4>Image To PDF</h4>
+                    <h5>
+                      Aplicación desarrollada en
+                      Python con la ayuda de SimpleGui
+                      que permite agrupar diferentes
+                      fotografías con una jerarquía
+                      directamente en un documento
+                      PDF. Es de gran utilidad a la
+                      hora de juntar apuntes, libros o
+                      cualquier otro elemento separado
+                      en fotografías individuales.
+                    </h5>
+                    <div class="d-flex align-items-center justify-content-start container-button">
+                      <a class="btn btn-primary" href="https://github.com/AntonioMrtz/ImageToPdf" target="_blank"
+                        role="button">Repositorio
+                        <i class="fa-brands fa-github"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="conoceme">
+        <h2>Conóceme</h2>
+
+        <div class="container">
+          <p>
+            📍 Actualmente resido en la ciudad de Murcia,
+            situada en la Región de Murcia.
+
+            <br /><br />
+
+            🔨 Una de las razones principales por las que cursé
+            el grado de ingeniería informática fue el gran
+            interés que tenía en poder crear las ideas que se me
+            ocurrían. Desde construir un bot de discord hasta
+            una aplicación que automatice mis tareas son algunas
+            de las cosas que soñaba con poder hacer antes de
+            comenzar la carrera.
+            <br /><br />
+
+            🏃‍♂️🚴‍♀️ Practico trail running y participo en carreras
+            regionales, anteriormente realicé ciclismo de
+            carretera participando también en varias carreras en
+            Murcia.
+
+            <br /><br />
+
+            🎵 Uno de mis pasatiempos favoritos es escuchar
+            música, estoy constantemente escuchando y buscando
+            nuevas canciones y géneros por descubrir.
+            <br /><br />
+            🎮Jugar videojuegos y dar una vuelta con mis amigos
+            son dos de mis maneras preferidas de desconectar y
+            tomar un descanso. 🪁
+          </p>
+
+          <div class="container-fluid d-flex flex-column" id="parent-conoceme-photos">
+            <div class="row top-row">
+              <div class="col">
+                <img src="assets/images/bio/posando_muro.webp" class="img-fluid rounded" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/images/bio/arbol_1.webp" class="img-fluid rounded" alt="" />
+              </div>
+            </div>
+
+            <div class="row mid-row">
+              <div class="col">
+                <img src="assets/images/bio/torrevieja.webp" class="img-fluid img-resize rounded" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/images/bio/alhama_trail.webp" class="img-fluid rounded" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/images/bio/traje_balcon.webp" class="img-fluid rounded" alt="" />
+              </div>
+            </div>
+            <div class="row bottom-row">
+              <div class="col">
+                <img src="assets/images/bio/puerto cartagena.webp" class="img-fluid rounded" alt="" />
+              </div>
+              <div class="col">
+                <img src="assets/images/bio/frente2.webp" class="img-fluid rounded" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="contacto">
+        <h2 class="formulario-contacto-header">
+          Formulario de contacto
+        </h2>
+
+        <form id="contact_form" name="contact_form" action="https://formspree.io/f/moqrwpev" method="POST">
+          <div class="mb-5 row">
+            <div class="col">
+              <label>Primer Nombre</label>
+              <input type="text" required maxlength="50" class="form-control" id="first_name" name="first_name" />
+            </div>
+            <div class="col">
+              <label>Apellidos</label>
+              <input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name" />
+            </div>
+          </div>
+          <div class="mb-5 row">
+            <div class="col">
+              <label for="email_addr">Email</label>
+              <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
+                placeholder="email@ejemplo.com" />
+            </div>
+            <div class="col">
+              <label for="phone_input">Teléfono</label>
+              <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="Phone"
+                placeholder="Phone" />
+            </div>
+          </div>
+          <div class="mb-5">
+            <label for="message">Mensaje</label>
+            <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary px-4 btn-lg">
+            Enviar
+          </button>
+        </form>
+      </div>
     </div>
 
+    <footer class="text-center text-lg-start text-white" style="background-color: #2b2a2e">
+      <section class="d-flex justify-content-between p-4" style="background-color: #4d4c53">
+        <div class="me-5">
+          <span>Conecta conmigo :</span>
+        </div>
+      </section>
 
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">
+                Antonio Martínez Fernández
+              </h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto" style="
+                                        width: 60px;
+                                        background-color: #dad9db;
+                                        height: 2px;
+                                    " />
+              <p>
+                Transformando ideas en Software.
+                <br />Desarrollador de software localizado
+                en Murcia.
+              </p>
+            </div>
 
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold">
+                Otros enlaces útiles
+              </h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto" style="
+                                        width: 60px;
+                                        background-color: #dad9db;
+                                        height: 2px;
+                                    " />
+              <p>
+                <i class="fab fa-linkedin fa-xs"></i>
+                <a href="https://www.linkedin.com/in/antonio-martinez-fern%C3%A1ndez-7b2a3224b/" target="_blank" class="text-white">Linkedin</a>
+              </p>
+              <p>
+                <i class="fab fa-instagram fa-xs"></i>
+                <a href="https://www.instagram.com/antonio_martin3z/" target="_blank" class="text-white">Instagram</a>
+              </p>
+            </div>
 
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold">Contacto</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto" style="
+                                        width: 60px;
+                                        background-color: #dad9db;
+                                        height: 2px;
+                                    " />
+              <p>
+                <i class="fab fa-github fa-xs"></i>
+                <a href="https://github.com/AntonioMrtz/" target="_blank" class="text-white">ㅤAntonioMrtz</a>
+              </p>
+              <p>
+                <i class="fas fa-envelope fa-xs"></i>ㅤantoniomartinezfernandez17@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <div class="text-center p-3" style="background-color: #1f1f22">
+        © 2022 Copyright:
+        <a class="text-white" href="https://github.com/AntonioMrtz">Antonio Martínez Fernández</a>
+      </div>
+    </footer>
+  </div>
 
-    <script src="liSelector.js"></script> <!-- Control de elemento clickado en navbar -->
-
+  <script src="liSelector.js"></script>
+  <!-- Control de elemento clickado en navbar -->
 </body>
 
 </html>
