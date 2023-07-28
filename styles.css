@@ -480,6 +480,48 @@ h3 {
     margin-bottom: 2%;
 }
 
+
+#experiencia {
+
+    order: 2;
+    border: 1px solid var(--dark-blue);
+
+    border-radius: 13px;
+    background: linear-gradient(145deg, #ffffff, #dadcde);
+    box-shadow: 5px 5px 0px #616263,
+        -5px -5px 0px #ffffff;
+}
+
+#experiencia h4 {
+
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 3%;
+
+}
+
+#experiencia h5 {
+
+    color: var(--dark-blue);
+    margin: 0 !important;
+}
+
+#experiencia span img{
+
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+
+}
+
+#experiencia span{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
 .container-proyecto {
 
     border: 1px solid var(--dark-blue);
@@ -856,6 +898,12 @@ footer a i{
     #contacto {
 
         padding-bottom: 20% !important;
+    }
+    
+    #experiencia h4,#habilidades h4{
+
+        padding-bottom: 5%;
+        margin-bottom: 5%;
     }
 
 

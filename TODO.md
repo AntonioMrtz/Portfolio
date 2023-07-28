@@ -47,6 +47,6 @@ poner los alt
 organizar css
 
 
--- 
+---
 
-footer mal alineado movil
+sticky header con navbar
