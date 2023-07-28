@@ -654,6 +654,7 @@ h3 {
     padding: 4%;
     color: var(--blanco-tenue);
     border: 1px solid var(--blanco-tenue);
+    border-radius: 8px;
 
 }
 
@@ -661,6 +662,8 @@ h3 {
     
     border: 1px solid var(--blanco-tenue) !important;
     margin: 2%;
+    border-radius: 8px;
+
 }
 
 #parent-conoceme-photos .col:hover,#conoceme p:hover{
@@ -673,22 +676,6 @@ h3 {
     padding-bottom: 5%;
 }
 
-
-.top-row img {
-
-    max-height: 80% !important;
-}
-
-.mid-row img {
-
-    max-height: 70% !important;
-}
-
-.bottom-row img {
-
-    max-height: 90% !important;
-}
-
 #conoceme .col {
 
     display: flex;
@@ -698,7 +685,8 @@ h3 {
 
 #conoceme .col img {
 
-    padding-top: 3%;
+    padding: 3%;
+    height: 400px;
 }
 
 
