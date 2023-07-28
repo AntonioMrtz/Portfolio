@@ -17,7 +17,6 @@ Ponerlo en tarjeta como tecnologias
 
 ----
 
-* Listener tamaño mostrar o no la barra de tareas
 * Mejorar animación barra tareas
 
 
@@ -33,10 +32,6 @@ fix conoceme padding
 ---
 
 
-hacer footer texto+boton clickable
-
-
----
 
 alineamiento texto p proyectos con titulo movil
 
@@ -49,4 +44,9 @@ poner los alt
 ----
 
 
-color primer texto diferente segundo en proyectos
+organizar css
+
+
+-- 
+
+footer mal alineado movil

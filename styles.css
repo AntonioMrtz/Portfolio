@@ -357,7 +357,7 @@ h3 {
 
 #tecnologias-parent {
 
-    margin-bottom: 5vw;
+    margin-bottom: 2%;
 
 }
 
@@ -433,6 +433,51 @@ h3 {
 #otras h5 {
 
     color: var(--dark-blue);
+}
+
+
+
+#habilidades {
+
+    order: 2;
+    border: 1px solid var(--dark-blue);
+
+    border-radius: 13px;
+    background: linear-gradient(145deg, #ffffff, #dadcde);
+    box-shadow: 5px 5px 0px #616263,
+        -5px -5px 0px #ffffff;
+
+
+}
+
+#habilidades h4 {
+
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 3%;
+
+}
+
+#habilidades h5 {
+
+    color: var(--dark-blue);
+    margin: 0 !important;
+}
+
+#habilidades span img{
+
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+
+}
+
+#habilidades span{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2%;
 }
 
 .container-proyecto {
@@ -627,6 +672,7 @@ h3 {
 
 footer a i{
     margin-right: 8px;
+    font-size: 1.25rem !important;
 }
 
 
@@ -839,6 +885,7 @@ footer a i{
     footer a {
 
         text-align: center !important;
+        justify-content: center !important;
     }
 
 }
