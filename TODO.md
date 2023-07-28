@@ -48,3 +48,20 @@ hacer footer texto+boton clickable
 ---
 
 alineamiento texto p proyectos con titulo
+
+
+--- animacion reveal proyectos como mayor optica
+
+
+---
+
+poner los alt
+
+-- 
+Añadir tecnologia
+* Material UI
+* Fast API
+* Electron
+
+
+

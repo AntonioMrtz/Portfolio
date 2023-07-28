@@ -55,6 +55,7 @@ nav i:hover {
 
     color: var(--naranja);
     /* COLOR PRINCIPAL */
+    transform: scale(1.04);
 }
 
 .header i:hover {
@@ -457,7 +458,7 @@ h3 {
         5px -5px 0px #ffffff;
 }
 
-.container-proyecto img {
+.container-proyecto .container-img img {
 
     padding: 2%;
 
@@ -850,4 +851,15 @@ h3 {
     height: 24px;
     margin-right: 10px;
 
+}
+
+
+.tech-wrapper img{
+
+    width: 24px;
+    margin: 1% 1% 1% 0;
+}
+.tech-wrapper img:not(:nth-child(1)){
+
+    margin: 1%;
 }
