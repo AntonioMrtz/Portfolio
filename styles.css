@@ -310,6 +310,7 @@ nav .navbar-items-phone i {
 .body {
 
     padding-top: 2vw;
+    padding: 3.5rem;
 }
 
 
@@ -532,6 +533,8 @@ h3 {
     background: #f2f4f7;
     box-shadow: 5px 5px 0px #616263,
         -5px -5px 0px #ffffff;
+    margin-left: 0;
+    margin-right: 0;
 
 
 }
