@@ -1063,6 +1063,11 @@ footer a:hover{
     width: 50px;
 }
 
+#sticky-menu button:active img {
+    border: 3px solid var(--naranja); /* Add your desired border style here */
+   
+}
+
 
 
 
