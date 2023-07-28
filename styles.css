@@ -832,6 +832,10 @@ footer a i{
         padding-bottom: 4vw;
     }
 
+    .body{
+        padding: 2% !important;
+    }
+
     .body h2 {
 
         font-size: 2.5rem;
@@ -926,6 +930,17 @@ footer a i{
     #header-img{
         justify-content: center !important;
     }
+    #parent-conoceme-photos{
+        display: none !important;
+    }
+    #experiencia{
+        margin-top: 3%;
+    }
+
+    #conoceme h2{
+
+        margin-bottom: 6% !important;
+    }
 
 }
 
@@ -934,6 +949,10 @@ footer a i{
     .logo a {
 
         display: none;
+    }
+    #sticky-menu{
+
+        display: none !important;
     }
 }
 
@@ -1017,3 +1036,34 @@ footer a:hover{
     transform: scale(1.04);
     border: 2px solid var(--naranja);
 }
+
+/* STICKY MENU */
+
+#sticky-menu {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    height: 8vh;
+    background-color: transparent;
+    padding: 3%;
+    display: flex;
+    justify-content: end;
+    z-index: 2;
+}
+
+#sticky-menu button{
+    border: none !important;
+    background-color: transparent;
+}
+
+#sticky-menu img {
+    border: 3px solid var(--azul-titulos); /* Add your desired border style here */
+    padding: 5px; /* Optional: Add padding around the image within the border */
+    border-radius: 12px;
+    width: 50px;
+}
+
+
+
+
+

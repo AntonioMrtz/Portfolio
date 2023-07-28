@@ -181,3 +181,7 @@ function handleResize(){
 }
 
 window.addEventListener("resize", handleResize);
+
+
+
+/* Sticky menu */
