@@ -485,10 +485,16 @@ h3 {
 .container-proyecto h5 {
 
     font-weight: 400;
+    font-size: 1.5rem;
+}
 
+.container-proyecto h6 {
 
+    font-weight: 300;
+    font-size: 1.25rem;
 
 }
+
 
 .container-img {
 
@@ -620,6 +626,10 @@ h3 {
 
 
 /* FOOTER */
+
+footer a i{
+    margin-right: 8px;
+}
 
 
 
@@ -828,7 +838,7 @@ h3 {
 @media (max-width:782px) {
 
 
-    footer p {
+    footer a {
 
         text-align: center !important;
     }
@@ -862,4 +872,25 @@ h3 {
 .tech-wrapper img:not(:nth-child(1)){
 
     margin: 1%;
+}
+
+
+
+/* REVEAL */
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.container-proyecto a img:hover{
+
+    transform: scale(1.04);
 }

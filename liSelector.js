@@ -2,32 +2,32 @@
 
 
 
-let nav_items =document.getElementsByClassName("navbar-items-phone");
+let nav_items = document.getElementsByClassName("navbar-items-phone");
 
 
-for(let item of nav_items){
+for (let item of nav_items) {
 
 
-    item.addEventListener("click", event => {
-   
-        let previous_selected_item =document.getElementsByClassName("li-active")[0];
+  item.addEventListener("click", event => {
 
-        if (previous_selected_item!==undefined)
-        
-            previous_selected_item.classList.remove("li-active")        
+    let previous_selected_item = document.getElementsByClassName("li-active")[0];
 
-        event.target.classList.add("li-active")
-        
+    if (previous_selected_item !== undefined)
+
+      previous_selected_item.classList.remove("li-active")
+
+    event.target.classList.add("li-active")
 
 
-});
+
+  });
 }
 
 
 
-function getLis(){
-    
-    let lis = document.getElementsByClassName('navbar-items-phone');
-    return lis;
+function getLis() {
+
+  let lis = document.getElementsByClassName('navbar-items-phone');
+  return lis;
 
 }

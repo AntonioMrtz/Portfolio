@@ -23,15 +23,6 @@ Ponerlo en tarjeta como tecnologias
 
 ----
 
-Icono en boton repositorio git / web
-
-
---- 
-
-añadir advent js
-
-
--- enlaces a cada tecnologia python -> link python
 
 
 ---
@@ -47,21 +38,15 @@ hacer footer texto+boton clickable
 
 ---
 
-alineamiento texto p proyectos con titulo
-
-
---- animacion reveal proyectos como mayor optica
+alineamiento texto p proyectos con titulo movil
 
 
 ---
 
 poner los alt
 
--- 
-Añadir tecnologia
-* Material UI
-* Fast API
-* Electron
+
+----
 
 
-
+color primer texto diferente segundo en proyectos
