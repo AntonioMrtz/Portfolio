@@ -1,8 +1,4 @@
-* Seccion Estudios
-    - Bachillerato Ciencias Salud
-    - UMU 4 años - 6 creditos honor - media 7
-* Experiencia laboral
-    - interno ByProx ( aplicacion web )
+
 * Seccion habilidades personales
     - ganas aprender
     - habilidades blandas
@@ -12,7 +8,6 @@
     - ganas mejorar
 
 
-Ponerlo en tarjeta como tecnologias
 
 
 ----

@@ -637,18 +637,35 @@ h3 {
 
 #conoceme {
 
-    background-color: var(--white-body);
+    /* background-color: var(--white-body); */
+    background-color: var(--bright-dark-blue);
 }
 
 #conoceme h2 {
-
+    
     padding-top: 5%;
     font-size: 3rem;
+    color: var(--blanco-tenue-brillante);
+    margin-bottom: 2%;
 }
 
 #conoceme p {
 
     padding: 4%;
+    color: var(--blanco-tenue);
+    border: 1px solid var(--blanco-tenue);
+
+}
+
+#conoceme .col {
+    
+    border: 1px solid var(--blanco-tenue) !important;
+    margin: 2%;
+}
+
+#parent-conoceme-photos .col:hover,#conoceme p:hover{
+    
+    transform: scale(1.01);
 }
 
 #parent-conoceme-photos {
