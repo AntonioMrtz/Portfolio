@@ -48,20 +48,18 @@ body {
 i {
 
     border-radius: 12px;
-
+    font-size: 1.25rem;
 }
 
 nav i:hover {
 
     color: var(--naranja);
-    /* COLOR PRINCIPAL */
-    transform: scale(1.04);
+    transform: scale(2);
 }
 
 .header i:hover {
 
     color: var(--blanco-tenue-brillante);
-    /* COLOR PRINCIPAL */
 
 }
 
@@ -893,4 +891,9 @@ footer a i{
 .container-proyecto a img:hover{
 
     transform: scale(1.04);
+}
+
+footer a:hover{
+
+    color: var(--naranja) !important;
 }
