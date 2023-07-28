@@ -923,7 +923,9 @@ footer a i{
     #header-text-wrapper{
         flex-direction: column !important;
     }
-
+    #header-img{
+        justify-content: center !important;
+    }
 
 }
 
