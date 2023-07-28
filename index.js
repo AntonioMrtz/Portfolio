@@ -167,3 +167,17 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+
+
+/* On resize navbar */
+
+function handleResize(){
+
+  toogleNavbar()
+  hideNavBarOnMobile()
+  showNavBarOnPC()
+
+}
+
+window.addEventListener("resize", handleResize);
