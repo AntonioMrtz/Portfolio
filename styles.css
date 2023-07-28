@@ -489,6 +489,8 @@ h3 {
     background: linear-gradient(145deg, #ffffff, #dadcde);
     box-shadow: 5px 5px 0px #616263,
         -5px -5px 0px #ffffff;
+    padding: 2%;
+    justify-content: start;
 }
 
 #experiencia h4 {
@@ -904,6 +906,9 @@ footer a i{
         padding-bottom: 5%;
         margin-bottom: 5%;
     }
+    #header-text-wrapper{
+        flex-direction: column !important;
+    }
 
 
 }
@@ -989,4 +994,10 @@ footer a i{
 footer a:hover{
 
     color: var(--naranja) !important;
+}
+
+#header-img:hover img{
+
+    transform: scale(1.04);
+    border: 2px solid var(--naranja);
 }

@@ -71,7 +71,7 @@
   </nav>
 
   <div class="wrapper" id="home">
-    <figure class="header" id="header">
+    <!-- <figure class="header" id="header">
       <div class="container-fluid">
         <img class="img-fluid w-100" src="assets/images/background/header.webp" alt="background" />
       </div>
@@ -85,14 +85,15 @@
         <a class="text-white me-4" onclick="toogleNavbar()" id="navbar-toogler"><i
             class="fa-solid fa-bars fa-2xl"></i></a>
       </div>
-    </figure>
+    </figure> -->
 
-    <div class="body p-4" id="body">
-      <div class="container-fluid">
-        <div class="container-fluid p-0" id="portfolio">
-          <h2>Antonio Martínez Fernández</h2>
-          <h2>Desarrollador Software</h2>
+    <div class="d-flex flex-column justify-content-center align-items-center" id="header" style="padding: 2.25rem;">
 
+      <div class="d-flex flex-row mb-4" id="header-text-wrapper">
+        <div id="header-text" class="me-4">
+          <h1 style="font-size: 5rem;">Antonio Martínez Fernández</h1>
+          <h2 style="font-size: 3rem;">Desarrollador Software</h2>
+          <hr>
           <div class="container">
             <p>
               Mi nombre es Antonio Martínez Fernández,
@@ -108,39 +109,75 @@
               enlaces a través de los cuales me podrás
               contactar.
             </p>
+          </div>
+          <!-- <div class="d-flex justify-content-start ms-3">
+            <h2 style="font-size: 3rem;">💻</h2>
+          </div> -->
+        </div>
+        <a href="https://www.instagram.com/antonio_martin3z/" class="d-flex justify-content-end" id="header-img">
+          <img src="/assets/images/bio/header_frente.webp" alt="Imagen perfil" class="img-fluid rounded-4" style="width: 80%;">
+        </a>
+      </div>
 
-            <div class="container-md d-flex flex-column align-items-center" id="experiencia">
-              <div class="container d-flex flex-column">
-                <h4>Estudios y experiencia laboral</h4>
-                <span class="d-flex flex-row">
-                  <div class="d-flex flex-row">
-                    <img src="assets/icons/umu.jpg" alt="trello-icon" />
-                    <div>
-                      <h5>Grado en Ingeniería Informática Universidad de Murcia</h5>
-                      <h6>Nota media: 7.1 | 2019-2023 | Matricula de honor en Arquitectura del Software</h6>
-                    </div>
-                  </div>  
-                </span>
-                <span class="d-flex flex-row">
-                  <div class="d-flex flex-row">
-                    <img src="assets/icons/byprox.png" alt="trello-icon" />
-                    <div>
-                      <h5>ByProx | Prácticas Curriculares </h5>
-                      <h6>4 meses | Aplicación Web de viajes | PHP + HTML + CSS + MYSQL</h6>
-                    </div>
-                  </div>
-                </span>
-                <span class="d-flex flex-row">
-                  <div class="d-flex flex-row">
-                    <img src="assets/icons/birrete.png" alt="trello-icon" />
-                    <div>
-                      <h5>Bachillerato IES CASCALES</h5>
-                      <h6>Nota media: 8 | Ciencias de la salud</h6>
-                    </div>
-                  </div>
-                </span>
+      <div class="container-fluid d-flex flex-column align-items-center me-3" id="experiencia">
+        <div class="container-fluid d-flex flex-column m-0">
+          <h4>Estudios y experiencia laboral</h4>
+          <span class="d-flex flex-row">
+            <div class="d-flex flex-row">
+              <img src="assets/icons/umu.jpg" alt="trello-icon" />
+              <div>
+                <h5>Grado en Ingeniería Informática Universidad de Murcia</h5>
+                <h6>Nota media: 7.1 | 2019-2023 | Matricula de honor en Arquitectura del Software</h6>
+              </div>
+            </div>  
+          </span>
+          <span class="d-flex flex-row">
+            <div class="d-flex flex-row">
+              <img src="assets/icons/byprox.png" alt="trello-icon" />
+              <div>
+                <h5>ByProx | Prácticas Curriculares </h5>
+                <h6>4 meses | Aplicación Web de viajes | PHP + HTML + CSS + MYSQL</h6>
               </div>
             </div>
+          </span>
+          <span class="d-flex flex-row">
+            <div class="d-flex flex-row">
+              <img src="assets/icons/birrete.png" alt="trello-icon" />
+              <div>
+                <h5>Bachillerato IES CASCALES</h5>
+                <h6>Nota media: 8 | Ciencias de la salud</h6>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+
+      
+    </div>
+
+
+    <div class="body p-4" id="body">
+      <div class="container-fluid">
+        <div class="container-fluid p-0" id="portfolio">
+
+          <div class="container">
+            <!-- <p>
+              Mi nombre es Antonio Martínez Fernández,
+              desarrollador de software, he cursado el grado
+              de ingeniería informática en la Universidad de
+              Murcia con mención en desarrollo Software.
+            </p>
+            <p>
+              En este portfolio mostraré las tecnologías y
+              herramientas con las que he trabajado, proyectos
+              que he realizado y una sección personal en la
+              que me podrás conocer mejor además de distintos
+              enlaces a través de los cuales me podrás
+              contactar.
+            </p> -->
+
+            
             <div class="d-flex flex-column">
               <h3>Tecnologías y habilidades</h3>
               <div class="container d-flex flex-row p-1" id="tecnologias-parent">
