@@ -15,7 +15,7 @@ const PC_MEDIA_QUERY = window.matchMedia("(min-width: 991px)");
 
 // Global ELEMENTS
 
-var navbar = document.getElementById("navbar");
+var navbar = document.getElementById("ul-navbar");
 var wrapper = document.getElementById("home");
 var body = document.getElementById("body");
 var stickyMenu = document.getElementById("sticky-menu");
@@ -113,9 +113,12 @@ PHONE_MEDIA_QUERY.addEventListener("change", hideNavBarOnMobile());
 
 // Turns navbar hidden into visible & margin of body between 0-20vw and viceversa
 function toogleNavbar() {
-  if (navbar.classList.contains("hidden")) {
-    wrapper.classList.add("body-opacity")
-    stickyMenu.classList.add("body-opacity")
+  if(PHONE_MEDIA_QUERY.matches && navbar.classList.contains("hidden")){
+    wrapper.classList.add("body-opacity");
+    stickyMenu.classList.add("body-opacity");
+    showNavBar();
+  }
+  else if (navbar.classList.contains("hidden")) {
     showNavBar();
   }
   else hideNavBar();

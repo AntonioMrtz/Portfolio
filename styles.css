@@ -75,6 +75,7 @@ nav {
 
     position: relative;
     z-index: 1000;
+
 }
 
 nav ul {
@@ -88,6 +89,7 @@ nav ul {
     background-color: #2B2A2E;
     padding-left: 2%;
     border: 1px solid #676767;
+    transition: 0.25s;
 
 
 }
@@ -246,8 +248,11 @@ nav .navbar-items-phone i {
 
 .hidden {
 
-    visibility: hidden;
-    opacity: 0;
+     /* visibility: hidden;
+    opacity: 0; */
+        width: 0px !important;
+        padding: 0 !important;
+        overflow: hidden;
 
 }
 
@@ -742,8 +747,8 @@ footer a i{
 
     nav {
 
-        -webkit-transition: all 0.15s;
-        transition: all 0.15s;
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
 
 
     }
