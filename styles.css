@@ -1060,6 +1060,10 @@ footer a:hover{
     background-color: transparent;
 }
 
+#sticky-menu button:active img{
+    transform: scale(1.1);
+}
+
 #sticky-menu img {
     border: 3px solid var(--azul-titulos); /* Add your desired border style here */
     padding: 5px; /* Optional: Add padding around the image within the border */
