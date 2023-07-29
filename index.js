@@ -16,8 +16,11 @@ const PC_MEDIA_QUERY = window.matchMedia("(min-width: 991px)");
 // Global ELEMENTS
 
 var navbar = document.getElementById("navbar");
-var wrapper = document.getElementById("body");
+var wrapper = document.getElementById("home");
 var body = document.getElementById("body");
+var stickyMenu = document.getElementById("sticky-menu");
+
+
 
 
 
@@ -137,13 +140,18 @@ navbar.onclick = clickerFn;
 /* UTILS */
 
 function showNavBar() {
-  wrapper.classList.remove("toogle-wrapper");
   navbar.classList.remove("hidden");
+  wrapper.classList.add("body-opacity")
+  stickyMenu.classList.add("body-opacity")
+
 }
 
 function hideNavBar() {
   navbar.classList.add("hidden");
-  wrapper.classList.add("toogle-wrapper");
+  wrapper.classList.remove("body-opacity")
+  stickyMenu.classList.remove("body-opacity")
+
+
 }
 
 
@@ -172,7 +180,7 @@ window.addEventListener("scroll", reveal);
 
 /* On resize navbar */
 
-function handleResize(){
+function handleResize() {
 
   toogleNavbar()
   hideNavBarOnMobile()
@@ -182,6 +190,3 @@ function handleResize(){
 
 window.addEventListener("resize", handleResize);
 
-
-
-/* Sticky menu */

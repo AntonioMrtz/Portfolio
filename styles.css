@@ -1077,6 +1077,11 @@ footer a:hover{
 }
 
 
+/* Body opacity */
 
 
+.body-opacity{
+
+    opacity: 0.2;
+}
 
