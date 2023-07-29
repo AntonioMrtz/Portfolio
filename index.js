@@ -113,7 +113,11 @@ PHONE_MEDIA_QUERY.addEventListener("change", hideNavBarOnMobile());
 
 // Turns navbar hidden into visible & margin of body between 0-20vw and viceversa
 function toogleNavbar() {
-  if (navbar.classList.contains("hidden")) showNavBar();
+  if (navbar.classList.contains("hidden")) {
+    wrapper.classList.add("body-opacity")
+    stickyMenu.classList.add("body-opacity")
+    showNavBar();
+  }
   else hideNavBar();
 }
 
@@ -124,16 +128,16 @@ var clickerFn = function () {
     hideNavBar();
 };
 
-body.onclick = clickerFn;
+wrapper.onclick = clickerFn;
 
 
 // hides navBar if its the phone version , navbar is not hidden and the user clicks on one li of it
-var clickerFn = function () {
+var clickerFnNav = function () {
   if (!navbar.classList.contains("hidden") && PHONE_MEDIA_QUERY.matches) {
     hideNavBar()
   }
 };
-navbar.onclick = clickerFn;
+navbar.onclick = clickerFnNav;
 
 
 
@@ -141,8 +145,8 @@ navbar.onclick = clickerFn;
 
 function showNavBar() {
   navbar.classList.remove("hidden");
-  wrapper.classList.add("body-opacity")
-  stickyMenu.classList.add("body-opacity")
+  /*  wrapper.classList.add("body-opacity")
+   stickyMenu.classList.add("body-opacity") */
 
 }
 
@@ -150,7 +154,6 @@ function hideNavBar() {
   navbar.classList.add("hidden");
   wrapper.classList.remove("body-opacity")
   stickyMenu.classList.remove("body-opacity")
-
 
 }
 
