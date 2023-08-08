@@ -196,3 +196,32 @@ function handleResize() {
 
 window.addEventListener("resize", handleResize);
 
+
+/* Handle Swipe */
+
+
+let touchstartX = 0
+let touchendX = 0
+    
+function checkDirection() {
+
+  //swipe left
+  if (touchendX > touchstartX && PHONE_MEDIA_QUERY.matches){
+
+    toogleNavbar()
+  }
+  //swipe right
+  if (touchendX < touchstartX && PHONE_MEDIA_QUERY.matches){
+
+    hideNavBarOnMobile()
+  }
+}
+
+document.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
+
+document.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  checkDirection()
+})
