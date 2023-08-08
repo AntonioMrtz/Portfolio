@@ -206,12 +206,12 @@ let touchendX = 0
 function checkDirection() {
 
   //swipe left
-  if (touchendX > touchstartX+200 && PHONE_MEDIA_QUERY.matches){
+  if (touchendX > touchstartX+100 && PHONE_MEDIA_QUERY.matches){
 
     toogleNavbar()
   }
   //swipe right
-  if (touchendX < touchstartX+200  && PHONE_MEDIA_QUERY.matches){
+  if (touchendX < touchstartX+100  && PHONE_MEDIA_QUERY.matches){
 
     hideNavBarOnMobile()
   }
