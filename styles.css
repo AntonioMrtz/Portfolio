@@ -1042,7 +1042,6 @@ footer a:hover{
 
 #header-img:hover img{
 
-    transform: scale(1.04);
     border: 2px solid var(--naranja);
 }
 
