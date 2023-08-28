@@ -561,48 +561,51 @@
 
       <div class="container d-flex flex-column justify-content-center align-items-center">
         <h2>Conóceme</h2>
-        <p>
-          📍 Actualmente resido en la ciudad de Murcia,
-          situada en la Región de Murcia.
+      </div>
 
-          <br /><br />
 
-          🔨 Una de las razones principales por las que cursé
-          el grado de ingeniería informática fue el gran
-          interés que tenía en poder crear las ideas que se me
-          ocurrían. Desde construir un bot de discord hasta
-          una aplicación que automatice mis tareas son algunas
-          de las cosas que soñaba con poder hacer antes de
-          comenzar la carrera.
-          <br /><br />
-
-          🏃‍♂️🚴‍♀️ Practico trail running y participo en carreras
-          regionales, anteriormente realicé ciclismo de
-          carretera participando también en varias carreras en
-          Murcia.
-
-          <br /><br />
-
-          🎵 Uno de mis pasatiempos favoritos es escuchar
-          música, estoy constantemente escuchando y buscando
-          nuevas canciones y géneros por descubrir.
-          <br /><br />
-          🎮 Jugar videojuegos y dar una vuelta con mis amigos
-          son dos de mis maneras preferidas de desconectar y
-          tomar un descanso. 🪁
-        </p>
-
-        <div class="container-fluid d-flex flex-column" id="parent-conoceme-photos">
-          <div class="row mid-row">
-            <div class="col">
-              <img src="assets/images/bio/puerto cartagena.webp" class="img-fluid img-resize rounded"
-                alt="imagen-personal-1" />
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/bio/sobremi.webp" class="d-block w-100" alt="Imagenes deportista">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Deportista</h5>
+              <p>He practicado deporte toda mi vida y actualmente participo en carreres de ciclismo y trail running.</p>
             </div>
-            <div class="col">
-              <img src="assets/images/bio/alhama_trail.webp" class="img-fluid rounded" alt="imagen-personal-1" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/bio/libros.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Apasionado de la lectura</h5>
+              <p>Leo todo tipo de géneros pero mis favortios son las novelas.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/bio/freetime.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Tiempo libre</h5>
+              <p>Me encanta compartir mi tiempo con las personas que aprecio.</p>
             </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
 
@@ -725,7 +728,10 @@
   </div>
 
   <script src="liSelector.js"></script>
-  <!-- Control de elemento clickado en navbar -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
