@@ -63,6 +63,22 @@ nav i:hover {
 
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--lila);
+    border-radius: 12px;
+    border: 1px solid var(--white-body);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--backkground);
+    /* For Firefox */
+    scrollbar-color: var(--lila) var(--white-body);
+}
+
 
 /* NAVBAR */
 
