@@ -682,55 +682,18 @@ h3 {
 }
 
 .carousel-control-prev-icon,.carousel-control-next-icon{
-    background-color: var(--naranja);
-    border-radius: 999px;
     padding: 10%;
     font-size: 1.5rem;
     width: 64px;
     height: 64px;
-    border: 3px solid var(--lila-titulos);
-}
-
-/* #conoceme p {
-
-    padding: 4%;
-    color: var(--blanco-tenue);
-    border: 1px solid var(--blanco-tenue);
+    border: 3px solid var(--naranja);
     border-radius: 8px;
-
 }
 
-#conoceme .col {
-    
-    border: 1px solid var(--blanco-tenue) !important;
-    margin: 2%;
-    border-radius: 8px;
+.carousel-control-next,.carousel-control-prev{
 
+    width: 6rem !important;
 }
-
-#parent-conoceme-photos .col:hover,#conoceme p:hover{
-    
-    transform: scale(1.01);
-}
-
-#parent-conoceme-photos {
-
-    padding-bottom: 5%;
-}
-
-#conoceme .col {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#conoceme .col img {
-
-    padding: 3%;
-    height: 400px;
-} */
-
 
 /* CONTACTO */
 
