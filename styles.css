@@ -74,10 +74,15 @@ nav i:hover {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--backkground);
+    background-color: var(--white-body);
     /* For Firefox */
     scrollbar-color: var(--lila) var(--white-body);
 }
+
+* {
+  scrollbar-color: var(--lila) var(--white-body);
+}
+
 
 
 /* NAVBAR */
