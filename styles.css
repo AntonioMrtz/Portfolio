@@ -330,6 +330,7 @@ h3 {
 #tecnologias-parent span {
     display: flex;
     flex-direction: row;
+    padding-bottom: 16px;
 }
 
 #tecnologias-parent span img {
@@ -364,6 +365,7 @@ h3 {
 
 #tecnologias h5 {
     color: var(--blanco-tenue-brillante);
+    margin-bottom: 0% !important;
 }
 
 #otras {
@@ -382,6 +384,7 @@ h3 {
 
 #otras h5 {
     color: var(--dark-blue);
+    margin: 0% !important;
 }
 
 #habilidades {
