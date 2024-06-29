@@ -1,0 +1,106 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+<style is:global>
+    ::root {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        --bright-dark-blue: #4d4c53;
+        --dark-blue: #2b2a2e;
+        --naranja: #ffa500;
+        --blanco-tenue: #dad9db;
+        --blanco-tenue-brillante: #e5eae9;
+        --lila: #4b455b;
+        --lila-titulos: #474159;
+        --azul-titulos: #313132;
+        --white-body: #f2f4f7;
+        --white-darker-body: #f4f3f6;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: white;
+    }
+
+    .li-active {
+        background-color: var(--bright-dark-blue);
+        border: 0.1px solid var(--naranja);
+    }
+
+    i {
+        border-radius: 12px;
+        font-size: 1.25rem;
+    }
+
+    nav i:hover {
+        color: var(--naranja);
+        transform: scale(2);
+    }
+
+    .header i:hover {
+        color: var(--blanco-tenue-brillante);
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--lila);
+        border-radius: 12px;
+        border: 1px solid var(--white-body);
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: var(--white-body);
+        /* For Firefox */
+        scrollbar-color: var(--lila) var(--white-body);
+    }
+
+    * {
+        scrollbar-color: var(--lila) var(--white-body);
+    }
+    html {
+        font-family: system-ui, sans-serif;
+        background: #13151a;
+        background-size: 224px;
+    }
+    code {
+        font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            Liberation Mono,
+            DejaVu Sans Mono,
+            Bitstream Vera Sans Mono,
+            Courier New,
+            monospace;
+    }
+</style>
