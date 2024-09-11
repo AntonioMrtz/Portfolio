@@ -325,7 +325,7 @@ h3 {
     padding-right: 0% !important;
 }
 
-/*  */
+/* TECH */
 
 #tecnologias-parent span {
     display: flex;
@@ -656,11 +656,6 @@ footer a i {
 
 footer a:hover {
     color: var(--naranja) !important;
-}
-
-#header-img-wrapper:hover #header-img {
-    -webkit-box-shadow: 0 0 5px 1px var(--naranja);
-    box-shadow: 0 0 5px 1px var(--naranja);
 }
 
 #header-img-wrapper:hover #header-img-hover-item {
