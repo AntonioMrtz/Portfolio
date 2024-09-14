@@ -559,15 +559,12 @@ h3 {
 /* CONÓCENOS */
 
 #conoceme {
-    /* background-color: var(--white-body); */
-    background-color: var(--bright-dark-blue);
     padding: 5% 3% 5% 3%;
 }
 
 #conoceme h2 {
     padding-top: 5%;
     font-size: 3rem;
-    color: var(--blanco-tenue-brillante);
     margin-bottom: 5%;
 }
 
