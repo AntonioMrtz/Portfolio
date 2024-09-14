@@ -1,0 +1,252 @@
+<div
+  class="flex flex-col content-center items-center"
+  id="header"
+  style="padding: 2.25rem"
+>
+  <div class="flex flex-row mb-4" id="header-text-wrapper">
+    <div id="header-text" class="">
+      <h1 style="font-size: 5rem">Antonio Martínez Fernández</h1>
+      <h2 style="font-size: 3rem">Desarrollador Software</h2>
+      <hr />
+      <div class="container">
+        <p>
+          Tengo
+          <strong>23 años</strong>
+          , actualmente resido en
+          <strong>Murcia</strong>
+          , con disponibilidad para trabajo remoto.
+          <br />
+          Soy un
+          <strong>apasionado del desarrollo software</strong>
+          ,disfruto transformando ideas en software y aprendiendo día a día.
+        </p>
+      </div>
+    </div>
+    <div class="flex content-end" id="header-img-wrapper">
+      <img
+        src="assets/images/bio/header_frente.webp"
+        alt="Imagen perfil"
+        class="img-fluid rounded-4"
+        id="header-img"
+        style="max-width: 80%;"
+      />
+    </div>
+  </div>
+
+  <div
+    class="container flex flex-col align-items-center me-3"
+    id="experiencia"
+  >
+    <div class="container flex flex-col m-0">
+      <h4>Estudios y experiencia laboral</h4>
+      <span class="flex flex-row">
+        <div class="flex flex-row">
+          <div class="wrapper-experiencia-img">
+            <img src="assets/icons/bionet.png" alt="bionet" />
+          </div>
+          <div>
+            <h5>Bionet</h5>
+            <h6>Desarrollador Backend | 2023 - Actualidad</h6>
+          </div>
+        </div>
+      </span>
+      <span class="flex flex-row">
+        <div class="flex flex-row">
+          <div class="wrapper-experiencia-img">
+            <img src="assets/icons/umu.jpg" alt="universidad" />
+          </div>
+          <div>
+            <h5>Grado en Ingeniería Informática Universidad de Murcia</h5>
+            <h6>
+              Nota media: 7.1 | 2019-2023 | Matricula de honor en Arquitectura
+              del Software
+            </h6>
+          </div>
+        </div>
+      </span>
+      <span class="flex flex-row">
+        <div class="flex flex-row">
+          <div class="wrapper-experiencia-img">
+            <img
+              src="assets/icons/SpotifyElectronLogo.webp"
+              alt="universidad"
+            />
+          </div>
+          <div>
+            <h5>Spotify Electron : Trabajo Final de Grado (TFG)</h5>
+            <h6>
+              Nota : 9.7 | 2023 | Desarrollo aplicación streaming de música
+              multiplataforma con enfoque open source
+            </h6>
+          </div>
+        </div>
+      </span>
+      <span class="flex flex-row">
+        <div class="flex flex-row">
+          <div class="wrapper-experiencia-img">
+            <img src="assets/icons/byprox.png" alt="prácticas" />
+          </div>
+          <div>
+            <h5>ByProx | Prácticas Curriculares</h5>
+            <h6>
+              4 meses | Aplicación Web de viajes | PHP + HTML + CSS + MYSQL
+            </h6>
+          </div>
+        </div>
+      </span>
+      <span class="flex flex-row">
+        <div class="flex flex-row">
+          <div class="wrapper-experiencia-img">
+            <img src="assets/icons/birrete.png" alt="bachillerato" />
+          </div>
+          <div>
+            <h5>Bachillerato IES Licenciado Francisco Cascales</h5>
+            <h6>Nota media: 8 | Ciencias de la salud</h6>
+          </div>
+        </div>
+      </span>
+      <span class="flex flex-row">
+        <div class="flex flex-row">
+          <div class="wrapper-experiencia-img">
+            <img
+              src="assets/icons/permiso-conducir.png"
+              alt="permiso de conducir"
+            />
+          </div>
+          <div>
+            <h5>Permiso de conducir</h5>
+            <h6>Tipo B</h6>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .header .container-fluid {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .header img {
+    width: 100%;
+    height: 50%;
+    opacity: 2;
+    filter: brightness(60%);
+  }
+
+  .header {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header #header-text {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+
+    color: aliceblue;
+    pointer-events: none;
+  }
+
+  .header #navbar-toogler {
+    display: none;
+  }
+
+  .header #header-text h1 {
+    font-size: 4vw;
+  }
+
+  .header #header-text h2 {
+    font-size: 2vw;
+  }
+
+  #header-text-wrapper p {
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    color: var(--lila);
+  }
+
+  #experiencia {
+    order: 2;
+    border: 1px solid var(--dark-blue);
+
+    border-radius: 13px;
+    background: linear-gradient(145deg, #ffffff, #dadcde);
+    box-shadow:
+      5px 5px 0px #616263,
+      -5px -5px 0px #ffffff;
+    padding: 2%;
+    justify-content: start;
+  }
+
+  #experiencia h4 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 3%;
+  }
+
+  #experiencia h5 {
+    color: var(--dark-blue);
+    margin: 0 !important;
+  }
+
+  #experiencia h6 {
+    margin-bottom: 0 !important;
+  }
+
+  #experiencia span img {
+    width: 32px;
+    height: 32px;
+  }
+
+  #experiencia span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+
+  #experiencia .wrapper-experiencia-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14px;
+  }
+
+  #habilidades {
+    order: 2;
+    border: 1px solid var(--dark-blue);
+
+    border-radius: 13px;
+    background: linear-gradient(145deg, #ffffff, #dadcde);
+    box-shadow:
+      5px 5px 0px #616263,
+      -5px -5px 0px #ffffff;
+  }
+
+  #habilidades h4 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 3%;
+  }
+
+  #habilidades h5 {
+    color: var(--dark-blue);
+    margin: 0 !important;
+  }
+
+  #habilidades span img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+
+  #habilidades span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2%;
+  }
+</style>

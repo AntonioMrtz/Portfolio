@@ -1,0 +1,20 @@
+---
+import Footer from '../Footer/Footer.astro';
+import Header from '../Header/Header.astro';
+---
+
+<div class="wrapper" id="home">
+  <Header />
+  <Footer />
+</div>
+
+<style>
+  .wrapper {
+    margin-left: 20vw;
+  }
+  @media (max-width: 990px) {
+    .wrapper {
+      margin-left: 0px;
+    }
+  }
+</style>

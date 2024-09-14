@@ -1,0 +1,62 @@
+---
+import logoAM from '/icons/logoAM.ico?url';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Antonio Martinez: software developer" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="keywords"
+      content="developer, website, Antonio Martinez, software, software developer, portfolio, backend,"
+    />
+    <link rel="icon" href={logoAM} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Antonio Martínez Fernández" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/AntonioMrtz/Portfolio/master/assets/logos/logoAM.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://raw.githubusercontent.com/AntonioMrtz/Portfolio/master/assets/logos/logoAM.png"
+    />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <title>Antonio Martínez Fernández Portfolio</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  .body {
+    padding-top: 2vw;
+    padding: 3.5rem;
+  }
+
+  .body h2,
+  h3 {
+    margin-bottom: 5vw;
+  }
+
+  .body h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--azul-titulos);
+  }
+
+  .body h3 {
+    margin-top: 3vw;
+    color: var(--lila-titulos);
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+</style>
