@@ -1,6 +1,5 @@
 # Welcome to my Portfolio 💻🎨
 
-
 ![Home](assets/walkthrough/home.png)
 <br>
 <br>
@@ -14,7 +13,6 @@
 <br>
 
 ![Conoceme](assets/walkthrough/conoceme.png)
-
 
 <table>
   <tr>

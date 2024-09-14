@@ -1,0 +1,107 @@
+<div class="navbar-section-link-wrapper">
+  <a href="#home" class="navbar-section-link" id="home">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      stroke-width={1.5}
+      stroke="currentColor"
+      class="size-8"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+      >
+      </path>
+    </svg>
+    Home
+  </a>
+  <a href="#portfolio" class="navbar-section-link" id="portfolio">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      stroke-width={1.5}
+      stroke="currentColor"
+      class="size-8"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+      >
+      </path>
+    </svg>
+    Portfolio
+  </a>
+  <a href="#conoceme" class="navbar-section-link" id="about-me">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      stroke-width={1.5}
+      stroke="currentColor"
+      class="size-8"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+      >
+      </path>
+    </svg>
+    About me
+  </a>
+</div>
+
+<style>
+  .navbar-section-link {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.75vw;
+    color: #fff;
+    position: relative;
+    padding: 3% 3% 3% 3%;
+    transition: all 0.5s;
+    font-weight: 300;
+    border: 0.1px solid transparent;
+    gap: 14px;
+    align-items: center;
+    align-content: center;
+  }
+
+  .navbar-section-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: var(--bright-dark-blue);
+    z-index: -1;
+    transition: all 1s;
+    font-weight: 600;
+  }
+
+  .navbar-section-link a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: var(--bright-dark-blue);
+    z-index: -1;
+    transition: all 1s;
+    font-weight: 600;
+  }
+
+  .navbar-section-link:hover {
+    color: white;
+  }
+
+  .navbar-section-link:hover:before {
+    width: 100%;
+  }
+</style>

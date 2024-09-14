@@ -1,0 +1,107 @@
+---
+import { Image } from 'astro:assets';
+import profileAM from '../../assets/profile/profileAM.webp';
+import crossClose from '../../assets/misc/xmark-solid.png';
+import SocialMedia from './SocialMedia/SocialMedia.astro';
+import SectionLinks from './SectionLinks/SectionLinks.astro';
+---
+
+<nav class="navbar flex flex-col h-full flex-wrap" id="navbar">
+  <div class="logo-wrapper flex flex-row rounded-sm gap-4">
+    <Image
+      src={profileAM}
+      alt="Antonio Martinez profile"
+      id="logo-img"
+      style="max-width: 10rem;"
+      loading="eager"
+      class="rounded w-full h-auto"
+    />
+
+    <a onclick="toogleNavbar()">
+      <Image
+        src={crossClose}
+        alt="close navbar"
+        width={72}
+        id="crossCloseNavbar"
+      />
+    </a>
+  </div>
+
+  <div>
+    <h1>Antonio Martínez Fernández</h1>
+  </div>
+  <div>
+    <h2>Software engineer 💻</h2>
+  </div>
+
+  <SectionLinks />
+  <SocialMedia />
+</nav>
+
+<style>
+  .logo-wrapper {
+    padding: 2vw 0 2vw 0.5vw;
+  }
+
+  .navbar {
+    position: fixed;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 20vw;
+    top: 0;
+    left: 0;
+    background-color: #2b2a2e;
+    padding-left: 2%;
+    border: 1px solid #676767;
+    transition: 0.25s;
+  }
+
+  h1 {
+    font-size: 1.5vw;
+    color: #fff;
+    padding: 3% 3% 3% 3%;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.25vw;
+    color: #fff;
+    padding: 1vw 3vw 2vw 0.5vw;
+  }
+
+  #logo-img {
+    border: 1px solid #696969;
+    border-width: 0.01px;
+  }
+
+  @media (min-width: 991px) {
+    #crossCloseNavbar {
+      display: none;
+    }
+    .logo-wrapper a {
+      display: none;
+    }
+  }
+  
+</style>
+
+<script>
+  let nav_items = document.getElementsByClassName('navbar-section-link');
+
+  for (let item of nav_items) {
+    item.addEventListener('click', (event) => {
+      const previous_selected_item =
+        document.getElementsByClassName('li-active')[0];
+
+      if (previous_selected_item !== undefined)
+        previous_selected_item.classList.remove('li-active');
+
+      const liTargetId = event['target']['id'];
+      const liTargetItem = document.getElementById(liTargetId);
+
+      liTargetItem.classList.add('li-active');
+    });
+  }
+</script>
