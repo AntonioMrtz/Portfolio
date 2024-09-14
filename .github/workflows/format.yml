@@ -20,7 +20,6 @@ jobs:
           node-version: "20"
 
       - name: Change directory and run commands
-        working-directory: Electron
         run: |
           npm install
           npm run format:check
