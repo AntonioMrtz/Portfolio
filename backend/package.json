@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-backend",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "put:secret": "wrangler secret put",
+    "cf-typegen": "wrangler types",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@notionhq/client": "^5.3.0",
+    "hono": "^4.10.1",
+    "notion-to-md": "^3.1.9"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/node": "^24.8.1",
+    "eslint": "^9.15.0",
+    "prettier": "^3.6.2",
+    "typescript-eslint": "^8.14.0",
+    "wrangler": "^4.45.0"
+  }
+}
