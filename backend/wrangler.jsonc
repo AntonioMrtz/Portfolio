@@ -4,15 +4,15 @@
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "portfolio-backend",
+  "name": "backend-portfolio-am",
   "main": "src/index.ts",
   "compatibility_date": "2025-10-11",
   "assets": {
     "binding": "ASSETS",
-    "directory": "./public",
+    "directory": "./public"
   },
   "observability": {
-    "enabled": true,
+    "enabled": true
   },
   /**
    * Rules to exclude files from upload
@@ -22,8 +22,8 @@
     {
       "type": "Text",
       "globs": ["**/*.md", "**/*.excalidraw", "**/eslint.config.js"],
-      "fallthrough": true,
-    },
+      "fallthrough": true
+    }
   ],
   /**
    * Smart Placement
