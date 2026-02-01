@@ -21,9 +21,9 @@ const { imgSrc, imgAlt, title, subheader, description, links, badges } =
 ---
 
 <div
-  class={`card-container flex gap-12 justify-between p-10 w-full max-w-5xl m-0 rounded-xl flex-row`}
+  class={`card-container flex flex-col-reverse lg:flex-row gap-12 justify-between p-10 w-full max-w-5xl m-0 rounded-xl`}
 >
-  <div class="flex flex-row gap-8">
+  <div class="flex flex-col md:flex-row gap-8">
     <img class="w-40 h-40 object-contain" src={imgSrc} alt={imgAlt} />
     <div class="flex flex-col gap-4 max-w-xl">
       <div class="flex flex-col gap-2">
@@ -39,7 +39,7 @@ const { imgSrc, imgAlt, title, subheader, description, links, badges } =
               iconSrc={githubIcon.src}
               url={links.repoUrl}
               altText="Github"
-              color="--primary-black-600"
+              color="--primary-black-400"
               turnIconWhite={true}
             />
           )
@@ -51,7 +51,7 @@ const { imgSrc, imgAlt, title, subheader, description, links, badges } =
               url={links.websiteUrl}
               iconSrc={websiteIcon.src}
               altText="Website"
-              color="--secondary-purple-500"
+              color="--secondary-purple-400"
               turnIconWhite={true}
             />
           )
@@ -59,7 +59,7 @@ const { imgSrc, imgAlt, title, subheader, description, links, badges } =
       </div>
     </div>
   </div>
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-row flex-wrap lg:flex-col gap-2">
     {badges.map((v) => <CardTech imageUrl={v.imageUrl} altText={v.name} />)}
   </div>
 </div>

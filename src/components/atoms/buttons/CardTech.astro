@@ -9,7 +9,11 @@ const { imageUrl, altText, placement } = Astro.props;
 ---
 
 <div
-  class={`flex w-full rounded-xl ${placement ? (placement === "left" ? "justify-start" : "justify-end") : "justify-end"} hover:scale-200`}
+  class={`flex rounded-xl ${placement ? (placement === "left" ? "justify-start" : "justify-end") : "justify-end"} `}
 >
-  <img class="object-contain rounded-xl" src={imageUrl} alt={altText} />
+  <img
+    class="rounded-xl min-h-8 w-fit md:transition-transform lg:duration-200 md:ease-in-out lg:hover:scale-150"
+    src={imageUrl}
+    alt={altText}
+  />
 </div>
