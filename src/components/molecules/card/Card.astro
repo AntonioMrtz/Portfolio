@@ -40,7 +40,9 @@ function parseSubheaderData(subheader: string[]): string {
           )
         }
       </div>
-      <p class="whitespace-pre-line">{description}</p>
+      <div class="description-container">
+        <p class="description whitespace-pre-line">{description}</p>
+      </div>
       <div class="flex flex-row gap-3">
         {
           links.repoUrl && (
@@ -95,6 +97,51 @@ function parseSubheaderData(subheader: string[]): string {
     opacity: 1;
     transform: translateY(0);
   }
+
+  .description-container {
+    position: relative;
+  }
+
+  .description {
+    transition:
+      max-height 0.4s ease-in-out,
+      opacity 0.3s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    .description-container {
+      cursor: pointer;
+    }
+
+    .description-container:not(.expanded) .description {
+      max-height: 9rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .description-container.expanded .description {
+      max-height: 100rem;
+    }
+
+    .description-container:not(.expanded) .description::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2rem;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--neutral-gray-100)
+      );
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .description-container.expanded .description::after {
+      opacity: 0;
+    }
+  }
 </style>
 
 <script>
@@ -120,13 +167,35 @@ function parseSubheaderData(subheader: string[]): string {
     });
   }
 
-  // Ejecutar cuando el DOM esté listo
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initCardReveal);
-  } else {
-    initCardReveal();
+  function initDescriptionExpand() {
+    const descriptionContainers = document.querySelectorAll(
+      ".description-container",
+    );
+
+    // Tailwind's md breakpoint is 768px
+    const isMobile = window.matchMedia("(max-width: 768px)");
+
+    descriptionContainers.forEach((container) => {
+      container.addEventListener("click", () => {
+        if (isMobile.matches) {
+          container.classList.toggle("expanded");
+        }
+      });
+    });
   }
 
-  // Re-ejecutar en navegación de Astro
-  document.addEventListener("astro:page-load", initCardReveal);
+  function initCard() {
+    initCardReveal();
+    initDescriptionExpand();
+  }
+
+  // When DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCard);
+  } else {
+    initCard();
+  }
+
+  // Re-run on Astro navigation
+  document.addEventListener("astro:page-load", initCard);
 </script>
