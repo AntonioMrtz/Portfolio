@@ -62,7 +62,7 @@ const COMPANY_ID_TO_DATA: Record<CompanyId, Company> = {
     id: "spotify-electron",
     name: "Spotify Electron",
     websiteUrl: "https://antoniomrtz.github.io/SpotifyElectron_Web/",
-    repoUrl: "https://github.com/AntonioMrtz?tab=repositories",
+    repoUrl: "https://github.com/AntonioMrtz/SpotifyElectron",
     description:
       "A cross-platform, open-source music streaming desktop app that includes Spotify-like core functionalities and user-requested features—such as the ability to upload personal music.",
     iconUrl: spotifyElectronIcon.src,
