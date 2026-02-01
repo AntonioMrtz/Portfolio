@@ -1,0 +1,70 @@
+---
+import LandingPageTemplate from "@/components/templates/LandingPageTemplate.astro";
+import "@/styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d6efd" />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      name="description"
+      content="Portfolio of Antonio Martínez — transforming ideas into software"
+    />
+    <meta name="author" content="Antonio Martínez Fernández" />
+    <meta
+      name="keywords"
+      content="Antonio Martínez, full stack developer, Python, Angular, Node.js, React, Electron, Spotify app, web developer, portfolio, AntonioMrtz"
+    />
+    <link rel="canonical" href="https://antoniomrtz.github.io/Portfolio/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Antonio Martínez — Portfolio" />
+    <meta
+      property="og:title"
+      content="Antonio Martínez —  Full Stack Developer | Python, Angular, Node.js & React | Creator of Spotify Electron App "
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Antonio Martínez — transforming ideas into software"
+    />
+    <meta
+      property="og:url"
+      content="https://antoniomrtz.github.io/Portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/AntonioMrtz/Portfolio/master/src/assets/images/thumbnails/logoAM.png"
+    />
+    <meta property="og:image:alt" content="Antonio Martínez logo" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Antonio Martínez",
+        "url": "https://antoniomrtz.github.io/Portfolio/",
+        "sameAs": ["https://github.com/AntonioMrtz"],
+        "jobTitle": "Software Developer"
+      }
+    </script>
+
+    <title>Antonio Martínez — Portfolio</title>
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <LandingPageTemplate />
+  </body>
+</html>

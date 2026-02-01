@@ -1,0 +1,15 @@
+---
+interface Props {
+  imageUrl: string;
+  altText: string;
+  placement?: "left" | "right";
+}
+
+const { imageUrl, altText, placement } = Astro.props;
+---
+
+<div
+  class={`flex w-full rounded-xl ${placement ? (placement === "left" ? "justify-start" : "justify-end") : "justify-end"} hover:scale-200`}
+>
+  <img class="object-contain rounded-xl" src={imageUrl} alt={altText} />
+</div>

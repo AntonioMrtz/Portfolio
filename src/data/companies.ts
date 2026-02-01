@@ -1,0 +1,142 @@
+import type { TechId } from "./stack";
+import metricaSportsIcon from "@/assets/images/companies/metrica-sports.png";
+import spotifyElectronIcon from "@/assets/images/companies/spotify-electron.webp";
+import bionetIcon from "@/assets/images/companies/bionet.png";
+import adventjsIcon from "@/assets/images/companies/advent-js.webp";
+import mayorOpticaIcon from "@/assets/images/companies/mayor-optica.webp";
+import byproxIcon from "@/assets/images/companies/byprox.png";
+
+export { type CompanyId, COMPANY_ID_TO_DATA };
+
+type CompanyId =
+  | "bionet"
+  | "metrica-sports"
+  | "byprox"
+  | "mayor-optica"
+  | "spotify-electron"
+  | "adventjs-cli";
+
+type Company = {
+  id: CompanyId;
+  name: string;
+  websiteUrl: string;
+  repoUrl?: string;
+  description: string;
+  iconUrl: string;
+  jobInfo: JobInfo;
+};
+
+interface JobInfo {
+  title: string;
+  description: string;
+  contractType: ContractType;
+  dates: string;
+  tech: TechId[];
+}
+
+enum ContractType {
+  FullTime = "Full Time",
+  Freelance = "Freelance",
+  Internship = "Internship",
+}
+
+// Order matters: the will be shown in this order in the UI.
+const COMPANY_ID_TO_DATA: Record<CompanyId, Company> = {
+  "metrica-sports": {
+    id: "metrica-sports",
+    name: "Metrica Sports",
+    websiteUrl: "https://www.metrica-sports.com/",
+    description:
+      "Metrica Sports provides an analysis solution for non-professional and professional teams. Our products, PlayBase and Metrica Nexus, allow users to enhance their game with video and data integration.",
+    iconUrl: metricaSportsIcon.src,
+    jobInfo: {
+      title: "Frontend Developer (Angular & RxJS)",
+      description:
+        "As a Frontend Developer, I design and implement high-performance, reactive interfaces for the Metrica Nexus cross-platform application, taking end-to-end ownership of features in a fast-paced startup environment.\n\n- Developed and maintained frontend features with Angular for the Metrica Nexus product.\n- Took ownership of end-to-end features, collaborating with a diverse, international team in a fast-paced startup environment.\n- Built reactive and high-performance interfaces using RxJS.\n- Worked on cross-platform applications with Electron and Ionic.",
+      contractType: ContractType.FullTime,
+      dates: "May 2025 - Present",
+      tech: ["angular", "rxjs", "typescript", "electron", "ionic"],
+    },
+  },
+  "spotify-electron": {
+    id: "spotify-electron",
+    name: "Spotify Electron",
+    websiteUrl: "https://antoniomrtz.github.io/SpotifyElectron_Web/",
+    repoUrl: "https://github.com/AntonioMrtz?tab=repositories",
+    description:
+      "A cross-platform, open-source music streaming desktop app that includes Spotify-like core functionalities and user-requested features—such as the ability to upload personal music.",
+    iconUrl: spotifyElectronIcon.src,
+    jobInfo: {
+      title: "Lead Developer (Python & React & FastAPI & MongoDB)",
+      description:
+        "As the owner and Lead Developer of an open-source cross-platform music streaming application, I have been at the forefront of replicating and enhancing Spotify's functionalities while incorporating unique user-requested features such as the ability to upload personal music. My role encompasses leadership, development and automatization.\n\n- Build and maintain a FastAPI-based REST API with Python and MongoDB.\n- Develop a cross-platform desktop app using React, TypeScript, and Electron.\n- Design UI with Material-UI, Bootstrap, HTML, and CSS, inspired by Spotify's UI.\n- Implement music streaming architecture and secure JWT authentication.\n- Utilize AWS (S3, CloudFront, Lambda) for storage, content delivery, and serverless functions.\n- Lead a global open-source team of 25+ contributors using Agile methodologies.\n- Manage Git/GitHub, overseeing branches, PRs, and issue tracking.\n- Use Docker for streamlined development and production environments.\n- Automate CI/CD pipelines with GitHub Actions, ensuring code quality and testing.\n- Implement end-to-end and unit testing with React Testing Library, Jest, and pytest.",
+      contractType: ContractType.Freelance,
+      dates: "May 2023 - Present",
+      tech: ["python", "react", "fastapi", "mongodb", "electron"],
+    },
+  },
+  bionet: {
+    id: "bionet",
+    name: "Bionet",
+    websiteUrl: "https://bionet.com/",
+    description:
+      "BIONET is a leading manufacturer of laboratory, pilot and industrial equipment and software for the bioprocessing industry, as well as a provider of advanced bioprocess-related services for companies that want to produce biomolecules through microbial fermentation or through cell culturing processes.",
+    iconUrl: bionetIcon.src,
+    jobInfo: {
+      title: "Full-Stack Developer (Python & Angular & FastAPI)",
+      description:
+        "Participate in all stages of software development for ROSITA2, an embedded system for bioreactors, developing both frontend and backend solutions while ensuring seamless integration with hardware.\n\n- Development of Rest APIs and microservices using Python and FastAPI. Usage of Redis queues and events for fast and efficient microservices communication.\n- Design and development of a touchscreen and desktop application interface for real-time management of bioreactors with Angular, Bootstrap and Neutralino.\n- Software lead for bSmart devices such as CT1 and bBreath4 obtaining integrated backend-frontend solutions and working closely with electronics teams for integrating low level hardware software. Led meetings for retrospective analysis and future planning based on requirements and user feedback.\n- Contribute to architecture planning and decision-making for system design.\n- Worked extensively with technologies such as OPC UA and Asyncio.\n- Unit and integration tests with pytest as well as extensive testing with physical prototypes to ensure reliability and performance.",
+      contractType: ContractType.FullTime,
+      dates: "Nov 2023 - Jul 2025",
+      tech: ["python", "fastapi", "angular", "postgresql", "redis"],
+    },
+  },
+  "adventjs-cli": {
+    id: "adventjs-cli",
+    name: "AdventJS CLI",
+    websiteUrl: "https://adventjs.dev/",
+    repoUrl: "https://github.com/AntonioMrtz/adventjs-cli",
+    description:
+      "AdventJS CLI Generator - Spin up your AdventJS challenges by @midudev in seconds! 🎄⚡ ",
+    iconUrl: adventjsIcon.src,
+    jobInfo: {
+      title: "Lead Developer (TypeScript)",
+      description:
+        "I created adventjs-cli, a command-line tool designed to streamline and automate the setup for each AdventJS challenge—so developers can focus on solving problems, not configuring environments.\n\nWhat adventjs-cli provides?\n\nWith a single command, it automatically generates:\n\n- A TypeScript function template ready for your solution\n- A Markdown file with the full problem description\n- A Jest test file to validate your implementation\n\nBuilt-in development tooling\n\nThe project comes pre configured with:\n- Debugging tools\n- Jest testing environment\n- TypeScript setup\n- ESLint for code quality\n- Prettier for consistent formatting\n- GitHub Actions CI workflows\n\nThis tool streamlines the entire challenge workflow, making it easier, faster, and more enjoyable to tackle AdventJS throughout the season.",
+      contractType: ContractType.Freelance,
+      dates: "Nov 2025 - Dec 2025",
+      tech: ["nodejs", "typescript", "github_actions", "jest"],
+    },
+  },
+  "mayor-optica": {
+    id: "mayor-optica",
+    name: "Mayor Óptica",
+    websiteUrl: "https://antoniomrtz.github.io/MayorOpticaWeb/",
+    repoUrl: "https://github.com/AntonioMrtz/MayorOpticaWeb",
+    description: "Optical center in Puente Tocinos, Murcia",
+    iconUrl: mayorOpticaIcon.src,
+    jobInfo: {
+      title: "Lead Frontend Developer",
+      description:
+        "As the sole Frontend Developer, I led the end-to-end development of the Mayor Óptica website, taking the project from initial design concepts to final deployment.\n\nKey contributions included:\n\n- Designing the user experience and interface to create a professional and engaging online presence.\n- Developing the full frontend, ensuring a seamless, responsive experience across devices.\n- Managing deployment and delivery, ensuring the website was fully operational and optimized.\n- Aligning the website with business goals, enhancing brand visibility, customer engagement, and lead generation.\n\nThis project demonstrates my ability to independently manage the complete development lifecycle, delivering a digital solution that directly supports business growth and strengthens the company's online identity.",
+      contractType: ContractType.Freelance,
+      dates: "Jan 2023 - May 2023",
+      tech: ["astro", "javascript", "css", "bootstrap", "html"],
+    },
+  },
+  byprox: {
+    id: "byprox",
+    name: "Byprox",
+    websiteUrl: "https://byprox.com/",
+    description: "Development of Custom INDUSTRY 4.0 Projects",
+    iconUrl: byproxIcon.src,
+    jobInfo: {
+      title: "Backend Developer (PHP)",
+      description:
+        "Developed the backend for a travel application structured around points of interest (POIs).\n\n- Developing the organizational structure and navigation through countries, regions, cities, and points of interest using PHP.\n- Data persistence using MySQL.\n- Managing the application using MySQL Workbench and PhpMyAdmin.\n- Organizing content graphically using HTML, CSS and JavaScript.",
+      contractType: ContractType.Internship,
+      dates: "Jan 2022 - Jun 2022",
+      tech: ["php", "javascript", "postgresql", "html", "css"],
+    },
+  },
+};

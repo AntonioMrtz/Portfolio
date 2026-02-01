@@ -1,0 +1,30 @@
+---
+interface Props {
+  color: string;
+  label: string;
+  iconSrc: string;
+  iconSize?: string;
+  altText: string;
+  url: string;
+  turnIconWhite?: boolean;
+}
+
+const { color, label, iconSrc, iconSize, altText, url, turnIconWhite } =
+  Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="flex flex-row gap-3 p-2 w-40 rounded-sm items-center justify-center hover:opacity-80 transition-opacity"
+  style={`background-color: var(${color})`}
+>
+  <img
+    src={iconSrc}
+    alt={altText}
+    class={`w-5 h-5 ${turnIconWhite ? "brightness-0 invert" : undefined}`}
+    style={iconSize ? `width: ${iconSize}; height: ${iconSize};` : undefined}
+  />
+  <p class="text-white">{label}</p>
+</a>

@@ -1,0 +1,75 @@
+---
+import CardButton from "@/components/atoms/buttons/CardButton.astro";
+import githubIcon from "@/assets/icons/github.svg";
+import websiteIcon from "@/assets/icons/website.svg";
+import CardTech from "@/components/atoms/buttons/CardTech.astro";
+import type { CardLinks } from "./card.model";
+import type { Badge } from "@/data/badges";
+
+interface Props {
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+  subheader?: string;
+  description: string;
+  links: CardLinks;
+  badges: Badge[];
+}
+
+const { imgSrc, imgAlt, title, subheader, description, links, badges } =
+  Astro.props;
+---
+
+<div
+  class={`card-container flex gap-12 justify-between p-10 w-full max-w-5xl m-0 rounded-xl flex-row`}
+>
+  <div class="flex flex-row gap-8">
+    <img class="w-40 h-40 object-contain" src={imgSrc} alt={imgAlt} />
+    <div class="flex flex-col gap-4 max-w-xl">
+      <div class="flex flex-col gap-2">
+        <h3 class="font-bold text-3xl">{title}</h3>
+        {subheader && <h4 class="font-bold text-xl">{subheader}</h4>}
+      </div>
+      <p class="whitespace-pre-line">{description}</p>
+      <div class="flex flex-row gap-3">
+        {
+          links.repoUrl && (
+            <CardButton
+              label="Github"
+              iconSrc={githubIcon.src}
+              url={links.repoUrl}
+              altText="Github"
+              color="--primary-black-600"
+              turnIconWhite={true}
+            />
+          )
+        }
+        {
+          links.websiteUrl && (
+            <CardButton
+              label="Website"
+              url={links.websiteUrl}
+              iconSrc={websiteIcon.src}
+              altText="Website"
+              color="--secondary-purple-500"
+              turnIconWhite={true}
+            />
+          )
+        }
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-2">
+    {badges.map((v) => <CardTech imageUrl={v.imageUrl} altText={v.name} />)}
+  </div>
+</div>
+
+<style>
+  .card-container {
+    border: 1px solid var(--primary-black-500);
+    background: var(--neutral-gray-100);
+    box-shadow:
+      5px 5px 0px var(--neutral-gray-500),
+      -5px -5px 0px var(--neutral-white);
+  }
+</style>
