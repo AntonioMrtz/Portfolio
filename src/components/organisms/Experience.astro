@@ -4,20 +4,16 @@ import Card from "../molecules/card/Card.astro";
 import { BADGE_ID_TO_DATA } from "@/data/badges";
 ---
 
-<div
-  class="flex flex-col gap-6 w-full max-w-5xl mx-auto justify-center items-center p-4"
->
-  {
-    Object.values(COMPANY_ID_TO_DATA).map((v) => (
-      <Card
-        imgSrc={v.iconUrl}
-        imgAlt={`${v.name} Logo`}
-        title={v.jobInfo.title}
-        subheader={v.name + " | " + v.jobInfo.dates}
-        description={v.jobInfo.description}
-        links={{ websiteUrl: v.websiteUrl, repoUrl: v.repoUrl }}
-        badges={v.jobInfo.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
-      />
-    ))
-  }
-</div>
+{
+  Object.values(COMPANY_ID_TO_DATA).map((v) => (
+    <Card
+      imgSrc={v.iconUrl}
+      imgAlt={`${v.name} Logo`}
+      title={v.jobInfo.title}
+      subheader={[v.name, v.jobInfo.dates, v.jobInfo.contractType]}
+      description={v.jobInfo.description}
+      links={{ websiteUrl: v.websiteUrl, repoUrl: v.repoUrl }}
+      badges={v.jobInfo.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
+    />
+  ))
+}

@@ -16,7 +16,7 @@ type CompanyId =
   | "spotify-electron"
   | "adventjs-cli";
 
-type Company = {
+interface Company {
   id: CompanyId;
   name: string;
   websiteUrl: string;
@@ -24,7 +24,7 @@ type Company = {
   description: string;
   iconUrl: string;
   jobInfo: JobInfo;
-};
+}
 
 interface JobInfo {
   title: string;

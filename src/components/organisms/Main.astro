@@ -1,7 +1,14 @@
 ---
+import SectionTemplate from "../templates/SectionTemplate.astro";
 import Experience from "./Experience.astro";
+import Projects from "./Projects.astro";
 ---
 
-<main>
-  <Experience />
+<main class="flex flex-col gap-10">
+  <SectionTemplate title="Experience">
+    <Experience />
+  </SectionTemplate>
+  <SectionTemplate title="Projects">
+    <Projects />
+  </SectionTemplate>
 </main>

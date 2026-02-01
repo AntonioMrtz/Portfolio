@@ -19,7 +19,8 @@
     "biomolecules",
     "pytest",
     "Neutralino",
-    "Asyncio"
+    "Asyncio",
+    "baka"
   ],
   "editor.tabSize": 2,
   "editor.insertSpaces": true

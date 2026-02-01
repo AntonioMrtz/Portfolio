@@ -10,7 +10,7 @@ interface Props {
   imgSrc: string;
   imgAlt: string;
   title: string;
-  subheader?: string;
+  subheader?: string[];
   description: string;
   links: CardLinks;
   badges: Badge[];
@@ -18,6 +18,10 @@ interface Props {
 
 const { imgSrc, imgAlt, title, subheader, description, links, badges } =
   Astro.props;
+
+function parseSubheaderData(subheader: string[]): string {
+  return subheader.join(" | ");
+}
 ---
 
 <div
@@ -27,8 +31,14 @@ const { imgSrc, imgAlt, title, subheader, description, links, badges } =
     <img class="w-40 h-40 object-contain" src={imgSrc} alt={imgAlt} />
     <div class="flex flex-col gap-4 max-w-xl">
       <div class="flex flex-col gap-2">
-        <h3 class="font-bold text-3xl">{title}</h3>
-        {subheader && <h4 class="font-bold text-xl">{subheader}</h4>}
+        <h3 class="font-semibold text-3xl">{title}</h3>
+        {
+          subheader && (
+            <h4 class="font-semibold text-lg">
+              {parseSubheaderData(subheader)}
+            </h4>
+          )
+        }
       </div>
       <p class="whitespace-pre-line">{description}</p>
       <div class="flex flex-row gap-3">

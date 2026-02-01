@@ -1,0 +1,19 @@
+---
+import Card from "../molecules/card/Card.astro";
+import { BADGE_ID_TO_DATA } from "@/data/badges";
+import { PROJECT_ID_TO_DATA } from "@/data/projects";
+import SectionTemplate from "../templates/SectionTemplate.astro";
+---
+
+{
+  Object.values(PROJECT_ID_TO_DATA).map((v) => (
+    <Card
+      imgSrc={v.iconUrl}
+      imgAlt={`${v.name} Logo`}
+      title={v.name}
+      description={v.description}
+      links={{ websiteUrl: v.websiteUrl, repoUrl: v.repoUrl }}
+      badges={v.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
+    />
+  ))
+}
