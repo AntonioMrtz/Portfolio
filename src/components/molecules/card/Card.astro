@@ -25,7 +25,7 @@ function parseSubheaderData(subheader: string[]): string {
 ---
 
 <div
-  class={`card-container flex flex-col-reverse lg:flex-row gap-12 justify-between p-10 w-full max-w-5xl m-0 rounded-xl`}
+  class={`card-container card-reveal flex flex-col-reverse lg:flex-row gap-12 justify-between p-10 w-full max-w-5xl m-0 rounded-xl`}
 >
   <div class="flex flex-col md:flex-row gap-8">
     <img class="w-40 h-40 object-contain" src={imgSrc} alt={imgAlt} />
@@ -82,4 +82,51 @@ function parseSubheaderData(subheader: string[]): string {
       5px 5px 0px var(--neutral-gray-500),
       -5px -5px 0px var(--neutral-white);
   }
+
+  .card-reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition:
+      opacity 1.2s ease-out,
+      transform 1.2s ease-out;
+  }
+
+  .card-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
+
+<script>
+  function initCardReveal() {
+    const cards = document.querySelectorAll(".card-reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      },
+    );
+
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+  }
+
+  // Ejecutar cuando el DOM esté listo
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCardReveal);
+  } else {
+    initCardReveal();
+  }
+
+  // Re-ejecutar en navegación de Astro
+  document.addEventListener("astro:page-load", initCardReveal);
+</script>

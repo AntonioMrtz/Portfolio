@@ -2,11 +2,10 @@
 
 ## Doing
 
-- Card. Adapt box shadow for both orientations
-- Button for website and repo
 
 ## Backlog
 
+- cards make them smaller with a toggle to see more in mobile
 - Readme
 - sitemaps
 - check favicon github pages
@@ -14,3 +13,4 @@
 - remove unused assets
 - check og image working
 - Absolute imports
+
