@@ -17,7 +17,7 @@ const { color, label, iconSrc, iconSize, altText, url, turnIconWhite } =
   href={url}
   target="_blank"
   rel="noopener noreferrer"
-  class="flex flex-row gap-3 p-2 w-40 rounded-sm items-center justify-center hover:opacity-80 active:brightness-75 transition-all"
+  class="flex flex-row gap-3 p-2 w-40 rounded-sm items-center justify-center hover:opacity-80 transition-all border-2 border-transparent"
   style={`background-color: var(${color})`}
 >
   <img
@@ -28,3 +28,9 @@ const { color, label, iconSrc, iconSize, altText, url, turnIconWhite } =
   />
   <p class="text-white font-semibold">{label}</p>
 </a>
+
+<style>
+  a:active {
+    border-color: var(--accent-orange-500) !important;
+  }
+</style>
