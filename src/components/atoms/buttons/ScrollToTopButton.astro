@@ -1,5 +1,5 @@
 ---
-
+import ArrowUpIcon from "../../../assets/icons/arrow-up.svg?raw";
 ---
 
 <button
@@ -7,19 +7,7 @@
   class="scroll-to-top-button"
   aria-label="Back to top"
 >
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    class="arrow-icon"
-  >
-    <path
-      d="M12 20L12 4M12 4L18 10M12 4L6 10"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"></path>
-  </svg>
+  <Fragment set:html={ArrowUpIcon} />
 </button>
 
 <style>
@@ -52,15 +40,16 @@
     box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
   }
 
-  .arrow-icon {
+  .scroll-to-top-button :global(svg) {
     width: 1.5rem;
     height: 1.5rem;
-    color: var(--neutral-white);
-    transition: color 0.3s ease;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
   }
 
-  .scroll-to-top-button:hover .arrow-icon {
-    color: var(--accent-orange-500);
+  .scroll-to-top-button:hover :global(svg) {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
+      hue-rotate(360deg) brightness(102%) contrast(101%);
   }
 </style>
 
