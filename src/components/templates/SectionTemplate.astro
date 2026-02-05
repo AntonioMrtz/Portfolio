@@ -6,10 +6,10 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<section class="w-full max-w-5xl mx-auto p-4">
+<section class="w-full">
   {
     title && (
-      <h2 class="text-5xl font-bold mb-8 text-left text-(--secondary-purple-400)">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 text-left text-(--secondary-purple-400)">
         {title}
       </h2>
     )

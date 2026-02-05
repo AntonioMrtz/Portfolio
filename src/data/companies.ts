@@ -41,7 +41,7 @@ enum ContractType {
 }
 
 // Order matters: the will be shown in this order in the UI.
-const COMPANY_ID_TO_DATA: Record<CompanyId, Company> = {
+const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
   "metrica-sports": {
     id: "metrica-sports",
     name: "Metrica Sports",

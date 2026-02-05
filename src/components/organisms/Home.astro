@@ -1,0 +1,103 @@
+---
+import {
+  CONTACT_ID_TO_DATA,
+  CV_DATA,
+  PERSONAL_INFO,
+  type Contact,
+  type CvInfo,
+} from "@/data/me";
+import HomeCard from "../molecules/home-card/HomeCard.astro";
+
+const email = CONTACT_ID_TO_DATA.email;
+const linkedin = CONTACT_ID_TO_DATA.linkedin;
+const github = CONTACT_ID_TO_DATA.github;
+const cv = CV_DATA;
+
+const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
+---
+
+<div class="flex flex-col w-full lg:min-h-screen justify-center">
+  <!-- Text -->
+  <div class="flex flex-col gap-6 py-0 md:py-12 mb-16 md:mb-0">
+    <h1 class="text-7xl md:text-9xl font-black tracking-tighter gradient-text">
+      {PERSONAL_INFO.name}
+    </h1>
+    <h2
+      class="text-2xl md:text-4xl font-bold leading-relaxed"
+      style="color: var(--secondary-purple-300);"
+    >
+      {PERSONAL_INFO.title}
+    </h2>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
+    <div
+      class="flex flex-row w-[75%] md:w-full justify-center items-center relative mb-24 md:m-0"
+    >
+      <div class="aspect-square w-[75%] rotate-6 rounded-xl background-card">
+      </div>
+      <div
+        class="aspect-square w-[75%] rotate-3 rounded-xl background-card-secondary absolute"
+      >
+      </div>
+      <img
+        class="absolute w-[75%] h-auto rounded-lg profile-shadow"
+        src={PERSONAL_INFO.profilePicturePath}
+        alt={`${PERSONAL_INFO.name} profile picture`}
+      />
+    </div>
+    <div class="grid grid-cols-2 gap-6 w-full p-4 md:p-0">
+      {
+        HOME_CARDS.map((card) => (
+          <HomeCard
+            text={card.label}
+            iconSrc={card.iconPath}
+            url={card.url}
+            copyUrl={"copyUrl" in card ? card.copyUrl : undefined}
+          />
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .gradient-text {
+    background: linear-gradient(
+      90deg,
+      var(--accent-orange-500) 0%,
+      var(--secondary-purple-400) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .profile-shadow {
+    filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.4))
+      drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
+  }
+
+  .background-card {
+    background: linear-gradient(
+      135deg,
+      var(--accent-orange-500) 0%,
+      color-mix(in srgb, var(--accent-orange-500) 80%, black) 100%
+    );
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 10px 20px rgba(0, 0, 0, 0.2),
+      inset 0 -2px 10px rgba(255, 255, 255, 0.1);
+  }
+
+  .background-card-secondary {
+    background: linear-gradient(
+      135deg,
+      var(--profile-pic-background) 0%,
+      color-mix(in srgb, var(--profile-pic-background) 80%, black) 100%
+    );
+    box-shadow:
+      0 15px 30px rgba(0, 0, 0, 0.2),
+      0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+</style>

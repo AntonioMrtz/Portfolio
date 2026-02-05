@@ -3,7 +3,7 @@ import CardButton from "@/components/atoms/buttons/CardButton.astro";
 import githubIcon from "@/assets/icons/github.svg";
 import websiteIcon from "@/assets/icons/website.svg";
 import CardTech from "@/components/atoms/buttons/CardTech.astro";
-import type { CardLinks } from "./card.model";
+import type { CardLinks } from "./experience-card.model";
 import type { Badge } from "@/data/badges";
 
 interface Props {
@@ -25,7 +25,7 @@ function parseSubheaderData(subheader: string[]): string {
 ---
 
 <div
-  class={`card-container card-reveal flex flex-col-reverse lg:flex-row gap-12 justify-between p-10 w-full max-w-5xl m-0 rounded-xl`}
+  class={`card-container card-reveal flex flex-col-reverse lg:flex-row gap-12 justify-between p-4 sm:p-10 w-full m-0 rounded-xl`}
 >
   <div class="flex flex-col md:flex-row gap-8">
     <img class="w-40 h-40 object-contain" src={imgSrc} alt={imgAlt} />
@@ -41,7 +41,9 @@ function parseSubheaderData(subheader: string[]): string {
         }
       </div>
       <div class="description-container">
-        <p class="description whitespace-pre-line">{description}</p>
+        <p class="description whitespace-pre-line">
+          {description}
+        </p>
       </div>
       <div class="flex flex-row gap-3">
         {
@@ -114,7 +116,7 @@ function parseSubheaderData(subheader: string[]): string {
     }
 
     .description-container:not(.expanded) .description {
-      max-height: 9rem;
+      max-height: 8rem;
       overflow: hidden;
       position: relative;
     }

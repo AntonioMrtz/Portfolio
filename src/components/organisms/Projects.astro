@@ -1,13 +1,12 @@
 ---
-import Card from "../molecules/card/Card.astro";
+import ExperienceCard from "../molecules/experience-card/ExperienceCard.astro";
 import { BADGE_ID_TO_DATA } from "@/data/badges";
 import { PROJECT_ID_TO_DATA } from "@/data/projects";
-import SectionTemplate from "../templates/SectionTemplate.astro";
 ---
 
 {
   Object.values(PROJECT_ID_TO_DATA).map((v) => (
-    <Card
+    <ExperienceCard
       imgSrc={v.iconUrl}
       imgAlt={`${v.name} Logo`}
       title={v.name}

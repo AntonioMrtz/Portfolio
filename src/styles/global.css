@@ -12,13 +12,19 @@
   --primary-black-500: #2b2a2e;
   --primary-black-600: #1f1f22;
 
+  --secondary-purple-300: #5c546e;
   --secondary-purple-400: #4b455b;
   --secondary-purple-500: #474159;
+  --secondary-purple-900: #2c2536;
 
   --neutral-white: #ffffff;
   --neutral-gray-50: #fafafa;
   --neutral-gray-100: #f0f0f0;
   --neutral-gray-500: #4d4c53;
+
+  --profile-pic-background: #3ec0bb;
+
+  color: var(--secondary-purple-900);
 }
 
 @font-face {

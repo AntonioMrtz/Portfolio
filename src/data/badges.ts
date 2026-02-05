@@ -8,7 +8,7 @@ type Badge = {
   imageUrl: string;
 };
 
-const BADGE_ID_TO_DATA: Record<TechId, Badge> = {
+const BADGE_ID_TO_DATA: Readonly<Record<TechId, Badge>> = {
   python: {
     id: "python",
     name: "Python",

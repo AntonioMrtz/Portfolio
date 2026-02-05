@@ -15,7 +15,7 @@ interface Project {
   tech: TechId[];
 }
 
-const PROJECT_ID_TO_DATA: Record<ProjectId, Project> = {
+const PROJECT_ID_TO_DATA: Readonly<Record<ProjectId, Project>> = {
   "adventjs-2024": {
     id: "adventjs-2024",
     name: "AdventJS 2024",

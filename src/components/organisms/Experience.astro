@@ -1,12 +1,12 @@
 ---
 import { COMPANY_ID_TO_DATA } from "@/data/companies";
-import Card from "../molecules/card/Card.astro";
+import ExperienceCard from "../molecules/experience-card/ExperienceCard.astro";
 import { BADGE_ID_TO_DATA } from "@/data/badges";
 ---
 
 {
   Object.values(COMPANY_ID_TO_DATA).map((v) => (
-    <Card
+    <ExperienceCard
       imgSrc={v.iconUrl}
       imgAlt={`${v.name} Logo`}
       title={v.jobInfo.title}

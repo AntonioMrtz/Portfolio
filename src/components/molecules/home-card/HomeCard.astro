@@ -1,0 +1,45 @@
+---
+interface Props {
+  text: string;
+  iconSrc: string;
+  url: string;
+  copyUrl?: string;
+}
+
+const { text, iconSrc, url, copyUrl } = Astro.props;
+---
+
+<a
+  class="group relative w-full flex flex-row justify-center items-center gap-4 aspect-square overflow-hidden rounded-xl bg-white/15 backdrop-blur-md border border-white/30 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ring-1 ring-white/10 transition-all duration-300 ease-out cursor-pointer select-none hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/20 hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)] hover:ring-white/30 active:translate-y-0 active:scale-[0.98] hover:border-(--accent-orange-500) active:border-(--accent-orange-500) active:ring-1 active:ring-(--accent-orange-500)/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+  tabindex="0"
+  href={copyUrl ? "#" : url}
+  target={copyUrl ? undefined : "_blank"}
+  rel={copyUrl ? undefined : "noopener noreferrer"}
+  id={`home-card-button-${text.toLowerCase()}`}
+>
+  <div
+    class="flex flex-col md:flex-row items-center gap-4 transition-opacity duration-100 delay-100 group-hover:delay-0 group-hover:duration-75 group-hover:opacity-0"
+  >
+    <img class="w-16 h-16" src={iconSrc} alt={text} />
+    <p class="text-2xl font-bold" style="color: var(--secondary-purple-400);">
+      {text}
+    </p>
+  </div>
+  <img
+    src={iconSrc}
+    alt={text}
+    class="absolute inset-0 m-auto opacity-0 transition-opacity duration-75 delay-0 group-hover:delay-150 group-hover:duration-300 group-hover:opacity-100 w-[50%] h-[50%] object-contain pointer-events-none z-10"
+  />
+</a>
+
+<script define:vars={{ url: url, copyUrl: copyUrl, text: text }} is:inline>
+  if (!copyUrl) return;
+
+  const button = document.getElementById(
+    `home-card-button-${text.toLowerCase()}`,
+  );
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(copyUrl);
+  });
+</script>
