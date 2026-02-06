@@ -27,9 +27,9 @@ function parseSubheaderData(subheader: string[]): string {
 <div
   class={`card-container card-reveal flex flex-col-reverse lg:flex-row gap-12 justify-between p-4 sm:p-10 w-full m-0 rounded-xl`}
 >
-  <div class="flex flex-col md:flex-row gap-8">
+  <div class="flex flex-col md:flex-row gap-8 min-w-0">
     <img class="w-40 h-40 object-contain" src={imgSrc} alt={imgAlt} />
-    <div class="flex flex-col gap-6 max-w-xl">
+    <div class="flex flex-col gap-6 max-w-xl min-w-0">
       <div class="flex flex-col gap-2">
         <h3 class="font-semibold text-3xl">{title}</h3>
         {
@@ -45,7 +45,7 @@ function parseSubheaderData(subheader: string[]): string {
           {description}
         </p>
       </div>
-      <div class="flex flex-row gap-3">
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-3">
         {
           links.repoUrl && (
             <CardButton
