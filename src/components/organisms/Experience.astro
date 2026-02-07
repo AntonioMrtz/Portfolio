@@ -8,7 +8,7 @@ import { BADGE_ID_TO_DATA } from "@/data/badges";
   Object.values(COMPANY_ID_TO_DATA).map((v) => (
     <ExperienceCard
       imgSrc={v.iconUrl}
-      imgAlt={`${v.name} Logo`}
+      imgAlt={`${v.name}`}
       title={v.jobInfo.title}
       subheader={[v.name, v.jobInfo.dates, v.jobInfo.contractType]}
       description={v.jobInfo.description}

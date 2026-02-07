@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
 interface Props {
   text: string;
-  iconSrc: string;
+  iconSrc: ImageMetadata;
   url: string;
   copyUrl?: string;
 }
@@ -22,10 +25,14 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
     id={`home-card-content-${text.toLowerCase()}`}
     class="flex flex-col items-center gap-4 transition-opacity duration-300 group-hover:opacity-0 group-hover:duration-75"
   >
-    <img
+    <Image
       class="w-12 sm:w-8 2xl:w-14 h-12 sm:h-8 2xl:h-14"
       src={iconSrc}
       alt={text}
+      width={48}
+      height={48}
+      loading="eager"
+      fetchpriority="high"
     />
     <p
       class="text-xl 2xl:text-2xl font-bold hidden md:block"
@@ -40,7 +47,14 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
     id={`hover-image-${text.toLowerCase()}`}
     class="absolute flex flex-col justify-center items-center inset-0 m-auto opacity-0 transition-opacity duration-300 w-[50%] h-[50%] object-contain pointer-events-none z-10 group-hover:opacity-100 group-hover:delay-150"
   >
-    <img src={iconSrc} alt={text} />
+    <Image
+      src={iconSrc}
+      alt={text}
+      width={48}
+      height={48}
+      loading="eager"
+      fetchpriority="high"
+    />
   </div>
 
   <!-- Hover for copied message cards -->
@@ -52,7 +66,7 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
       >
         <div
           class="w-[50%] h-[50%]"
-          style={`-webkit-mask: url("${iconSrc}") no-repeat center / contain; mask: url("${iconSrc}") no-repeat center / contain; background-color: var(--accent-orange-500);`}
+          style={`-webkit-mask: url("${iconSrc.src}") no-repeat center / contain; mask: url("${iconSrc.src}") no-repeat center / contain; background-color: var(--accent-orange-500);`}
         />
         <p
           class="font-semibold text-xl text-center"

@@ -1,3 +1,4 @@
+import type { ImageMetadata } from "astro";
 import type { TechId } from "./stack";
 import metricaSportsIcon from "@/assets/images/companies/metrica-sports.png";
 import spotifyElectronIcon from "@/assets/images/companies/spotify-electron.webp";
@@ -22,7 +23,7 @@ interface Company {
   websiteUrl: string;
   repoUrl?: string;
   description: string;
-  iconUrl: string;
+  iconUrl: ImageMetadata;
   jobInfo: JobInfo;
 }
 
@@ -48,7 +49,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     websiteUrl: "https://www.metrica-sports.com/",
     description:
       "Metrica Sports provides an analysis solution for non-professional and professional teams. Our products, PlayBase and Metrica Nexus, allow users to enhance their game with video and data integration.",
-    iconUrl: metricaSportsIcon.src,
+    iconUrl: metricaSportsIcon,
     jobInfo: {
       title: "Frontend Developer (Angular & RxJS)",
       description:
@@ -65,7 +66,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     repoUrl: "https://github.com/AntonioMrtz/SpotifyElectron",
     description:
       "A cross-platform, open-source music streaming desktop app that includes Spotify-like core functionalities and user-requested features—such as the ability to upload personal music.",
-    iconUrl: spotifyElectronIcon.src,
+    iconUrl: spotifyElectronIcon,
     jobInfo: {
       title: "Lead Developer (Python & React & FastAPI & MongoDB)",
       description:
@@ -81,7 +82,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     websiteUrl: "https://bionet.com/",
     description:
       "BIONET is a leading manufacturer of laboratory, pilot and industrial equipment and software for the bioprocessing industry, as well as a provider of advanced bioprocess-related services for companies that want to produce biomolecules through microbial fermentation or through cell culturing processes.",
-    iconUrl: bionetIcon.src,
+    iconUrl: bionetIcon,
     jobInfo: {
       title: "Full-Stack Developer (Python & Angular & FastAPI)",
       description:
@@ -98,7 +99,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     repoUrl: "https://github.com/AntonioMrtz/adventjs-cli",
     description:
       "AdventJS CLI Generator - Spin up your AdventJS challenges by @midudev in seconds! 🎄⚡ ",
-    iconUrl: adventjsIcon.src,
+    iconUrl: adventjsIcon,
     jobInfo: {
       title: "Lead Developer (TypeScript)",
       description:
@@ -114,7 +115,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     websiteUrl: "https://antoniomrtz.github.io/MayorOpticaWeb/",
     repoUrl: "https://github.com/AntonioMrtz/MayorOpticaWeb",
     description: "Optical center in Puente Tocinos, Murcia",
-    iconUrl: mayorOpticaIcon.src,
+    iconUrl: mayorOpticaIcon,
     jobInfo: {
       title: "Lead Frontend Developer",
       description:
@@ -129,7 +130,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     name: "Byprox",
     websiteUrl: "https://byprox.com/",
     description: "Development of Custom INDUSTRY 4.0 Projects",
-    iconUrl: byproxIcon.src,
+    iconUrl: byproxIcon,
     jobInfo: {
       title: "Backend Developer (PHP)",
       description:

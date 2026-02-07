@@ -3,6 +3,7 @@ import { CONTACT_ID_TO_DATA, PERSONAL_INFO } from "@/data/me";
 import { SECTIONS_ID_TO_DATA } from "@/data/sections";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { TW_SCREEN_LG } from "@/styles/styles";
+import { Image } from "astro:assets";
 ---
 
 <header id="site-navbar" class="lg:flex py-4 px-5 md:px-12 gap-5 navbar">
@@ -14,7 +15,7 @@ import { TW_SCREEN_LG } from "@/styles/styles";
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={PERSONAL_INFO.logo} alt={`${PERSONAL_INFO.name} logo`} />
+        <Image src={PERSONAL_INFO.logo} alt={`${PERSONAL_INFO.name}`} />
       </a>
       <div class="block lg:hidden">
         <MenuIcon class="icon navbar-text pointer cursor-pointer" />

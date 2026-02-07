@@ -6,12 +6,13 @@ export {
   PERSONAL_INFO,
   CV_DATA,
 };
-import emailIcon from "@/assets/icons/email.svg?url";
-import githubIcon from "@/assets/icons/github.svg?url";
-import linkedinIcon from "@/assets/icons/linkedin.svg?url";
-import cvIcon from "@/assets/icons/cv.svg?url";
+import type { ImageMetadata } from "astro";
+import emailIcon from "@/assets/icons/email.svg";
+import githubIcon from "@/assets/icons/github.svg";
+import linkedinIcon from "@/assets/icons/linkedin.svg";
+import cvIcon from "@/assets/icons/cv.svg";
 import profileIcon from "@/assets/images/me/profile-pic-no-bg-tall.png?url";
-import logoIcon from "@/assets/images/me/logoAM.png?url";
+import logoIcon from "@/assets/images/me/logoAM.png";
 
 type ContactId = "email" | "linkedin" | "github";
 
@@ -19,7 +20,7 @@ interface Contact {
   id: ContactId;
   label: string;
   url: string;
-  iconPath: string;
+  iconPath: ImageMetadata;
   copyUrl?: string;
 }
 
@@ -28,7 +29,7 @@ interface PersonalInfo {
   title: string[];
   description: string;
   profilePicturePath: string;
-  logo: string;
+  logo: ImageMetadata;
 }
 
 const PERSONAL_INFO: PersonalInfo = {
@@ -65,7 +66,7 @@ const CONTACT_ID_TO_DATA: Readonly<Record<ContactId, Contact>> = {
 interface CvInfo {
   label: string;
   url: string;
-  iconPath: string;
+  iconPath: ImageMetadata;
 }
 
 const CV_DATA: Readonly<CvInfo> = {

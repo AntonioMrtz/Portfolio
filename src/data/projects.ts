@@ -1,3 +1,4 @@
+import type { ImageMetadata } from "astro";
 import type { TechId } from "./stack";
 import adventjsIcon from "@/assets/images/companies/advent-js.webp";
 
@@ -11,7 +12,7 @@ interface Project {
   description: string;
   websiteUrl: string;
   repoUrl?: string;
-  iconUrl: string;
+  iconUrl: ImageMetadata;
   tech: TechId[];
 }
 
@@ -23,7 +24,7 @@ const PROJECT_ID_TO_DATA: Readonly<Record<ProjectId, Project>> = {
       "My solutions to the AdventJS 2024 challenge\n\nAdventJS is an annual event that helps developers improve their coding skills with 25 progressively harder challenges leading up to Christmas. The challenges are primarily focused on JavaScript and TypeScript, and in some cases Python. Each day, a new challenge is released, and participants are encouraged to solve it and share their solutions.",
     websiteUrl: "https://adventjs.dev/",
     repoUrl: "https://github.com/AntonioMrtz/AdventJS-2024",
-    iconUrl: adventjsIcon.src,
+    iconUrl: adventjsIcon,
     tech: ["typescript", "python"],
   },
 };
