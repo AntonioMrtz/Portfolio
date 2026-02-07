@@ -3,7 +3,6 @@ import type { TechId } from "./stack";
 import metricaSportsIcon from "@/assets/images/companies/metrica-sports.png";
 import spotifyElectronIcon from "@/assets/images/companies/spotify-electron.webp";
 import bionetIcon from "@/assets/images/companies/bionet.png";
-import adventjsIcon from "@/assets/images/companies/advent-js.webp";
 import mayorOpticaIcon from "@/assets/images/companies/mayor-optica.webp";
 import byproxIcon from "@/assets/images/companies/byprox.png";
 
@@ -14,8 +13,7 @@ type CompanyId =
   | "metrica-sports"
   | "byprox"
   | "mayor-optica"
-  | "spotify-electron"
-  | "adventjs-cli";
+  | "spotify-electron";
 
 interface Company {
   id: CompanyId;
@@ -90,23 +88,6 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
       contractType: ContractType.FullTime,
       dates: "Nov 2023 - Jul 2025",
       tech: ["python", "fastapi", "angular", "postgresql", "redis"],
-    },
-  },
-  "adventjs-cli": {
-    id: "adventjs-cli",
-    name: "AdventJS CLI",
-    websiteUrl: "https://adventjs.dev/",
-    repoUrl: "https://github.com/AntonioMrtz/adventjs-cli",
-    description:
-      "AdventJS CLI Generator - Spin up your AdventJS challenges by @midudev in seconds! 🎄⚡ ",
-    iconUrl: adventjsIcon,
-    jobInfo: {
-      title: "Lead Developer (TypeScript)",
-      description:
-        "I created adventjs-cli, a command-line tool designed to streamline and automate the setup for each AdventJS challenge—so developers can focus on solving problems, not configuring environments.\n\nWhat adventjs-cli provides?\n\nWith a single command, it automatically generates:\n\n- A TypeScript function template ready for your solution\n- A Markdown file with the full problem description\n- A Jest test file to validate your implementation\n\nBuilt-in development tooling\n\nThe project comes pre configured with:\n- Debugging tools\n- Jest testing environment\n- TypeScript setup\n- ESLint for code quality\n- Prettier for consistent formatting\n- GitHub Actions CI workflows\n\nThis tool streamlines the entire challenge workflow, making it easier, faster, and more enjoyable to tackle AdventJS throughout the season.",
-      contractType: ContractType.Freelance,
-      dates: "Nov 2025 - Dec 2025",
-      tech: ["nodejs", "typescript", "github_actions", "jest"],
     },
   },
   "mayor-optica": {
