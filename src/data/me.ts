@@ -11,7 +11,7 @@ import emailIcon from "@/assets/icons/email.svg";
 import githubIcon from "@/assets/icons/github.svg";
 import linkedinIcon from "@/assets/icons/linkedin.svg";
 import cvIcon from "@/assets/icons/cv.svg";
-import profileIcon from "@/assets/images/me/profile-pic-no-bg-tall.png?url";
+import profileIcon from "@/assets/images/me/profile-pic-no-bg-tall.webp";
 import logoIcon from "@/assets/images/me/logoAM.png";
 
 type ContactId = "email" | "linkedin" | "github";
@@ -28,7 +28,7 @@ interface PersonalInfo {
   name: string;
   title: string[];
   description: string;
-  profilePicturePath: string;
+  profilePicturePath: ImageMetadata;
   logo: ImageMetadata;
 }
 
