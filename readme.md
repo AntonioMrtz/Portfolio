@@ -26,3 +26,7 @@ Open `http://localhost:4321` in your browser.
 - `npm run build`: Build the site for production
 - `npm run preview`: Preview the production build locally
 - `npm run astro ...`: Run Astro CLI commands
+
+## Github Pages build
+
+Read the [official docs](https://docs.astro.build/en/guides/deploy/github/).
