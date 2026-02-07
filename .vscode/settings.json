@@ -20,7 +20,8 @@
     "pytest",
     "Neutralino",
     "Asyncio",
-    "baka"
+    "baka",
+    "Astronav"
   ],
   "editor.tabSize": 2,
   "editor.insertSpaces": true

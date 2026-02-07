@@ -10,7 +10,8 @@ import emailIcon from "@/assets/icons/email.svg?url";
 import githubIcon from "@/assets/icons/github.svg?url";
 import linkedinIcon from "@/assets/icons/linkedin.svg?url";
 import cvIcon from "@/assets/icons/cv.svg?url";
-import profileIcon from "@/assets/images/me/profile-pic-no-bg-tall.png";
+import profileIcon from "@/assets/images/me/profile-pic-no-bg-tall.png?url";
+import logoIcon from "@/assets/images/me/logoAM.png?url";
 
 type ContactId = "email" | "linkedin" | "github";
 
@@ -27,13 +28,15 @@ interface PersonalInfo {
   title: string[];
   description: string;
   profilePicturePath: string;
+  logo: string;
 }
 
 const PERSONAL_INFO: PersonalInfo = {
   name: "Antonio Martínez Fernández",
   title: ["Full Stack Developer", "Python, Angular, Node.js & React"],
   description: "🎯 Transforming ideas into Software",
-  profilePicturePath: profileIcon.src,
+  profilePicturePath: profileIcon,
+  logo: logoIcon,
 };
 
 // Order matters for display purposes

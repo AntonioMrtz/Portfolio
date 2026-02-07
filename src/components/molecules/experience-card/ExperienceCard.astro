@@ -5,6 +5,7 @@ import websiteIcon from "@/assets/icons/website.svg";
 import CardTech from "@/components/atoms/buttons/CardTech.astro";
 import type { CardLinks } from "./experience-card.model";
 import type { Badge } from "@/data/badges";
+import { TW_SCREEN_MD } from "@/styles/styles";
 
 interface Props {
   imgSrc: string;
@@ -40,14 +41,14 @@ function parseSubheaderData(subheader: string[]): string {
         <h3 class="font-bold text-lg md:text-2xl 2xl:text-3xl">{title}</h3>
         {
           subheader && (
-            <h4 class="font-semibold text-md md:text-lg">
+            <h4 class="font-semibold text-md md:text-lg 2xl:text-xl">
               {parseSubheaderData(subheader)}
             </h4>
           )
         }
       </div>
       <div class="description-container">
-        <p class="description whitespace-pre-line">
+        <p class="description whitespace-pre-line text-base 2xl:text-[1.2rem]">
           {description}
         </p>
       </div>
@@ -152,7 +153,7 @@ function parseSubheaderData(subheader: string[]): string {
   }
 </style>
 
-<script>
+<script define:vars={{ mdBreakpoint: TW_SCREEN_MD }}>
   function initCardReveal() {
     const cards = document.querySelectorAll(".card-reveal");
 
@@ -180,8 +181,7 @@ function parseSubheaderData(subheader: string[]): string {
       ".description-container",
     );
 
-    // Tailwind's md breakpoint is 768px
-    const isMobile = window.matchMedia("(max-width: 768px)");
+    const isMobile = window.matchMedia(`(max-width: ${mdBreakpoint})`);
 
     descriptionContainers.forEach((container) => {
       container.addEventListener("click", () => {

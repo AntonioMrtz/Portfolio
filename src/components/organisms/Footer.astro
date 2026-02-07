@@ -12,7 +12,7 @@ const github = CONTACT_ID_TO_DATA.github as Contact;
       <!-- Column 1: About -->
       <div class="mx-auto">
         <h3 class="text-lg font-bold mb-4">{PERSONAL_INFO.name}</h3>
-        <p class="text-(--neutral-gray-100)">
+        <p class="text-(--neutral-gray-100) footer-text">
           {PERSONAL_INFO.description}
         </p>
       </div>
@@ -30,7 +30,7 @@ const github = CONTACT_ID_TO_DATA.github as Contact;
             href={linkedin.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500)"
+            class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500) footer-text"
           >
             {linkedin.label}
           </a>
@@ -51,7 +51,7 @@ const github = CONTACT_ID_TO_DATA.github as Contact;
               href={github.url}
               target="_blank"
               rel="noopener noreferrer"
-              class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500)"
+              class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500) footer-text"
             >
               {github.label}
             </a>
@@ -64,7 +64,7 @@ const github = CONTACT_ID_TO_DATA.github as Contact;
             />
             <a
               href={email.url}
-              class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500)"
+              class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500) footer-text"
             >
               {email.label}
             </a>
@@ -83,3 +83,15 @@ const github = CONTACT_ID_TO_DATA.github as Contact;
     </div>
   </div>
 </footer>
+
+<style>
+  .footer-text {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 1536px) {
+    .footer-text {
+      font-size: 1.2rem;
+    }
+  }
+</style>

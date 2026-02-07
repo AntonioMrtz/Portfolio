@@ -15,6 +15,7 @@
   --secondary-purple-300: #5c546e;
   --secondary-purple-400: #4b455b;
   --secondary-purple-500: #474159;
+  --secondary-purple-600: #3e3750;
   --secondary-purple-900: #2c2536;
 
   --neutral-white: #ffffff;
@@ -23,6 +24,12 @@
   --neutral-gray-500: #4d4c53;
 
   --profile-pic-background: #3ec0bb;
+
+  --tw-screen-sm: 640px;
+  --tw-screen-md: 768px;
+  --tw-screen-lg: 1024px;
+  --tw-screen-xl: 1280px;
+  --tw-screen-2xl: 1536px;
 
   color: var(--secondary-purple-900);
 }
