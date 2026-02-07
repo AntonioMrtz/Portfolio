@@ -24,15 +24,14 @@ interface Contact {
 
 interface PersonalInfo {
   name: string;
-  title: string;
+  title: string[];
   description: string;
   profilePicturePath: string;
 }
 
 const PERSONAL_INFO: PersonalInfo = {
   name: "Antonio Martínez Fernández",
-  title:
-    "Full Stack Developer | Python, Angular, Node.js & React | Creator of Spotify Electron App",
+  title: ["Full Stack Developer", "Python, Angular, Node.js & React"],
   description: "🎯 Transforming ideas into Software",
   profilePicturePath: profileIcon.src,
 };

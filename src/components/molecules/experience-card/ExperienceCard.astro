@@ -28,13 +28,19 @@ function parseSubheaderData(subheader: string[]): string {
   class={`card-container card-reveal flex flex-col-reverse lg:flex-row gap-12 justify-between p-4 sm:p-10 w-full m-0 rounded-xl`}
 >
   <div class="flex flex-col md:flex-row gap-8 min-w-0">
-    <img class="w-40 h-40 object-contain" src={imgSrc} alt={imgAlt} />
+    <div class="flex justify-center md:justify-start w-full">
+      <img
+        class="w-30 sm:w-40 h-30 sm:h-40 object-contain"
+        src={imgSrc}
+        alt={imgAlt}
+      />
+    </div>
     <div class="flex flex-col gap-6 max-w-xl min-w-0">
       <div class="flex flex-col gap-2">
-        <h3 class="font-semibold text-3xl">{title}</h3>
+        <h3 class="font-bold text-lg md:text-2xl 2xl:text-3xl">{title}</h3>
         {
           subheader && (
-            <h4 class="font-semibold text-lg">
+            <h4 class="font-semibold text-md md:text-lg">
               {parseSubheaderData(subheader)}
             </h4>
           )

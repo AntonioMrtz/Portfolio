@@ -16,39 +16,49 @@ const cv = CV_DATA;
 const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
 ---
 
-<div class="flex flex-col w-full lg:min-h-screen justify-center">
+<div class="flex flex-col w-full min-h-screen justify-center gap-4">
   <!-- Text -->
-  <div class="flex flex-col gap-6 py-0 md:py-12 mb-16 md:mb-0">
+  <div class="flex flex-col gap-2 sm:gap-6 mb-6 sm:mb-16">
     <h1
-      class="text-7xl text-center md:text-9xl font-black tracking-tighter gradient-text"
+      class="text-3xl md:text-5xl 2xl:text-9xl text-center font-black gradient-text"
     >
       {PERSONAL_INFO.name}
     </h1>
-    <h2
-      class="text-2xl text-center md:text-4xl font-bold leading-relaxed"
-      style="color: var(--secondary-purple-300);"
-    >
-      {PERSONAL_INFO.title}
-    </h2>
+    <div class="flex flex-col flex-wrap gap-1 items-center justify-center">
+      {
+        PERSONAL_INFO.title.map((line) => (
+          <h2
+            class="text-lg sm:text-2xl text-center 2xl:text-3xl font-black leading-tight gap-1"
+            style="color: var(--secondary-purple-300);"
+          >
+            {`>> ${line}`}
+          </h2>
+        ))
+      }
+    </div>
   </div>
 
-  <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
+  <div
+    class="flex flex-col md:flex-row gap-12 lg:gap-4 justify-between items-center md:p-[5%]"
+  >
     <div
-      class="flex flex-row w-[75%] md:w-full justify-center items-center relative mb-24 md:m-0"
+      class="flex flex-row w-full justify-center items-center relative mb-4 md:m-0"
     >
-      <div class="aspect-square w-[75%] rotate-6 rounded-xl background-card">
+      <div
+        class="aspect-square w-[40%] sm:w-[50%] 2xl:w-[65%] rotate-6 rounded-xl background-card"
+      >
       </div>
       <div
-        class="aspect-square w-[75%] rotate-3 rounded-xl background-card-secondary absolute"
+        class="aspect-square w-[40%] sm:w-[50%] 2xl:w-[65%] rotate-3 rounded-xl background-card-secondary absolute"
       >
       </div>
       <img
-        class="absolute w-[75%] h-auto rounded-lg profile-shadow"
+        class="absolute w-[40%] sm:w-[50%] 2xl:w-[65%] h-auto rounded-lg profile-shadow"
         src={PERSONAL_INFO.profilePicturePath}
         alt={`${PERSONAL_INFO.name} profile picture`}
       />
     </div>
-    <div class="grid grid-cols-2 gap-6 w-full p-4 md:p-0">
+    <div class="grid grid-cols-2 gap-6 w-[65%] xl:p-[5%]">
       {
         HOME_CARDS.map((card) => (
           <HomeCard

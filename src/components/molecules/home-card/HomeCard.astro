@@ -20,13 +20,19 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
   <!-- Content -->
   <div
     id={`home-card-content-${text.toLowerCase()}`}
-    class="flex flex-col md:flex-row items-center gap-4 transition-opacity duration-300 group-hover:opacity-0 group-hover:duration-75"
+    class="flex flex-col items-center gap-4 transition-opacity duration-300 group-hover:opacity-0 group-hover:duration-75"
   >
-    <img class="w-12 sm:w-16 h-12 sm:h-16" src={iconSrc} alt={text} />
-    <p class="text-2xl font-bold" style="color: var(--secondary-purple-400);">
+    <img
+      class="w-12 sm:w-8 2xl:w-14 h-12 sm:h-8 2xl:h-14"
+      src={iconSrc}
+      alt={text}
+    />
+    <p
+      class="text-xl 2xl:text-2xl font-bold hidden md:block"
+      style="color: var(--secondary-purple-400);"
+    >
       {text}
     </p>
-    <p></p>
   </div>
 
   <!-- Regular hover -->
