@@ -60,8 +60,11 @@ import "@/styles/global.css";
 
     <title>Antonio Martínez — Portfolio</title>
 
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}/favicon.ico`} />
+    <link
+      rel="apple-touch-icon"
+      href={`${import.meta.env.BASE_URL}/favicon.ico`}
+    />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
