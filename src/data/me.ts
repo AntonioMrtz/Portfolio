@@ -71,6 +71,6 @@ interface CvInfo {
 
 const CV_DATA: Readonly<CvInfo> = {
   label: "CV",
-  url: "/cv/CV_Antonio_Martinez_Fernandez.pdf",
+  url: `${import.meta.env.BASE_URL}/cv/CV_Antonio_Martinez_Fernandez.pdf`,
   iconPath: cvIcon,
 };
