@@ -1,0 +1,34 @@
+---
+import { SECTIONS_ID_TO_DATA, type Section } from "@/data/sections";
+import SectionTemplate from "../templates/SectionTemplate.astro";
+import Experience from "./Experience.astro";
+import Home from "./Home.astro";
+import Projects from "./Projects.astro";
+
+const homeSection = SECTIONS_ID_TO_DATA.home;
+const experienceSection = SECTIONS_ID_TO_DATA.experience;
+const projectsSection = SECTIONS_ID_TO_DATA.projects;
+
+const getSectionTitle = (section: Section): string => {
+  return `${section.icon} ${section.label}`;
+};
+---
+
+<main class="flex flex-col gap-y-16 max-w-7xl mx-auto p-4">
+  <section id={homeSection.id}>
+    <Home />
+  </section>
+  <SectionTemplate
+    id={experienceSection.id}
+    title={getSectionTitle(experienceSection)}
+  >
+    <Experience />
+  </SectionTemplate>
+
+  <SectionTemplate
+    id={projectsSection.id}
+    title={getSectionTitle(projectsSection)}
+  >
+    <Projects />
+  </SectionTemplate>
+</main>

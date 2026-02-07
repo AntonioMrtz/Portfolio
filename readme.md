@@ -1,24 +1,28 @@
-# Welcome to my Portfolio 💻🎨
+# Portfolio
 
+Personal portfolio built with Astro and Tailwind CSS.
 
-![Home](assets/walkthrough/home.png)
-<br>
-<br>
+## Tech Stack
 
-![Tecnologias](assets/walkthrough/tecnologias.png)
-<br>
-<br>
+- Astro
+- TypeScript
+- Tailwind CSS
 
-![Proyectos](assets/walkthrough/proyectos.png)
-<br>
-<br>
+## Getting Started
 
-![Conoceme](assets/walkthrough/conoceme.png)
+```sh
+npm install
+```
 
+```sh
+npm run dev
+```
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/AntonioMrtz"><img src="assets/images/bio/header_frente.webp" width="400PX; " alt=""/></td>
-    <td align="center"><a href="https://github.com/AntonioMrtz"><img src="assets/images/thumbnails/logoAM.png" width="400PX;" alt=""/></td>
-  </tr>
-</table>
+Open `http://localhost:4321` in your browser.
+
+## Scripts
+
+- `npm run dev`: Start the dev server
+- `npm run build`: Build the site for production
+- `npm run preview`: Preview the production build locally
+- `npm run astro ...`: Run Astro CLI commands

@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --accent-orange-500: #ffa500;
+
+  --primary-black-400: #313132;
+  --primary-black-500: #2b2a2e;
+  --primary-black-600: #1f1f22;
+
+  --secondary-purple-300: #5c546e;
+  --secondary-purple-400: #4b455b;
+  --secondary-purple-500: #474159;
+  --secondary-purple-600: #3e3750;
+  --secondary-purple-900: #2c2536;
+
+  --neutral-white: #ffffff;
+  --neutral-gray-50: #fafafa;
+  --neutral-gray-100: #f0f0f0;
+  --neutral-gray-500: #4d4c53;
+
+  --profile-pic-background: #3ec0bb;
+
+  --tw-screen-sm: 640px;
+  --tw-screen-md: 768px;
+  --tw-screen-lg: 1024px;
+  --tw-screen-xl: 1280px;
+  --tw-screen-2xl: 1536px;
+
+  color: var(--secondary-purple-900);
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/Ubuntu-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/Ubuntu-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

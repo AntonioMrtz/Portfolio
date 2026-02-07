@@ -1,0 +1,126 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  text: string;
+  iconSrc: ImageMetadata;
+  url: string;
+  copyUrl?: string;
+}
+
+const { text, iconSrc, url, copyUrl } = Astro.props;
+---
+
+<a
+  class="group relative w-full flex flex-row justify-center items-center gap-4 aspect-square overflow-hidden rounded-xl bg-white/15 backdrop-blur-md border border-white/30 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ring-1 ring-white/10 transition-all duration-300 ease-out cursor-pointer select-none hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/20 hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)] hover:ring-white/30 active:translate-y-0 active:scale-[0.98] hover:border-(--accent-orange-500) active:border-(--accent-orange-500) active:ring-1 active:ring-(--accent-orange-500)/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+  tabindex="0"
+  href={copyUrl ? "#" : url}
+  target={copyUrl ? undefined : "_blank"}
+  rel={copyUrl ? undefined : "noopener noreferrer"}
+  id={`home-card-button-${text.toLowerCase()}`}
+>
+  <!-- Content -->
+  <div
+    id={`home-card-content-${text.toLowerCase()}`}
+    class="flex flex-col items-center gap-4 transition-opacity duration-300 group-hover:opacity-0 group-hover:duration-75"
+  >
+    <Image
+      class="w-12 sm:w-8 2xl:w-14 h-12 sm:h-8 2xl:h-14"
+      src={iconSrc}
+      alt={text}
+      width={48}
+      height={48}
+      loading="eager"
+      fetchpriority="high"
+    />
+    <p
+      class="text-xl 2xl:text-2xl font-bold hidden md:block"
+      style="color: var(--secondary-purple-400);"
+    >
+      {text}
+    </p>
+  </div>
+
+  <!-- Regular hover -->
+  <div
+    id={`hover-image-${text.toLowerCase()}`}
+    class="absolute flex flex-col justify-center items-center inset-0 m-auto opacity-0 transition-opacity duration-300 w-[50%] h-[50%] object-contain pointer-events-none z-10 group-hover:opacity-100 group-hover:delay-150"
+  >
+    <Image
+      src={iconSrc}
+      alt={text}
+      width={48}
+      height={48}
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+
+  <!-- Hover for copied message cards -->
+  {
+    copyUrl && (
+      <div
+        id={`card-copied-${text.toLowerCase()}`}
+        class="absolute flex flex-col justify-center items-center inset-0 m-auto opacity-0 transition-opacity duration-300 w-[50%] h-[50%] object-contain pointer-events-none z-10"
+      >
+        <div
+          class="w-[50%] h-[50%]"
+          style={`-webkit-mask: url("${iconSrc.src}") no-repeat center / contain; mask: url("${iconSrc.src}") no-repeat center / contain; background-color: var(--accent-orange-500);`}
+        />
+        <p
+          class="font-semibold text-xl text-center"
+          style="color: var(--accent-orange-500)"
+        >
+          {`${text} copied!`}
+        </p>
+      </div>
+    )
+  }
+</a>
+
+<script define:vars={{ url: url, copyUrl: copyUrl, text: text }} is:inline>
+  if (!copyUrl) return;
+
+  const button = document.getElementById(
+    `home-card-button-${text.toLowerCase()}`,
+  );
+  const copiedMessage = document.getElementById(
+    `card-copied-${text.toLowerCase()}`,
+  );
+  const content = document.getElementById(
+    `home-card-content-${text.toLowerCase()}`,
+  );
+  const hoverImage = document.getElementById(
+    `hover-image-${text.toLowerCase()}`,
+  );
+
+  let buttonClickTimeout = null;
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(copyUrl);
+
+    // Clear any existing timeouts
+    if (buttonClickTimeout) clearTimeout(buttonClickTimeout);
+
+    // Temporarily disable hover effects
+    button.classList.remove("group");
+
+    // Hide the original content and hover image, show the "Email copied" message
+    content.style.opacity = "0";
+    hoverImage.style.opacity = "0";
+    copiedMessage.style.opacity = "1";
+
+    // Restore after 2 seconds
+    buttonClickTimeout = setTimeout(() => {
+      copiedMessage.style.opacity = "0";
+      // Reset all inline styles to allow CSS classes to control opacity again
+      content.style.opacity = "";
+      hoverImage.style.opacity = "";
+      copiedMessage.style.opacity = "";
+      // Re-enable hover effects
+      button.classList.add("group");
+    }, 2000);
+  });
+</script>

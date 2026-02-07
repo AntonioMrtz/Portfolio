@@ -1,0 +1,18 @@
+---
+import ExperienceCard from "../molecules/experience-card/ExperienceCard.astro";
+import { BADGE_ID_TO_DATA } from "@/data/badges";
+import { PROJECT_ID_TO_DATA } from "@/data/projects";
+---
+
+{
+  Object.values(PROJECT_ID_TO_DATA).map((v) => (
+    <ExperienceCard
+      imgSrc={v.iconUrl}
+      imgAlt={`${v.name}`}
+      title={v.name}
+      description={v.description}
+      links={{ websiteUrl: v.websiteUrl, repoUrl: v.repoUrl }}
+      badges={v.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
+    />
+  ))
+}

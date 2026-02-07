@@ -1,0 +1,110 @@
+---
+import { Image } from "astro:assets";
+import { CONTACT_ID_TO_DATA, PERSONAL_INFO, type Contact } from "@/data/me";
+
+const email = CONTACT_ID_TO_DATA.email as Contact;
+const linkedin = CONTACT_ID_TO_DATA.linkedin as Contact;
+const github = CONTACT_ID_TO_DATA.github as Contact;
+---
+
+<footer class="bg-(--primary-black-500) text-white py-12">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Column 1: About -->
+      <div class="mx-auto">
+        <h3 class="text-lg font-bold mb-4">{PERSONAL_INFO.name}</h3>
+        <p class="text-(--neutral-gray-100) footer-text">
+          {PERSONAL_INFO.description}
+        </p>
+      </div>
+
+      <!-- Column 2: Useful Links -->
+      <div class="mx-auto">
+        <h3 class="text-lg font-bold mb-4">USEFUL LINKS</h3>
+        <div class="flex items-center gap-2">
+          <Image
+            src={linkedin.iconPath}
+            alt={linkedin.label}
+            width={20}
+            height={20}
+            loading="lazy"
+            decoding="async"
+            class="w-5 h-5 brightness-0 invert"
+          />
+          <a
+            href={linkedin.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500) footer-text"
+          >
+            {linkedin.label}
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 3: Contact -->
+      <div class="mx-auto">
+        <h3 class="text-lg font-bold mb-4">CONTACT</h3>
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <Image
+              src={github.iconPath}
+              alt={github.label}
+              width={20}
+              height={20}
+              loading="lazy"
+              decoding="async"
+              class="w-5 h-5 brightness-0 invert"
+            />
+            <a
+              href={github.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500) footer-text"
+            >
+              {github.label}
+            </a>
+          </div>
+          <div class="flex items-center gap-2">
+            <Image
+              src={email.iconPath}
+              alt={email.label}
+              width={20}
+              height={20}
+              loading="lazy"
+              decoding="async"
+              class="w-5 h-5 brightness-0 invert"
+            />
+            <a
+              href={email.url}
+              class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500) footer-text"
+            >
+              {email.label}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div
+      class="border-t border-(--secondary-purple-400) pt-6 text-center text-(--neutral-gray-500)"
+    >
+      <a target="_blank" rel="noopener noreferrer" href={github.url}>
+        © 2022 Copyright: Antonio Martínez Fernández</a
+      >
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-text {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 1536px) {
+    .footer-text {
+      font-size: 1.2rem;
+    }
+  }
+</style>

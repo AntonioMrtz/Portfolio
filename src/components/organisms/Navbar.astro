@@ -1,0 +1,209 @@
+---
+import { CONTACT_ID_TO_DATA, PERSONAL_INFO } from "@/data/me";
+import { SECTIONS_ID_TO_DATA } from "@/data/sections";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { TW_SCREEN_LG } from "@/styles/styles";
+import { Image } from "astro:assets";
+---
+
+<header id="site-navbar" class="lg:flex py-4 px-5 md:px-12 gap-5 navbar">
+  <Astronav closeOnClick>
+    <div class="flex w-full justify-end lg:justify-between">
+      <a
+        class="icon logo-icon"
+        href={CONTACT_ID_TO_DATA.github.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image src={PERSONAL_INFO.logo} alt={`${PERSONAL_INFO.name}`} />
+      </a>
+      <div class="block lg:hidden">
+        <MenuIcon class="icon navbar-text pointer cursor-pointer" />
+      </div>
+    </div>
+    <MenuItems class="hidden pr-[5%] lg:flex">
+      <ul class="flex flex-col gap-5 items-center lg:flex-row">
+        {
+          Object.values(SECTIONS_ID_TO_DATA).map((section) => (
+            <li class="navbar-link">
+              <a href={`#${section.id}`} class="navbar-text">
+                <p class="font-semibold text-4xl lg:text-[24px]">
+                  {section.label}
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </MenuItems>
+  </Astronav>
+</header>
+
+<style>
+  .navbar {
+    color: var(--secondary-purple-600);
+    opacity: 0.85;
+    transition:
+      background-color 240ms ease,
+      box-shadow 240ms ease,
+      border-radius 240ms ease,
+      opacity 240ms ease,
+      transform 240ms ease;
+  }
+
+  .navbar-text {
+    color: var(--secondary-purple-600);
+    opacity: 0.85;
+    transition: color 240ms ease;
+  }
+
+  .navbar-link:hover .navbar-text {
+    color: var(--accent-orange-500) !important;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo-icon {
+    display: none;
+  }
+
+  .navbar.is-hidden {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+  }
+
+  :global(body.menu-open) {
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: none;
+  }
+
+  @media (max-width: 1023px) {
+    :global(.astronav-items) {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1.5rem;
+      background-color: var(--secondary-purple-300);
+      height: 100dvh;
+      width: 100vw;
+      overflow-y: auto;
+    }
+
+    :global(.astronav-items ul) {
+      width: 100%;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    :global(.astronav-items .navbar-text) {
+      color: var(--neutral-white);
+      opacity: 1;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    :global(.astronav-items .navbar-link a) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 14rem;
+      padding: 0.75rem 1.5rem;
+    }
+
+    :global(.astronav-items.hidden) {
+      display: none;
+    }
+
+    :global(#astronav-menu) {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 80;
+      color: var(--secondary-purple-600);
+      opacity: 0.9;
+    }
+
+    :global(body.menu-open #astronav-menu) {
+      color: var(--neutral-white);
+      opacity: 1;
+    }
+
+    :global(body.menu-open #astronav-menu .navbar-text) {
+      color: var(--neutral-white);
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .icon {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .navbar {
+      border-radius: 12px;
+      margin: 12px 16px 0;
+    }
+
+    .logo-icon {
+      display: block;
+    }
+  }
+</style>
+
+<script define:vars={{ lgBreakpoint: TW_SCREEN_LG }}>
+  const navbar = document.getElementById("site-navbar");
+  const menuItems = document.querySelector(".astronav-items");
+  const menuButton = document.getElementById("astronav-menu");
+
+  const toggleBodyScrollLock = () => {
+    if (!menuItems) return;
+    const isMobile = window.matchMedia(
+      `(max-width: calc(${lgBreakpoint} - 1px))`,
+    ).matches;
+    const isMenuOpen = !menuItems.classList.contains("hidden");
+    const shouldLock = isMobile && isMenuOpen;
+    document.body.classList.toggle("menu-open", shouldLock);
+  };
+
+  const toggleNavbarHidden = () => {
+    if (!navbar) return;
+    const isDesktop = window.matchMedia(`(min-width: ${lgBreakpoint})`).matches;
+    const isScrolled = window.scrollY > 100;
+    if (!isDesktop) {
+      navbar.classList.remove("is-hidden");
+      return;
+    }
+    navbar.classList.toggle("is-hidden", isScrolled);
+  };
+
+  toggleNavbarHidden();
+  toggleBodyScrollLock();
+  window.addEventListener("scroll", toggleNavbarHidden, { passive: true });
+  window.addEventListener("resize", toggleBodyScrollLock, { passive: true });
+  menuButton?.addEventListener("click", () => {
+    requestAnimationFrame(toggleBodyScrollLock);
+  });
+  if (menuItems) {
+    const observer = new MutationObserver(toggleBodyScrollLock);
+    observer.observe(menuItems, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+  document.addEventListener("astro:page-load", toggleBodyScrollLock);
+</script>

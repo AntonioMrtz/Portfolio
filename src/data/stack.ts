@@ -1,0 +1,23 @@
+export { type TechId };
+
+type TechId =
+  | "python"
+  | "react"
+  | "fastapi"
+  | "mongodb"
+  | "electron"
+  | "angular"
+  | "rxjs"
+  | "typescript"
+  | "ionic"
+  | "nodejs"
+  | "github_actions"
+  | "jest"
+  | "astro"
+  | "javascript"
+  | "css"
+  | "bootstrap"
+  | "html"
+  | "postgresql"
+  | "redis"
+  | "php";

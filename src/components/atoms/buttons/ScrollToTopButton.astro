@@ -1,0 +1,76 @@
+---
+import ArrowUpIcon from "../../../assets/icons/arrow-up.svg?raw";
+---
+
+<button
+  id="scroll-to-top"
+  class="scroll-to-top-button"
+  aria-label="Back to top"
+>
+  <Fragment set:html={ArrowUpIcon} />
+</button>
+
+<style>
+  .scroll-to-top-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--primary-black-600);
+    border: 2px solid var(--primary-black-600);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .scroll-to-top-button.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .scroll-to-top-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+    border-color: var(--accent-orange-500);
+  }
+
+  .scroll-to-top-button :global(svg) {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+  }
+
+  .scroll-to-top-button:hover :global(svg) {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
+      hue-rotate(360deg) brightness(102%) contrast(101%);
+  }
+</style>
+
+<script>
+  const scrollButton = document.getElementById("scroll-to-top");
+
+  if (scrollButton) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollButton.classList.add("visible");
+      } else {
+        scrollButton.classList.remove("visible");
+      }
+    });
+
+    scrollButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+</script>
