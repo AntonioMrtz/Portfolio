@@ -68,10 +68,10 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     jobInfo: {
       title: "Lead Developer (Python & React & FastAPI & MongoDB)",
       description:
-        "As the owner and Lead Developer of an open-source cross-platform music streaming application, I have been at the forefront of replicating and enhancing Spotify's functionalities while incorporating unique user-requested features such as the ability to upload personal music. My role encompasses leadership, development and automatization.\n\n- Build and maintain a FastAPI-based REST API with Python and MongoDB.\n- Develop a cross-platform desktop app using React, TypeScript, and Electron.\n- Design UI with Material-UI, Bootstrap, HTML, and CSS, inspired by Spotify's UI.\n- Implement music streaming architecture and secure JWT authentication.\n- Utilize AWS (S3, CloudFront, Lambda) for storage, content delivery, and serverless functions.\n- Lead a global open-source team of 25+ contributors using Agile methodologies.\n- Manage Git/GitHub, overseeing branches, PRs, and issue tracking.\n- Use Docker for streamlined development and production environments.\n- Automate CI/CD pipelines with GitHub Actions, ensuring code quality and testing.\n- Implement end-to-end and unit testing with React Testing Library, Jest, and pytest.",
+        "As the owner and Lead Developer of an open-source cross-platform music streaming application, I have been at the forefront of replicating and enhancing Spotify's functionalities while incorporating unique user-requested features such as the ability to upload personal music.\n\n- Led a global open-source team of 25+ contributors using Agile methodologies, managing Git/GitHub workflows, PRs, and issue tracking.\n- Developed REST APIs using Python, FastAPI, and MongoDB, including JWT-based authentication.\n- Designed a scalable music streaming architecture leveraging AWS (S3, CloudFront, Lambda) for storage, CDN, and serverless processing.\n- Built a cross-platform desktop application with React, TypeScript, and Electron, featuring a Spotify-inspired UI.\n- Implemented Dockerized environments, CI/CD pipelines with GitHub Actions, and automated testing with Jest, React Testing Library, and pytest.",
       contractType: ContractType.Freelance,
       dates: "May 2023 - Present",
-      tech: ["python", "react", "fastapi", "mongodb", "electron"],
+      tech: ["python", "react", "fastapi", "mongodb", "aws"],
     },
   },
   bionet: {

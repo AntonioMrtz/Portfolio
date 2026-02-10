@@ -23,4 +23,5 @@ type TechId =
   | "php"
   | "english"
   | "nestjs"
+  | "aws"
   | "google_cloud";

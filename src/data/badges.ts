@@ -141,6 +141,12 @@ const BADGE_ID_TO_DATA: Readonly<Record<TechId, Badge>> = {
     imageUrl:
       "https://img.shields.io/badge/NestJS-E02337?style=for-the-badge&logo=nestjs&logoColor=white",
   },
+  aws: {
+    id: "aws",
+    name: "AWS",
+    imageUrl:
+      "https://custom-icon-badges.demolab.com/badge/AWS-%23FF9900.svg?logo=aws&logoColor=white",
+  },
   google_cloud: {
     id: "google_cloud",
     name: "Google Cloud",
