@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:4321` in your browser.
+Open `http://localhost:4321/Portfolio` in your browser.
 
 ## Scripts
 
