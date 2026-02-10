@@ -98,7 +98,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     description: "Optical center in Puente Tocinos, Murcia",
     iconUrl: mayorOpticaIcon,
     jobInfo: {
-      title: "Lead Frontend Developer",
+      title: "Frontend Developer",
       description:
         "As the sole Frontend Developer, I led the end-to-end development of the Mayor Óptica website, taking the project from initial design concepts to final deployment.\n\nKey contributions included:\n\n- Designing the user experience and interface to create a professional and engaging online presence.\n- Developing the full frontend, ensuring a seamless, responsive experience across devices.\n- Managing deployment and delivery, ensuring the website was fully operational and optimized.\n- Aligning the website with business goals, enhancing brand visibility, customer engagement, and lead generation.\n\nThis project demonstrates my ability to independently manage the complete development lifecycle, delivering a digital solution that directly supports business growth and strengthens the company's online identity.",
       contractType: ContractType.Freelance,
