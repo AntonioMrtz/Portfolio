@@ -1,0 +1,19 @@
+---
+import ExperienceCard from "../molecules/experience-card/ExperienceCard.astro";
+import { EDUCATION_ID_TO_DATA } from "@/data/education";
+---
+
+{
+  Object.values(EDUCATION_ID_TO_DATA).map((v) => (
+    <ExperienceCard
+      imgSrc={v.iconUrl}
+      imgAlt={`${v.label}`}
+      title={v.label}
+      subheader={[v.entity, v.dates]}
+      description={v.description}
+      badges={[]}
+      forceTechColumnDisplay={true}
+      fixedHeight={500}
+    />
+  ))
+}

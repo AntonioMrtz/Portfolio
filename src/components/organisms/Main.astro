@@ -5,11 +5,13 @@ import Experience from "./Experience.astro";
 import Home from "./Home.astro";
 import Projects from "./Projects.astro";
 import Certifications from "./Certifications.astro";
+import Education from "./Education.astro";
 
 const homeSection = SECTIONS_ID_TO_DATA.home;
 const experienceSection = SECTIONS_ID_TO_DATA.experience;
 const projectsSection = SECTIONS_ID_TO_DATA.projects;
 const certificationsSection = SECTIONS_ID_TO_DATA.certifications;
+const educationSection = SECTIONS_ID_TO_DATA.education;
 
 const getSectionTitle = (section: Section): string => {
   return `${section.icon} ${section.label}`;
@@ -41,5 +43,13 @@ const getSectionTitle = (section: Section): string => {
     display="grid"
   >
     <Certifications />
+  </SectionTemplate>
+
+  <SectionTemplate
+    id={educationSection.id}
+    title={getSectionTitle(educationSection)}
+    display="grid"
+  >
+    <Education />
   </SectionTemplate>
 </main>

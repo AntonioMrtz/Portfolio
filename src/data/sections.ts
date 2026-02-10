@@ -1,6 +1,11 @@
 export { type SectionID, type Section, SECTIONS_ID_TO_DATA };
 
-type SectionID = "home" | "experience" | "projects" | "certifications";
+type SectionID =
+  | "home"
+  | "experience"
+  | "projects"
+  | "certifications"
+  | "education";
 
 interface Section {
   id: SectionID;
@@ -28,5 +33,10 @@ const SECTIONS_ID_TO_DATA: Readonly<Record<SectionID, Section>> = {
     id: "certifications",
     label: "Certifications",
     icon: "📜",
+  },
+  education: {
+    id: "education",
+    label: "Education",
+    icon: "🎓",
   },
 };

@@ -1,7 +1,7 @@
 import type { TechId } from "./stack";
-import udemyIcon from "@/assets/icons/udemy.svg";
-import mongoDbIcon from "@/assets/icons/mongodb.svg";
-import efIcon from "@/assets/icons/ef.svg";
+import udemyIcon from "@/assets/icons/certifications/udemy.svg";
+import mongoDbIcon from "@/assets/icons/certifications/mongodb.svg";
+import efIcon from "@/assets/icons/certifications/ef.svg";
 
 export { CERTIFICATION_ID_TO_DATA, type Certification };
 

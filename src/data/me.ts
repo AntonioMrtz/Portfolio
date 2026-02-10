@@ -7,10 +7,10 @@ export {
   CV_DATA,
 };
 import type { ImageMetadata } from "astro";
-import emailIcon from "@/assets/icons/email.svg";
-import githubIcon from "@/assets/icons/github.svg";
-import linkedinIcon from "@/assets/icons/linkedin.svg";
-import cvIcon from "@/assets/icons/cv.svg";
+import emailIcon from "@/assets/icons/common/email.svg";
+import githubIcon from "@/assets/icons/common/github.svg";
+import linkedinIcon from "@/assets/icons/common/linkedin.svg";
+import cvIcon from "@/assets/icons/common/cv.svg";
 import profileIcon from "@/assets/images/me/profile-pic-no-bg-tall.webp";
 import logoIcon from "@/assets/images/me/logoAM.png";
 
