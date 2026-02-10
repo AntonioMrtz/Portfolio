@@ -51,7 +51,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     jobInfo: {
       title: "Frontend Developer (Angular & RxJS)",
       description:
-        "As a Frontend Developer, I design and implement high-performance, reactive interfaces for the Metrica Nexus cross-platform application, taking end-to-end ownership of features in a fast-paced startup environment.\n\n- Developed and maintained frontend features with Angular for the Metrica Nexus product.\n- Took ownership of end-to-end features, collaborating with a diverse, international team in a fast-paced startup environment.\n- Built reactive and high-performance interfaces using RxJS.\n- Worked on cross-platform applications with Electron and Ionic.",
+        "As a Frontend Developer, I design and implement high-performance, reactive interfaces for the Metrica Nexus cross-platform application, taking end-to-end ownership of features in a fast-paced startup environment.\n\n- Developed and maintained frontend features with Angular for the Metrica Nexus product (desktop and mobile apps).\n- Took ownership of end-to-end features, collaborating with a diverse, international team in a fast-paced startup environment.\n- Built reactive and high-performance interfaces using RxJS.\n- Worked on cross-platform applications with Electron and Ionic.",
       contractType: ContractType.FullTime,
       dates: "May 2025 - Present",
       tech: ["angular", "rxjs", "typescript", "electron", "ionic"],
