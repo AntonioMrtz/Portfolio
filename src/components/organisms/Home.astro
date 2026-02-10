@@ -28,10 +28,7 @@ const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
     <div class="flex flex-col flex-wrap gap-1 items-center justify-center">
       {
         PERSONAL_INFO.title.map((line) => (
-          <h2
-            class="text-lg sm:text-2xl text-center 2xl:text-3xl font-black leading-tight gap-1"
-            style="color: var(--secondary-purple-300);"
-          >
+          <h2 class="text-lg sm:text-2xl text-center 2xl:text-3xl font-black leading-tight gap-1 text-secondary-purple-300">
             {`>> ${line}`}
           </h2>
         ))
