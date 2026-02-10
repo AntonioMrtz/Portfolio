@@ -35,7 +35,8 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
       fetchpriority="high"
     />
     <p
-      class="text-xl 2xl:text-2xl font-bold hidden md:block text-secondary-purple-400"
+      class="text-xl 2xl:text-2xl font-bold hidden md:block"
+      style="color: var(--secondary-purple-400);"
     >
       {text}
     </p>
@@ -64,10 +65,13 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
         class="absolute flex flex-col justify-center items-center inset-0 m-auto opacity-0 transition-opacity duration-300 w-[50%] h-[50%] object-contain pointer-events-none z-10"
       >
         <div
-          class="w-[50%] h-[50%] bg-accent-500"
-          style={`-webkit-mask: url("${iconSrc.src}") no-repeat center / contain; mask: url("${iconSrc.src}") no-repeat center / contain;`}
+          class="w-[50%] h-[50%]"
+          style={`-webkit-mask: url("${iconSrc.src}") no-repeat center / contain; mask: url("${iconSrc.src}") no-repeat center / contain; background-color: var(--accent-orange-500);`}
         />
-        <p class="font-semibold text-xl text-center text-accent-500">
+        <p
+          class="font-semibold text-xl text-center"
+          style="color: var(--accent-orange-500)"
+        >
           {`${text} copied!`}
         </p>
       </div>
