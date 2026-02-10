@@ -15,17 +15,19 @@ import websiteIcon from "@/assets/icons/website.svg";
       title={v.name}
       badges={v.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
       forceTechColumnDisplay={true}
-      fixedHeight={480}
+      fixedHeight={500}
     >
-      <CardButton
-        slot="actions"
-        label="Diploma"
-        iconSrc={certificateIcon}
-        url={v.diplomaUrl}
-        altText="Diploma"
-        color="--primary-black-400"
-        turnIconWhite={true}
-      />
+      {v.diplomaUrl && (
+        <CardButton
+          slot="actions"
+          label="Diploma"
+          iconSrc={certificateIcon}
+          url={v.diplomaUrl}
+          altText="Diploma"
+          color="--primary-black-400"
+          turnIconWhite={true}
+        />
+      )}
       <CardButton
         slot="actions"
         label="Website"

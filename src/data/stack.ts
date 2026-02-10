@@ -21,4 +21,6 @@ type TechId =
   | "postgresql"
   | "redis"
   | "php"
-  | "english";
+  | "english"
+  | "nestjs"
+  | "google_cloud";

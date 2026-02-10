@@ -135,4 +135,16 @@ const BADGE_ID_TO_DATA: Readonly<Record<TechId, Badge>> = {
     imageUrl:
       "https://img.shields.io/badge/English-0073B1?style=for-the-badge&logo=linkedin&logoColor=white",
   },
+  nestjs: {
+    id: "nestjs",
+    name: "NestJS",
+    imageUrl:
+      "https://img.shields.io/badge/NestJS-E02337?style=for-the-badge&logo=nestjs&logoColor=white",
+  },
+  google_cloud: {
+    id: "google_cloud",
+    name: "Google Cloud",
+    imageUrl:
+      "https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white",
+  },
 };

@@ -5,20 +5,34 @@ import efIcon from "@/assets/icons/ef.svg";
 
 export { CERTIFICATION_ID_TO_DATA, type Certification };
 
-type CertificationId = "mongo-db-dev-path" | "ef-set" | "udemy-python-asyncio";
+type CertificationId =
+  | "mongo-db-dev-path"
+  | "ef-set"
+  | "udemy-python-asyncio"
+  | "udemy-nestjs-microservices";
 
 interface Certification {
   id: CertificationId;
   name: string;
-  diplomaUrl: string;
+  diplomaUrl?: string;
   websiteUrl: string;
   iconUrl: ImageMetadata;
   tech: TechId[];
 }
 
+// Order matters.
 const CERTIFICATION_ID_TO_DATA: Readonly<
   Record<CertificationId, Certification>
 > = {
+  "udemy-nestjs-microservices": {
+    id: "udemy-nestjs-microservices",
+    name: "[In progress] NestJS Microservices — Build & Deploy a Scalable Backend",
+    websiteUrl:
+      "https://www.udemy.com/course/nestjs-microservices-build-deploy-a-scaleable-backend/",
+    diplomaUrl: "",
+    iconUrl: udemyIcon,
+    tech: ["nestjs", "nodejs", "jest", "mongodb", "google_cloud"],
+  },
   "mongo-db-dev-path": {
     id: "mongo-db-dev-path",
     name: "MongoDB Python Developer Path",
