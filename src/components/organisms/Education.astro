@@ -9,7 +9,7 @@ import { EDUCATION_ID_TO_DATA } from "@/data/education";
       imgSrc={v.iconUrl}
       imgAlt={`${v.label}`}
       title={v.label}
-      subheader={[v.entity, v.dates]}
+      subheader={v.dates ? [v.entity, v.dates] : [v.entity]}
       description={v.description}
       badges={[]}
       forceTechColumnDisplay={true}
