@@ -1,0 +1,40 @@
+---
+import ExperienceCard from "../molecules/experience-card/ExperienceCard.astro";
+import CardButton from "@/components/atoms/buttons/CardButton.astro";
+import { BADGE_ID_TO_DATA } from "@/data/badges";
+import { CERTIFICATION_ID_TO_DATA } from "@/data/certifications";
+import certificateIcon from "@/assets/icons/certificate.svg";
+import websiteIcon from "@/assets/icons/website.svg";
+---
+
+{
+  Object.values(CERTIFICATION_ID_TO_DATA).map((v) => (
+    <ExperienceCard
+      imgSrc={v.iconUrl}
+      imgAlt={`${v.name}`}
+      title={v.name}
+      badges={v.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
+      forceTechColumnDisplay={true}
+      fixedHeight={480}
+    >
+      <CardButton
+        slot="actions"
+        label="Diploma"
+        iconSrc={certificateIcon}
+        url={v.diplomaUrl}
+        altText="Diploma"
+        color="--primary-black-400"
+        turnIconWhite={true}
+      />
+      <CardButton
+        slot="actions"
+        label="Website"
+        iconSrc={websiteIcon}
+        url={v.websiteUrl}
+        altText="Website"
+        color="--secondary-purple-400"
+        turnIconWhite={true}
+      />
+    </ExperienceCard>
+  ))
+}

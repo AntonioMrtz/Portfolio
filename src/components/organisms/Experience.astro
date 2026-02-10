@@ -2,6 +2,9 @@
 import { COMPANY_ID_TO_DATA } from "@/data/companies";
 import ExperienceCard from "../molecules/experience-card/ExperienceCard.astro";
 import { BADGE_ID_TO_DATA } from "@/data/badges";
+import CardButton from "@/components/atoms/buttons/CardButton.astro";
+import githubIcon from "@/assets/icons/github.svg";
+import websiteIcon from "@/assets/icons/website.svg";
 ---
 
 {
@@ -12,8 +15,30 @@ import { BADGE_ID_TO_DATA } from "@/data/badges";
       title={v.jobInfo.title}
       subheader={[v.name, v.jobInfo.dates, v.jobInfo.contractType]}
       description={v.jobInfo.description}
-      links={{ websiteUrl: v.websiteUrl, repoUrl: v.repoUrl }}
       badges={v.jobInfo.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
-    />
+    >
+      {v.repoUrl && (
+        <CardButton
+          slot="actions"
+          label="Github"
+          iconSrc={githubIcon}
+          url={v.repoUrl}
+          altText="Github"
+          color="--primary-black-400"
+          turnIconWhite={true}
+        />
+      )}
+      {v.websiteUrl && (
+        <CardButton
+          slot="actions"
+          label="Website"
+          url={v.websiteUrl}
+          iconSrc={websiteIcon}
+          altText="Website"
+          color="--secondary-purple-400"
+          turnIconWhite={true}
+        />
+      )}
+    </ExperienceCard>
   ))
 }

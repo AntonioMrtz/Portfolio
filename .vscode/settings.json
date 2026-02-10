@@ -21,7 +21,11 @@
     "Neutralino",
     "Asyncio",
     "baka",
-    "Astronav"
+    "Astronav",
+    "Asyncio",
+    "asyncio",
+    "Udemy",
+    "udemy",
   ],
   "editor.tabSize": 2,
   "editor.insertSpaces": true

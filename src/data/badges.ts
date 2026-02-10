@@ -129,4 +129,10 @@ const BADGE_ID_TO_DATA: Readonly<Record<TechId, Badge>> = {
     imageUrl:
       "https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white",
   },
+  english: {
+    id: "english",
+    name: "English",
+    imageUrl:
+      "https://img.shields.io/badge/English-0073B1?style=for-the-badge&logo=linkedin&logoColor=white",
+  },
 };

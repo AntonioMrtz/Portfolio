@@ -2,9 +2,10 @@
 interface Props {
   title?: string;
   id?: string;
+  display?: "grid" | "flex";
 }
 
-const { title, id } = Astro.props;
+const { title, id, display } = Astro.props;
 ---
 
 <section class="w-full" id={id}>
@@ -15,7 +16,18 @@ const { title, id } = Astro.props;
       </h2>
     )
   }
-  <div class="flex flex-col gap-6 w-full justify-center items-center">
+  <div class={display === "grid" ? "grid-display" : "flex-display"}>
     <slot />
   </div>
 </section>
+
+<style>
+  @reference "tailwindcss";
+
+  .flex-display {
+    @apply flex flex-col gap-6 w-full justify-center items-center;
+  }
+  .grid-display {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-6 w-full justify-center items-start;
+  }
+</style>

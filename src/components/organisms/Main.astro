@@ -4,10 +4,12 @@ import SectionTemplate from "../templates/SectionTemplate.astro";
 import Experience from "./Experience.astro";
 import Home from "./Home.astro";
 import Projects from "./Projects.astro";
+import Certifications from "./Certifications.astro";
 
 const homeSection = SECTIONS_ID_TO_DATA.home;
 const experienceSection = SECTIONS_ID_TO_DATA.experience;
 const projectsSection = SECTIONS_ID_TO_DATA.projects;
+const certificationsSection = SECTIONS_ID_TO_DATA.certifications;
 
 const getSectionTitle = (section: Section): string => {
   return `${section.icon} ${section.label}`;
@@ -28,7 +30,16 @@ const getSectionTitle = (section: Section): string => {
   <SectionTemplate
     id={projectsSection.id}
     title={getSectionTitle(projectsSection)}
+    display="grid"
   >
     <Projects />
+  </SectionTemplate>
+
+  <SectionTemplate
+    id={certificationsSection.id}
+    title={getSectionTitle(certificationsSection)}
+    display="grid"
+  >
+    <Certifications />
   </SectionTemplate>
 </main>

@@ -80,47 +80,47 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
 </a>
 
 <script define:vars={{ url: url, copyUrl: copyUrl, text: text }} is:inline>
-  if (!copyUrl) return;
+  if (copyUrl) {
+    const button = document.getElementById(
+      `home-card-button-${text.toLowerCase()}`,
+    );
+    const copiedMessage = document.getElementById(
+      `card-copied-${text.toLowerCase()}`,
+    );
+    const content = document.getElementById(
+      `home-card-content-${text.toLowerCase()}`,
+    );
+    const hoverImage = document.getElementById(
+      `hover-image-${text.toLowerCase()}`,
+    );
 
-  const button = document.getElementById(
-    `home-card-button-${text.toLowerCase()}`,
-  );
-  const copiedMessage = document.getElementById(
-    `card-copied-${text.toLowerCase()}`,
-  );
-  const content = document.getElementById(
-    `home-card-content-${text.toLowerCase()}`,
-  );
-  const hoverImage = document.getElementById(
-    `hover-image-${text.toLowerCase()}`,
-  );
+    let buttonClickTimeout = null;
 
-  let buttonClickTimeout = null;
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigator.clipboard.writeText(copyUrl);
 
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-    navigator.clipboard.writeText(copyUrl);
+      // Clear any existing timeouts
+      if (buttonClickTimeout) clearTimeout(buttonClickTimeout);
 
-    // Clear any existing timeouts
-    if (buttonClickTimeout) clearTimeout(buttonClickTimeout);
+      // Temporarily disable hover effects
+      button.classList.remove("group");
 
-    // Temporarily disable hover effects
-    button.classList.remove("group");
+      // Hide the original content and hover image, show the "Email copied" message
+      content.style.opacity = "0";
+      hoverImage.style.opacity = "0";
+      copiedMessage.style.opacity = "1";
 
-    // Hide the original content and hover image, show the "Email copied" message
-    content.style.opacity = "0";
-    hoverImage.style.opacity = "0";
-    copiedMessage.style.opacity = "1";
-
-    // Restore after 2 seconds
-    buttonClickTimeout = setTimeout(() => {
-      copiedMessage.style.opacity = "0";
-      // Reset all inline styles to allow CSS classes to control opacity again
-      content.style.opacity = "";
-      hoverImage.style.opacity = "";
-      copiedMessage.style.opacity = "";
-      // Re-enable hover effects
-      button.classList.add("group");
-    }, 2000);
-  });
+      // Restore after 2 seconds
+      buttonClickTimeout = setTimeout(() => {
+        copiedMessage.style.opacity = "0";
+        // Reset all inline styles to allow CSS classes to control opacity again
+        content.style.opacity = "";
+        hoverImage.style.opacity = "";
+        copiedMessage.style.opacity = "";
+        // Re-enable hover effects
+        button.classList.add("group");
+      }, 2000);
+    });
+  }
 </script>

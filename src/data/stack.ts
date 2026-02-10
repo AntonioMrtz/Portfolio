@@ -20,4 +20,5 @@ type TechId =
   | "html"
   | "postgresql"
   | "redis"
-  | "php";
+  | "php"
+  | "english";
