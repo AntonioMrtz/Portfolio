@@ -7,7 +7,6 @@ import Projects from "./Projects.astro";
 import Certifications from "./Certifications.astro";
 import Education from "./Education.astro";
 
-const homeSection = SECTIONS_ID_TO_DATA.home;
 const experienceSection = SECTIONS_ID_TO_DATA.experience;
 const projectsSection = SECTIONS_ID_TO_DATA.projects;
 const certificationsSection = SECTIONS_ID_TO_DATA.certifications;
@@ -19,9 +18,12 @@ const getSectionTitle = (section: Section): string => {
 ---
 
 <main class="flex flex-col gap-y-16 max-w-7xl mx-auto p-4">
-  <section id={homeSection.id}>
+  <!-- Home -->
+  <section>
     <Home />
   </section>
+
+  <!-- Experience -->
   <SectionTemplate
     id={experienceSection.id}
     title={getSectionTitle(experienceSection)}
@@ -29,6 +31,7 @@ const getSectionTitle = (section: Section): string => {
     <Experience />
   </SectionTemplate>
 
+  <!-- Projects -->
   <SectionTemplate
     id={projectsSection.id}
     title={getSectionTitle(projectsSection)}
@@ -37,6 +40,7 @@ const getSectionTitle = (section: Section): string => {
     <Projects />
   </SectionTemplate>
 
+  <!-- Certifications -->
   <SectionTemplate
     id={certificationsSection.id}
     title={getSectionTitle(certificationsSection)}
@@ -45,6 +49,7 @@ const getSectionTitle = (section: Section): string => {
     <Certifications />
   </SectionTemplate>
 
+  <!-- Education -->
   <SectionTemplate
     id={educationSection.id}
     title={getSectionTitle(educationSection)}
