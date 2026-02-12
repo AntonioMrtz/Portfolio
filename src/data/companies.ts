@@ -102,7 +102,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
       description:
         "- Led end-to-end website development from concept to production deployment.\n- Designed the UI/UX to create a professional, user-centered digital experience aligned with brand identity.\n- Built a responsive, performance-optimized frontend ensuring seamless cross-device compatibility.\n- Managed deployment, optimization, and launch, delivering a fully operational production-ready website.",
       contractType: ContractType.Freelance,
-      dates: "Jan 2023 - May 2023",
+      dates: "Jan 2023 - June 2023",
       tech: ["astro", "javascript", "css", "bootstrap", "html"],
     },
   },
