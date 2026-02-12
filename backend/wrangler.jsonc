@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio-backend-am",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-10-11",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./public"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "rules": [
+    {
+      "type": "Text",
+      "globs": ["**/*.md", "**/*.excalidraw", "**/eslint.config.js"],
+      "fallthrough": true
+    }
+  ]
+}
