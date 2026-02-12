@@ -51,7 +51,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     jobInfo: {
       title: "Frontend Developer (Angular & RxJS)",
       description:
-        "As a Frontend Developer, I design and implement high-performance, reactive interfaces for the Metrica Nexus cross-platform application, taking end-to-end ownership of features in a fast-paced startup environment.\n\n- Developed and maintained frontend features with Angular for the Metrica Nexus product (desktop and mobile apps).\n- Took ownership of end-to-end features, collaborating with a diverse, international team in a fast-paced startup environment.\n- Built reactive and high-performance interfaces using RxJS.\n- Worked on cross-platform applications with Electron and Ionic.",
+        "As a Frontend Developer, I design and implement high-performance, reactive interfaces for the Metrica Nexus cross-platform application, taking end-to-end ownership of features in a fast-paced startup environment.\n\n- Developed and maintained frontend features with Angular (v14) for the Metrica Nexus product (desktop and mobile apps).\n- Took ownership of end-to-end features, collaborating with a diverse, international team in a fast-paced startup environment.\n- Built reactive and high-performance interfaces using RxJS. Partnered with designers to improve UX/UI experiences.\n- Worked on cross-platform applications with Electron and Ionic.",
       contractType: ContractType.FullTime,
       dates: "May 2025 - Present",
       tech: ["angular", "rxjs", "typescript", "electron", "ionic"],
@@ -66,7 +66,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
       "A cross-platform, open-source music streaming desktop app that includes Spotify-like core functionalities and user-requested features—such as the ability to upload personal music.",
     iconUrl: spotifyElectronIcon,
     jobInfo: {
-      title: "Lead Developer (Python & React & FastAPI & MongoDB)",
+      title: "Lead Developer (Python & React & FastAPI & AWS)",
       description:
         "As the owner and Lead Developer of an open-source cross-platform music streaming application, I have been at the forefront of replicating and enhancing Spotify's functionalities while incorporating unique user-requested features such as the ability to upload personal music.\n\n- Led a global open-source team of 25+ contributors using Agile methodologies, managing Git/GitHub workflows, PRs, and issue tracking.\n- Developed REST APIs using Python, FastAPI, and MongoDB, including JWT-based authentication.\n- Designed a scalable music streaming architecture leveraging AWS (S3, CloudFront, Lambda) for storage, CDN, and serverless processing.\n- Built a cross-platform desktop application with React, TypeScript, and Electron, featuring a Spotify-inspired UI.\n- Implemented Dockerized environments, CI/CD pipelines with GitHub Actions, and automated testing with Jest, React Testing Library, and pytest.",
       contractType: ContractType.Freelance,
@@ -84,7 +84,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     jobInfo: {
       title: "Full-Stack Developer (Python & Angular & FastAPI)",
       description:
-        "Participate in all stages of software development for ROSITA2, an embedded system for bioreactors, developing both frontend and backend solutions while ensuring seamless integration with hardware.\n\n- Development of Rest APIs and microservices using Python and FastAPI. Usage of Redis queues and events for fast and efficient microservices communication.\n- Design and development of a touchscreen and desktop application interface for real-time management of bioreactors with Angular, Bootstrap and Neutralino.\n- Software lead for bSmart devices such as CT1 and bBreath4 obtaining integrated backend-frontend solutions and working closely with electronics teams for integrating low level hardware software. Led meetings for retrospective analysis and future planning based on requirements and user feedback.\n- Contribute to architecture planning and decision-making for system design.\n- Worked extensively with technologies such as OPC UA and Asyncio.\n- Unit and integration tests with pytest as well as extensive testing with physical prototypes to ensure reliability and performance.",
+        "Participate in all stages of software development for ROSITA2, an embedded system for bioreactors, developing both frontend and backend solutions while ensuring seamless integration with hardware.\n\n- Development of Rest APIs and microservices using Python and FastAPI. Usage of Redis queues and events for fast and efficient microservices communication.\n- Design and development of a touchscreen and desktop application interface for real-time management of bioreactors with Angular (v12-19), Bootstrap and Neutralino. Successfully migrated all systems from Angular 12 to 19.\n- Software lead for bSmart devices such as CT1 and bBreath4 obtaining integrated backend-frontend solutions and working closely with electronics teams for integrating low level hardware software. Led meetings for retrospective analysis and future planning based on requirements and user feedback.\n- Contribute to architecture planning and decision-making for system design.\n- Worked extensively with technologies such as OPC UA and Asyncio.\n- Unit and integration tests with pytest as well as extensive testing with physical prototypes to ensure reliability and performance. Testing with Jasmine and Karma to validate frontend product requirements.",
       contractType: ContractType.FullTime,
       dates: "Nov 2023 - Jul 2025",
       tech: ["python", "fastapi", "angular", "postgresql", "redis"],
@@ -100,7 +100,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     jobInfo: {
       title: "Frontend Developer",
       description:
-        "As the sole Frontend Developer, I led the end-to-end development of the Mayor Óptica website, taking the project from initial design concepts to final deployment.\n\nKey contributions included:\n\n- Designing the user experience and interface to create a professional and engaging online presence.\n- Developing the full frontend, ensuring a seamless, responsive experience across devices.\n- Managing deployment and delivery, ensuring the website was fully operational and optimized.\n- Aligning the website with business goals, enhancing brand visibility, customer engagement, and lead generation.\n\nThis project demonstrates my ability to independently manage the complete development lifecycle, delivering a digital solution that directly supports business growth and strengthens the company's online identity.",
+        "- Led end-to-end website development from concept to production deployment.\n- Designed the UI/UX to create a professional, user-centered digital experience aligned with brand identity.\n- Built a responsive, performance-optimized frontend ensuring seamless cross-device compatibility.\n- Managed deployment, optimization, and launch, delivering a fully operational production-ready website.",
       contractType: ContractType.Freelance,
       dates: "Jan 2023 - May 2023",
       tech: ["astro", "javascript", "css", "bootstrap", "html"],
@@ -113,9 +113,9 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     description: "Development of Custom INDUSTRY 4.0 Projects",
     iconUrl: byproxIcon,
     jobInfo: {
-      title: "Backend Developer (PHP)",
+      title: "Full-Stack Developer (PHP & JavaScript)",
       description:
-        "Developed the backend for a travel application structured around points of interest (POIs).\n\n- Developing the organizational structure and navigation through countries, regions, cities, and points of interest using PHP.\n- Data persistence using MySQL.\n- Managing the application using MySQL Workbench and PhpMyAdmin.\n- Organizing content graphically using HTML, CSS and JavaScript.",
+        "Developed the backend and frontend for a travel application structured around points of interest (POIs).\n\n- Developed the organizational structure and navigation through countries, regions, cities, and points of interest using PHP.\n- Data persistence using MySQL.\n- Organized content graphically using HTML, CSS and JavaScript.",
       contractType: ContractType.Internship,
       dates: "Jan 2022 - Jun 2022",
       tech: ["php", "javascript", "postgresql", "html", "css"],
