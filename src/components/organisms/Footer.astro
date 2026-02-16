@@ -1,11 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import { CONTACT_ID_TO_DATA, PERSONAL_INFO, type Contact } from "@/data/me";
-import FooterItem from "@/components/atoms/footer-item/FooterItem.astro";
+import { CONTACT_ID_TO_DATA, type Contact } from "@/data/me";
+import FooterItem from "@/components/atoms/footer/FooterItem.astro";
 import { FOOTER_SECTIONS } from "@/data/footer";
 
-const email = CONTACT_ID_TO_DATA.email as Contact;
-const linkedin = CONTACT_ID_TO_DATA.linkedin as Contact;
 const github = CONTACT_ID_TO_DATA.github as Contact;
 ---
 
