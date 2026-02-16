@@ -11,6 +11,8 @@ import ArrowUpIcon from "@/assets/icons/common/arrow-up.svg?raw";
 </button>
 
 <style>
+  @reference "tailwindcss";
+
   .scroll-to-top-button {
     position: fixed;
     bottom: 2rem;
@@ -19,7 +21,6 @@ import ArrowUpIcon from "@/assets/icons/common/arrow-up.svg?raw";
     height: 3rem;
     background-color: var(--secondary-purple-900);
     border: 2px solid var(--neutral-gray-100);
-    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,6 +29,8 @@ import ArrowUpIcon from "@/assets/icons/common/arrow-up.svg?raw";
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
+
+    @apply rounded-xl;
   }
 
   .scroll-to-top-button.visible {
