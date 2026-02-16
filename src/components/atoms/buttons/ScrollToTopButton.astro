@@ -35,6 +35,13 @@ import ArrowUpIcon from "@/assets/icons/common/arrow-up.svg?raw";
     visibility: visible;
   }
 
+  /* Hide when navbar mobile menu is open — CSS-only, keeps JS simple */
+  :global(body.menu-open) .scroll-to-top-button {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+  }
+
   .scroll-to-top-button:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
