@@ -20,6 +20,7 @@ interface Contact {
   id: ContactId;
   label: string;
   url: string;
+  shortUrl?: string;
   iconPath: ImageMetadata;
   copyUrl?: string;
 }
@@ -46,6 +47,7 @@ const CONTACT_ID_TO_DATA: Readonly<Record<ContactId, Contact>> = {
     id: "email",
     label: "Email",
     url: "mailto:antoniomartinezfernandez17@gmail.com",
+    shortUrl: "antoniomartinezfernandez17@gmail.com",
     copyUrl: "antoniomartinezfernandez17@gmail.com",
     iconPath: emailIcon,
   },
@@ -53,12 +55,14 @@ const CONTACT_ID_TO_DATA: Readonly<Record<ContactId, Contact>> = {
     id: "linkedin",
     label: "LinkedIn",
     url: "https://www.linkedin.com/in/antonio-martinez-fernandez-dev/",
+    shortUrl: "linkedin.com/in/antonio-martinez-fernandez-dev",
     iconPath: linkedinIcon,
   },
   github: {
     id: "github",
     label: "Github",
     url: "https://github.com/AntonioMrtz",
+    shortUrl: "github.com/AntonioMrtz",
     iconPath: githubIcon,
   },
 };

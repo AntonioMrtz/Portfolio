@@ -1,0 +1,14 @@
+---
+import { CONTACT_ID_TO_DATA } from "@/data/me";
+import ContactItem from "../atoms/contact/ContactItem.astro";
+---
+
+<div
+  class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start justify-start p-2 sm:p-4"
+>
+  {
+    Object.values(CONTACT_ID_TO_DATA).map((v) => {
+      return <ContactItem contact={v} />;
+    })
+  }
+</div>

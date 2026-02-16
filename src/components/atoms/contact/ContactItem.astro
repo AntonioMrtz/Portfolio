@@ -1,0 +1,63 @@
+---
+import type { Contact } from "@/data/me";
+import { Image } from "astro:assets";
+import linkIcon from "@/assets/icons/common/link.svg";
+
+interface Props {
+  contact: Contact;
+}
+
+const { contact } = Astro.props;
+---
+
+<div class="contact-item">
+  <div class="flex flex-col">
+    <span class="flex flex-row items-center gap-2 font-bold">
+      <Image
+        src={contact.iconPath}
+        class="w-[1.1em] h-[1.1em]"
+        alt={contact.label}
+      />
+      <p class="text-lg">{contact.label}</p>
+    </span>
+    <span class="short-url-container">
+      <p>{contact.shortUrl}</p>
+    </span>
+  </div>
+  <a
+    href={contact.url}
+    class="group flex items-center justify-center w-10 h-10"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image
+      src={linkIcon}
+      class="w-8 h-8 object-cover transition-all duration-200 ease-in-out"
+      alt={contact.label}
+    />
+  </a>
+</div>
+
+<style>
+  @reference "tailwindcss";
+
+  .contact-item {
+    border: 1px solid var(--secondary-purple-300);
+    @apply flex flex-row p-6 rounded-xl justify-between items-center gap-4;
+  }
+
+  .short-url-container {
+    display: block;
+  }
+
+  .group:hover img {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
+      hue-rotate(360deg) brightness(102%) contrast(101%);
+  }
+
+  @media (max-width: 1023px) {
+    .short-url-container {
+      display: none;
+    }
+  }
+</style>

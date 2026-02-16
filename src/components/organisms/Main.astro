@@ -6,11 +6,15 @@ import Home from "@/components/organisms/Home.astro";
 import Projects from "@/components/organisms/Projects.astro";
 import Certifications from "@/components/organisms/Certifications.astro";
 import Education from "@/components/organisms/Education.astro";
+import AboutMe from "./AboutMe.astro";
+import Contact from "./Contact.astro";
 
 const experienceSection = SECTIONS_ID_TO_DATA.experience;
 const projectsSection = SECTIONS_ID_TO_DATA.projects;
 const certificationsSection = SECTIONS_ID_TO_DATA.certifications;
 const educationSection = SECTIONS_ID_TO_DATA.education;
+const aboutMeSection = SECTIONS_ID_TO_DATA["about-me"];
+const contactSection = SECTIONS_ID_TO_DATA.contact;
 ---
 
 <main class="flex flex-col gap-y-16 max-w-7xl mx-auto p-4">
@@ -56,5 +60,23 @@ const educationSection = SECTIONS_ID_TO_DATA.education;
     display="grid"
   >
     <Education />
+  </SectionTemplate>
+
+  <!-- About me -->
+  <!-- <SectionTemplate
+    id={aboutMeSection.id}
+    title={aboutMeSection.label}
+    iconSrc={aboutMeSection.icon}
+  >
+    <AboutMe />
+  </SectionTemplate> -->
+
+  <!-- Contact -->
+  <SectionTemplate
+    id={contactSection.id}
+    title={contactSection.label}
+    iconSrc={contactSection.icon}
+  >
+    <Contact />
   </SectionTemplate>
 </main>
