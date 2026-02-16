@@ -161,6 +161,12 @@ const HAMBURGER_ICON_HEIGHT = 42;
       height: 100dvh;
       width: 100vw;
       overflow-y: auto;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition:
+        opacity 200ms ease,
+        transform 200ms ease;
+      pointer-events: none;
     }
 
     :global(.astronav-items ul) {
@@ -186,7 +192,15 @@ const HAMBURGER_ICON_HEIGHT = 42;
     }
 
     :global(.astronav-items.hidden) {
-      display: none;
+      opacity: 0;
+      transform: translateY(-8px);
+      pointer-events: none;
+    }
+
+    :global(.astronav-items:not(.hidden)) {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
     }
 
     :global(#astronav-menu) {
