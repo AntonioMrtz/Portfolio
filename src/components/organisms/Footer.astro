@@ -12,7 +12,11 @@ const github = CONTACT_ID_TO_DATA.github as Contact;
       {
         FOOTER_SECTIONS.map((section) => (
           <div class="footer-col">
-            <h3 class="footer-heading">{section.heading}</h3>
+            <h3
+              class={`footer-heading ${section.type !== "text" ? "underline" : undefined}`}
+            >
+              {section.heading}
+            </h3>
 
             {section.type === "text" ? (
               <p class="footer-text">{section.content}</p>
@@ -40,7 +44,7 @@ const github = CONTACT_ID_TO_DATA.github as Contact;
 
     <!-- Copyright -->
     <div
-      class="border-t border-(--secondary-purple-400) pt-6 text-center text-neutral-gray-500"
+      class="border-t border-(--secondary-purple-400) pt-6 text-center text-neutral-gray-500 hover:underline"
     >
       <a target="_blank" rel="noopener noreferrer" href={github.url}>
         © 2025 Copyright: Antonio Martínez Fernández</a
