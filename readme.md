@@ -5,13 +5,17 @@ Personal portfolio built with Astro and Tailwind CSS.
 ## Tech Stack
 
 - Astro
-- TypeScript
-- Tailwind CSS
+- Tailwind
+- Github Actions
+- Astro Navbar component
+- Svg
+    - [Repo](https://www.svgrepo.com/)
+    - [Solar broken icons](https://www.svgrepo.com/collection/solar-broken-line-icons/)
 
 ## Getting Started
 
 ```sh
-npm install
+npm i
 ```
 
 ```sh
@@ -25,7 +29,6 @@ Open `http://localhost:4321/Portfolio` in your browser.
 - `npm run dev`: Start the dev server
 - `npm run build`: Build the site for production
 - `npm run preview`: Preview the production build locally
-- `npm run astro ...`: Run Astro CLI commands
 
 ## Github Pages build
 
