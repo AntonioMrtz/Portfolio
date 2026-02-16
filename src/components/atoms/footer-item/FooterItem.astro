@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  label: string;
+  url: string;
+  iconPath?: ImageMetadata;
+  openInNewTab?: boolean;
+}
+
+const { label, url, iconPath, openInNewTab } = Astro.props as Props;
+---
+
+<div class="footer-item">
+  {
+    iconPath ? (
+      <Image
+        src={iconPath}
+        alt={label}
+        width={20}
+        height={20}
+        loading="lazy"
+        decoding="async"
+        class="footer-icon"
+      />
+    ) : null
+  }
+
+  <a
+    href={url}
+    class="footer-link footer-text"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {label}
+  </a>
+</div>

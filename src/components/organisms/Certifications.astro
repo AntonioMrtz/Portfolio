@@ -4,7 +4,7 @@ import CardButton from "@/components/atoms/buttons/CardButton.astro";
 import { BADGE_ID_TO_DATA } from "@/data/badges";
 import { CERTIFICATION_ID_TO_DATA } from "@/data/certifications";
 import certificateIcon from "@/assets/icons/certifications/certificate.svg";
-import websiteIcon from "@/assets/icons/common/website.svg";
+import websiteIcon from "@/assets/icons/common/display.svg";
 ---
 
 {
@@ -24,7 +24,7 @@ import websiteIcon from "@/assets/icons/common/website.svg";
           iconSrc={certificateIcon}
           url={v.diplomaUrl}
           altText="Diploma"
-          color="--primary-black-400"
+          type="primary"
           turnIconWhite={true}
         />
       )}
@@ -34,7 +34,7 @@ import websiteIcon from "@/assets/icons/common/website.svg";
         iconSrc={websiteIcon}
         url={v.websiteUrl}
         altText="Website"
-        color="--secondary-purple-400"
+        type="secondary"
         turnIconWhite={true}
       />
     </ExperienceCard>

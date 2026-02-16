@@ -1,0 +1,11 @@
+/* Icons should be #000000 */
+
+.filter-secondary-purple-400 {
+  filter: invert(26%) sepia(14%) saturate(420%) hue-rotate(260deg)
+    brightness(0.92) contrast(0.9);
+}
+
+.filter-accent-orange-500 {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
+    hue-rotate(360deg) brightness(102%) contrast(101%);
+}

@@ -2,8 +2,15 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
+type CardButtonType = "primary" | "secondary";
+
+const CARD_BUTTON_TYPE_TO_COLOR: Record<CardButtonType, string> = {
+  primary: "--secondary-purple-900",
+  secondary: "--secondary-purple-500",
+};
+
 interface Props {
-  color: string;
+  type: CardButtonType;
   label: string;
   iconSrc: ImageMetadata;
   iconSize?: string;
@@ -12,7 +19,7 @@ interface Props {
   turnIconWhite?: boolean;
 }
 
-const { color, label, iconSrc, iconSize, altText, url, turnIconWhite } =
+const { type, label, iconSrc, iconSize, altText, url, turnIconWhite } =
   Astro.props;
 ---
 
@@ -21,7 +28,7 @@ const { color, label, iconSrc, iconSize, altText, url, turnIconWhite } =
   target="_blank"
   rel="noopener noreferrer"
   class="flex flex-row gap-3 p-2 w-40 rounded-sm items-center justify-center hover:opacity-80 transition-all border-2 border-transparent hover:border-(--accent-orange-500)"
-  style={`background-color: var(${color})`}
+  style={`background-color: var(${CARD_BUTTON_TYPE_TO_COLOR[type]})`}
 >
   <Image
     src={iconSrc}
@@ -33,7 +40,7 @@ const { color, label, iconSrc, iconSize, altText, url, turnIconWhite } =
     class={`w-5 h-5 ${turnIconWhite ? "brightness-0 invert" : undefined}`}
     style={iconSize ? `width: ${iconSize}; height: ${iconSize};` : undefined}
   />
-  <p class="text-white font-semibold">{label}</p>
+  <p class="text-neutral-gray-200 font-semibold">{label}</p>
 </a>
 
 <style>

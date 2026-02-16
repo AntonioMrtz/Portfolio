@@ -1,19 +1,29 @@
 ---
 interface Props {
-  title?: string;
-  id?: string;
+  title: string;
+  id: string;
+  iconSrc: ImageMetadata;
   display?: "grid" | "flex";
 }
 
-const { title, id, display } = Astro.props;
+import { Image } from "astro:assets";
+const { title, id, display, iconSrc } = Astro.props;
 ---
 
 <section class="w-full" id={id}>
   {
     title && (
-      <h2 class="text-2xl md:text-3xl 2xl:text-5xl font-bold mb-8 text-left text-(--secondary-purple-400)">
-        {title}
-      </h2>
+      <span class="flex flex-row w-full gap-2 items-center mb-8 text-secondary-purple-400 text-2xl md:text-3xl 2xl:text-5xl">
+        <Image
+          src={iconSrc}
+          class="image inline-block w-[1em] h-[1em] icon-img filter-secondary-purple-400"
+          alt={title}
+          width={iconSrc.width}
+          height={iconSrc.height}
+          loading="lazy"
+        />
+        <h2 class="font-bold text-left">{title}</h2>
+      </span>
     )
   }
   <div class={display === "grid" ? "grid-display" : "flex-display"}>
@@ -23,6 +33,15 @@ const { title, id, display } = Astro.props;
 
 <style>
   @reference "tailwindcss";
+
+  .icon-img {
+    display: inline-block;
+    object-fit: contain;
+    vertical-align: middle;
+
+    height: 1em;
+    width: 1em;
+  }
 
   .flex-display {
     @apply flex flex-col gap-6 w-full justify-center items-center;

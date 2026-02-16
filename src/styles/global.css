@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./colors.css";
+@import "./filters.css";
 
 :root {
   scroll-behavior: smooth;
@@ -8,10 +9,6 @@
   text-rendering: optimizeLegibility;
 
   --accent-orange-500: #ffa500;
-
-  --primary-black-400: #313132;
-  --primary-black-500: #2b2a2e;
-  --primary-black-600: #1f1f22;
 
   --secondary-purple-300: #5c546e;
   --secondary-purple-400: #4b455b;
@@ -22,6 +19,8 @@
   --neutral-white: #ffffff;
   --neutral-gray-50: #fafafa;
   --neutral-gray-100: #f0f0f0;
+  --neutral-gray-200: #e0e0e0;
+  --neutral-gray-300: #bdbdbd;
   --neutral-gray-500: #4d4c53;
 
   --profile-pic-background: #3ec0bb;

@@ -1,3 +1,8 @@
+import experienceIcon from "@/assets/icons/common/briefcase.svg";
+import projectsIcon from "@/assets/icons/common/rocket.svg";
+import certificationIcon from "@/assets/icons/common/bookmark.svg";
+import graduationCapIcon from "@/assets/icons/common/graduation-cap.svg";
+
 export { type SectionID, type Section, SECTIONS_ID_TO_DATA };
 
 type SectionID = "experience" | "projects" | "certifications" | "education";
@@ -5,28 +10,28 @@ type SectionID = "experience" | "projects" | "certifications" | "education";
 interface Section {
   id: SectionID;
   label: string;
-  icon: string;
+  icon: ImageMetadata;
 }
 
 const SECTIONS_ID_TO_DATA: Readonly<Record<SectionID, Section>> = {
   experience: {
     id: "experience",
     label: "Experience",
-    icon: "💼",
+    icon: experienceIcon,
   },
   projects: {
     id: "projects",
     label: "Projects",
-    icon: "🏗️",
+    icon: projectsIcon,
   },
   certifications: {
     id: "certifications",
     label: "Certifications",
-    icon: "📜",
+    icon: certificationIcon,
   },
   education: {
     id: "education",
     label: "Education",
-    icon: "🎓",
+    icon: graduationCapIcon,
   },
 };

@@ -11,10 +11,6 @@ const experienceSection = SECTIONS_ID_TO_DATA.experience;
 const projectsSection = SECTIONS_ID_TO_DATA.projects;
 const certificationsSection = SECTIONS_ID_TO_DATA.certifications;
 const educationSection = SECTIONS_ID_TO_DATA.education;
-
-const getSectionTitle = (section: Section): string => {
-  return `${section.icon} ${section.label}`;
-};
 ---
 
 <main class="flex flex-col gap-y-16 max-w-7xl mx-auto p-4">
@@ -26,7 +22,8 @@ const getSectionTitle = (section: Section): string => {
   <!-- Experience -->
   <SectionTemplate
     id={experienceSection.id}
-    title={getSectionTitle(experienceSection)}
+    title={experienceSection.label}
+    iconSrc={experienceSection.icon}
   >
     <Experience />
   </SectionTemplate>
@@ -34,7 +31,8 @@ const getSectionTitle = (section: Section): string => {
   <!-- Projects -->
   <SectionTemplate
     id={projectsSection.id}
-    title={getSectionTitle(projectsSection)}
+    title={projectsSection.label}
+    iconSrc={projectsSection.icon}
     display="grid"
   >
     <Projects />
@@ -43,7 +41,8 @@ const getSectionTitle = (section: Section): string => {
   <!-- Certifications -->
   <SectionTemplate
     id={certificationsSection.id}
-    title={getSectionTitle(certificationsSection)}
+    title={certificationsSection.label}
+    iconSrc={certificationsSection.icon}
     display="grid"
   >
     <Certifications />
@@ -52,7 +51,8 @@ const getSectionTitle = (section: Section): string => {
   <!-- Education -->
   <SectionTemplate
     id={educationSection.id}
-    title={getSectionTitle(educationSection)}
+    title={educationSection.label}
+    iconSrc={educationSection.icon}
     display="grid"
   >
     <Education />

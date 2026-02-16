@@ -4,7 +4,7 @@ import ExperienceCard from "@/components/molecules/experience-card/ExperienceCar
 import { BADGE_ID_TO_DATA } from "@/data/badges";
 import CardButton from "@/components/atoms/buttons/CardButton.astro";
 import githubIcon from "@/assets/icons/common/github.svg";
-import websiteIcon from "@/assets/icons/common/website.svg";
+import websiteIcon from "@/assets/icons/common/display.svg";
 ---
 
 {
@@ -24,7 +24,7 @@ import websiteIcon from "@/assets/icons/common/website.svg";
           iconSrc={githubIcon}
           url={v.repoUrl}
           altText="Github"
-          color="--primary-black-400"
+          type="primary"
           turnIconWhite={true}
         />
       )}
@@ -35,7 +35,7 @@ import websiteIcon from "@/assets/icons/common/website.svg";
           url={v.websiteUrl}
           iconSrc={websiteIcon}
           altText="Website"
-          color="--secondary-purple-400"
+          type="secondary"
           turnIconWhite={true}
         />
       )}

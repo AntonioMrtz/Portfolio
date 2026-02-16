@@ -1,94 +1,49 @@
 ---
 import { Image } from "astro:assets";
 import { CONTACT_ID_TO_DATA, PERSONAL_INFO, type Contact } from "@/data/me";
+import FooterItem from "@/components/atoms/footer-item/FooterItem.astro";
+import { FOOTER_SECTIONS } from "@/data/footer";
 
 const email = CONTACT_ID_TO_DATA.email as Contact;
 const linkedin = CONTACT_ID_TO_DATA.linkedin as Contact;
 const github = CONTACT_ID_TO_DATA.github as Contact;
 ---
 
-<footer class="bg-(--primary-black-500) text-white py-12">
+<footer class="bg-secondary-purple-900 py-12">
   <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-      <!-- Column 1: About -->
-      <div class="mx-auto">
-        <h3 class="text-lg font-bold mb-4">{PERSONAL_INFO.name}</h3>
-        <p class="text-(--neutral-gray-100) footer-text">
-          {PERSONAL_INFO.description}
-        </p>
-      </div>
+      {
+        FOOTER_SECTIONS.map((section) => (
+          <div class="footer-col">
+            <h3 class="footer-heading">{section.heading}</h3>
 
-      <!-- Column 2: Useful Links -->
-      <div class="mx-auto">
-        <h3 class="text-lg font-bold mb-4">USEFUL LINKS</h3>
-        <div class="flex items-center gap-2">
-          <Image
-            src={linkedin.iconPath}
-            alt={linkedin.label}
-            width={20}
-            height={20}
-            loading="lazy"
-            decoding="async"
-            class="w-5 h-5 brightness-0 invert"
-          />
-          <a
-            href={linkedin.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500) footer-text"
-          >
-            {linkedin.label}
-          </a>
-        </div>
-      </div>
-
-      <!-- Column 3: Contact -->
-      <div class="mx-auto">
-        <h3 class="text-lg font-bold mb-4">CONTACT</h3>
-        <div class="space-y-3">
-          <div class="flex items-center gap-2">
-            <Image
-              src={github.iconPath}
-              alt={github.label}
-              width={20}
-              height={20}
-              loading="lazy"
-              decoding="async"
-              class="w-5 h-5 brightness-0 invert"
-            />
-            <a
-              href={github.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500) footer-text"
-            >
-              {github.label}
-            </a>
+            {section.type === "text" ? (
+              <p class="footer-text">{section.content}</p>
+            ) : (
+              <div
+                class={
+                  section.items && section.items.length > 1
+                    ? "space-y-3"
+                    : undefined
+                }
+              >
+                {section.items?.map((item) => (
+                  <FooterItem
+                    label={item.label}
+                    url={item.url}
+                    iconPath={item.iconPath}
+                  />
+                ))}
+              </div>
+            )}
           </div>
-          <div class="flex items-center gap-2">
-            <Image
-              src={email.iconPath}
-              alt={email.label}
-              width={20}
-              height={20}
-              loading="lazy"
-              decoding="async"
-              class="w-5 h-5 brightness-0 invert"
-            />
-            <a
-              href={email.url}
-              class="transition-colors text-(--neutral-gray-100) hover:text-(--accent-orange-500) footer-text"
-            >
-              {email.label}
-            </a>
-          </div>
-        </div>
-      </div>
+        ))
+      }
     </div>
 
     <!-- Copyright -->
     <div
-      class="border-t border-(--secondary-purple-400) pt-6 text-center text-(--neutral-gray-500)"
+      class="border-t border-(--secondary-purple-400) pt-6 text-center text-neutral-gray-500"
     >
       <a target="_blank" rel="noopener noreferrer" href={github.url}>
         © 2025 Copyright: Antonio Martínez Fernández</a
@@ -98,12 +53,48 @@ const github = CONTACT_ID_TO_DATA.github as Contact;
 </footer>
 
 <style>
-  .footer-text {
+  @reference "tailwindcss";
+
+  :global(.footer-text) {
     font-size: 1rem;
+    color: var(--neutral-gray-300);
+  }
+
+  .footer-col {
+    @apply mx-auto;
+  }
+
+  .footer-heading {
+    @apply text-lg font-bold mb-4;
+    color: var(--neutral-gray-200);
+  }
+
+  :global(.footer-item) {
+    @apply flex items-center gap-2;
+    color: var(--neutral-gray-300);
+  }
+  :global(.footer-item:hover) {
+    color: var(--accent-orange-500) !important;
+  }
+  :global(.footer-item:hover .footer-icon) {
+    /* apply the accent-orange filter on hover (overrides brightness-0 invert) */
+    filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
+      hue-rotate(360deg) brightness(102%) contrast(101%);
+  }
+
+  :global(.footer-icon) {
+    @apply w-5 h-5 brightness-0 invert;
+    /* smooth transition when filter changes on hover */
+    transition: filter 200ms ease;
+  }
+
+  :global(.footer-link) {
+    @apply transition-colors;
+    color: inherit;
   }
 
   @media (min-width: 1536px) {
-    .footer-text {
+    :global(.footer-text) {
       font-size: 1.2rem;
     }
   }

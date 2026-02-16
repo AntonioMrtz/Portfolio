@@ -26,7 +26,7 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
     class="flex flex-col items-center gap-4 transition-opacity duration-300 group-hover:opacity-0 group-hover:duration-75"
   >
     <Image
-      class="w-12 sm:w-8 2xl:w-14 h-12 sm:h-8 2xl:h-14"
+      class="w-12 sm:w-8 2xl:w-14 h-12 sm:h-8 2xl:h-14 filter-secondary-purple-400"
       src={iconSrc}
       alt={text}
       width={48}
@@ -48,6 +48,7 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
   >
     <Image
       src={iconSrc}
+      class="filter-secondary-purple-400"
       alt={text}
       width={48}
       height={48}
@@ -64,10 +65,10 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
         class="absolute flex flex-col justify-center items-center inset-0 m-auto opacity-0 transition-opacity duration-300 w-[50%] h-[50%] object-contain pointer-events-none z-10"
       >
         <div
-          class="w-[50%] h-[50%] bg-accent-500"
+          class="w-[50%] h-[50%] bg-accent-orange-500"
           style={`-webkit-mask: url("${iconSrc.src}") no-repeat center / contain; mask: url("${iconSrc.src}") no-repeat center / contain;`}
         />
-        <p class="font-semibold text-xl text-center text-accent-500">
+        <p class="font-semibold text-xl text-center text-accent-orange-500">
           {`${text} copied!`}
         </p>
       </div>

@@ -1,4 +1,9 @@
 /* Text color */
+
+.text-accent-orange-500 {
+  color: var(--accent-orange-500);
+}
+
 .text-secondary-purple-300 {
   color: var(--secondary-purple-300);
 }
@@ -8,30 +13,23 @@
 .text-secondary-purple-500 {
   color: var(--secondary-purple-500);
 }
-.text-accent-500 {
-  color: var(--accent-orange-500);
+
+.text-neutral-gray-200 {
+  color: var(--neutral-gray-200);
 }
-.text-primary-black-400 {
-  color: var(--primary-black-400);
+.text-neutral-gray-300 {
+  color: var(--neutral-gray-300);
 }
-.text-primary-black-500 {
-  color: var(--primary-black-500);
-}
-.text-primary-black-600 {
-  color: var(--primary-black-600);
+.text-neutral-gray-500 {
+  color: var(--neutral-gray-500);
 }
 
 /* Background color */
 
-.bg-accent-500 {
+.bg-accent-orange-500 {
   background-color: var(--accent-orange-500);
 }
-.bg-primary-black-400 {
-  background-color: var(--primary-black-400);
-}
-.bg-primary-black-600 {
-  background-color: var(--primary-black-600);
-}
+
 .bg-secondary-purple-300 {
   background-color: var(--secondary-purple-300);
 }
@@ -41,6 +39,10 @@
 .bg-secondary-purple-500 {
   background-color: var(--secondary-purple-500);
 }
+.bg-secondary-purple-900 {
+  background-color: var(--secondary-purple-900);
+}
+
 .bg-profile-pic-background {
   background-color: var(--profile-pic-background);
 }
