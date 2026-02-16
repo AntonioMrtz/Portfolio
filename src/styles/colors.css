@@ -14,6 +14,9 @@
   color: var(--secondary-purple-500);
 }
 
+.text-neutral-gray-100 {
+  color: var(--neutral-gray-100);
+}
 .text-neutral-gray-200 {
   color: var(--neutral-gray-200);
 }

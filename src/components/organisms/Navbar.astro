@@ -60,8 +60,17 @@ const HAMBURGER_ICON_HEIGHT = 42;
         {
           Object.values(SECTIONS_ID_TO_DATA).map((section) => (
             <li class="navbar-link">
-              <a href={`#${section.id}`} class="navbar-text">
-                <p class="font-semibold text-4xl lg:text-[24px]">
+              <a href={`#${section.id}`} class="navbar-text section-link">
+                <Image
+                  src={section.icon}
+                  alt={section.label}
+                  aria-hidden="true"
+                  class="nav-section-icon filter-accent-orange-500"
+                  width={64}
+                  height={64}
+                  loading="lazy"
+                />
+                <p class="font-semibold text-4xl lg:text-[24px] text-neutral-gray-100">
                   {section.label}
                 </p>
               </a>
@@ -74,9 +83,10 @@ const HAMBURGER_ICON_HEIGHT = 42;
 </header>
 
 <style>
+  @reference "tailwindcss";
   .navbar {
     color: var(--secondary-purple-600);
-    opacity: 0.9;
+    opacity: 0.95;
     transition:
       background-color 240ms ease,
       box-shadow 240ms ease,
@@ -93,6 +103,21 @@ const HAMBURGER_ICON_HEIGHT = 42;
 
   .navbar-link:hover .navbar-text {
     color: var(--accent-orange-500) !important;
+  }
+
+  .section-link {
+    display: inline-flex;
+    align-items: center;
+    @apply gap-6;
+  }
+
+  .nav-section-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    font-weight: bold;
+    object-fit: contain;
+    vertical-align: middle;
   }
 
   .icon {
@@ -139,10 +164,9 @@ const HAMBURGER_ICON_HEIGHT = 42;
     }
 
     :global(.astronav-items ul) {
-      width: 100%;
       flex: 1;
       justify-content: center;
-      align-items: center;
+      align-items: start;
       gap: 1.5rem;
     }
 
@@ -192,13 +216,6 @@ const HAMBURGER_ICON_HEIGHT = 42;
   }
 
   @media (min-width: 1024px) {
-    .icon {
-      width: 48px;
-      height: 48px;
-    }
-  }
-
-  @media (min-width: 1024px) {
     .navbar {
       border-radius: 12px;
       margin: 12px 16px 0;
@@ -206,6 +223,14 @@ const HAMBURGER_ICON_HEIGHT = 42;
 
     .logo-icon {
       display: block;
+    }
+    .icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .nav-section-icon {
+      display: none;
     }
   }
 </style>
@@ -238,6 +263,7 @@ const HAMBURGER_ICON_HEIGHT = 42;
 
   toggleNavbarHidden();
   toggleBodyScrollLock();
+
   window.addEventListener("scroll", toggleNavbarHidden, { passive: true });
   window.addEventListener("resize", toggleBodyScrollLock, { passive: true });
   menuButton?.addEventListener("click", () => {
