@@ -1,9 +1,20 @@
 ---
 import { CONTACT_ID_TO_DATA, PERSONAL_INFO } from "@/data/me";
 import { SECTIONS_ID_TO_DATA } from "@/data/sections";
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import {
+  Astronav,
+  MenuItems,
+  MenuIcon,
+  OpenIcon,
+  CloseIcon,
+} from "astro-navbar";
 import { TW_SCREEN_LG } from "@/styles/styles";
 import { Image } from "astro:assets";
+import hamburgerIcon from "@/assets/icons/navbar/hamburger.svg";
+import closeIcon from "@/assets/icons/navbar/close.svg";
+
+const HAMBURGER_ICON_WIDTH = 42;
+const HAMBURGER_ICON_HEIGHT = 42;
 ---
 
 <header id="site-navbar" class="lg:flex py-4 px-5 md:px-12 gap-5 navbar">
@@ -22,7 +33,26 @@ import { Image } from "astro:assets";
         />
       </a>
       <div class="block lg:hidden">
-        <MenuIcon class="icon navbar-text pointer cursor-pointer" />
+        <MenuIcon class="icon navbar-text pointer cursor-pointer">
+          <OpenIcon>
+            <Image
+              width={HAMBURGER_ICON_WIDTH}
+              height={HAMBURGER_ICON_HEIGHT}
+              src={hamburgerIcon}
+              alt="Open menu"
+              class="filter-secondary-purple-600"
+            />
+          </OpenIcon>
+          <CloseIcon>
+            <Image
+              width={HAMBURGER_ICON_WIDTH}
+              height={HAMBURGER_ICON_HEIGHT}
+              src={closeIcon}
+              alt="Close menu"
+              class="filter-neutral-gray-300"
+            />
+          </CloseIcon>
+        </MenuIcon>
       </div>
     </div>
     <MenuItems class="hidden pr-[5%] lg:flex">
@@ -68,6 +98,12 @@ import { Image } from "astro:assets";
   .icon {
     width: 42px;
     height: 42px;
+  }
+
+  .icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 
   .logo-icon {
@@ -147,6 +183,11 @@ import { Image } from "astro:assets";
     :global(body.menu-open #astronav-menu .navbar-text) {
       color: var(--neutral-white);
       opacity: 1;
+    }
+
+    :global(body.menu-open #astronav-menu .filter-neutral-gray-300) {
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+        brightness(100%) contrast(100%);
     }
   }
 

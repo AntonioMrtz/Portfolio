@@ -9,3 +9,13 @@
   filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
     hue-rotate(360deg) brightness(102%) contrast(101%);
 }
+
+.filter-secondary-purple-600 {
+  filter: invert(20%) sepia(21%) saturate(460%) hue-rotate(252deg)
+    brightness(0.85) contrast(0.95);
+}
+
+.filter-neutral-gray-300 {
+  filter: invert(74%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(96%)
+    contrast(94%);
+}
