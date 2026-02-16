@@ -57,7 +57,7 @@ const CONTACT_ID_TO_DATA: Readonly<Record<ContactId, Contact>> = {
   },
   github: {
     id: "github",
-    label: "GitHub",
+    label: "Github",
     url: "https://github.com/AntonioMrtz",
     iconPath: githubIcon,
   },
