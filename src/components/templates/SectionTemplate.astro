@@ -13,7 +13,7 @@ const { title, id, display, iconSrc } = Astro.props;
 <section class="w-full" id={id}>
   {
     title && (
-      <span class="flex flex-row w-full gap-2 items-center mb-8 text-secondary-purple-400 text-2xl md:text-3xl 2xl:text-5xl">
+      <span class="flex flex-row w-full gap-2 items-center mb-8 text-secondary-purple-400">
         <Image
           src={iconSrc}
           class="image inline-block w-[1em] h-[1em] icon-img filter-secondary-purple-400"
@@ -22,7 +22,9 @@ const { title, id, display, iconSrc } = Astro.props;
           height={iconSrc.height}
           loading="lazy"
         />
-        <h2 class="font-bold text-left">{title}</h2>
+        <h2 class="font-bold text-left text-2xl md:text-3xl 2xl:text-5xl">
+          {title}
+        </h2>
       </span>
     )
   }
