@@ -17,9 +17,11 @@ const cv = CV_DATA;
 const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
 ---
 
-<div class="flex flex-col w-full min-h-screen justify-center gap-4">
+<div class="flex flex-col w-full min-h-screen justify-center gap-4 home">
   <!-- Text -->
-  <div class="flex flex-col gap-2 sm:gap-6 mb-6 sm:mb-16 lg:mb-0">
+  <div
+    class="flex flex-col gap-2 sm:gap-6 mb-6 sm:mb-16 lg:mb-0 home__text-container"
+  >
     <h1
       class="text-3xl md:text-5xl 2xl:text-9xl text-center font-black gradient-text"
     >
@@ -28,7 +30,7 @@ const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
     <div class="flex flex-col flex-wrap gap-1 items-center justify-center">
       {
         PERSONAL_INFO.title.map((line) => (
-          <h2 class="text-lg sm:text-2xl text-center 2xl:text-3xl font-black leading-tight gap-1 text-secondary-purple-300">
+          <h2 class="sm:text-2xl text-center 2xl:text-3xl font-black leading-tight gap-1 text-secondary-purple-300">
             {`>> ${line}`}
           </h2>
         ))
@@ -37,7 +39,7 @@ const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
   </div>
 
   <div
-    class="flex flex-col md:flex-row gap-12 lg:gap-4 justify-between items-center 2xl:p-[5%]"
+    class="flex flex-col md:flex-row gap-12 lg:gap-4 justify-between items-center 2xl:p-[5%] home__data-container"
   >
     <div
       class="flex flex-row w-full justify-center items-center relative mb-4 md:m-0"
@@ -76,6 +78,8 @@ const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
 </div>
 
 <style>
+  @reference "tailwindcss";
+
   .gradient-text {
     background: linear-gradient(
       90deg,
@@ -113,5 +117,23 @@ const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
     box-shadow:
       0 15px 30px rgba(0, 0, 0, 0.2),
       0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-height: 1080px) and (min-width: 1024px) {
+    h1 {
+      @apply text-7xl;
+    }
+
+    .home {
+      @apply gap-0;
+    }
+
+    .home__data-container {
+      @apply p-2;
+    }
+
+    .home__text-container {
+      @apply gap-4;
+    }
   }
 </style>
