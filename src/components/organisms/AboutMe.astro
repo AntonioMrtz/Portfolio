@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import aboutMePicture from "@/assets/images/me/about-me.webp";
+import { ABOUT_ME } from "@/data/me";
+---
+
+<div class="flex flex-col lg:flex-row lg:items-stretch gap-6 p-4 lg:p-0">
+  <div
+    class="mx-auto w-36 h-36 lg:mx-0 lg:w-full lg:h-auto lg:basis-1/2 relative rounded-full lg:rounded-lg overflow-hidden"
+  >
+    <Image
+      class="w-full h-full lg:absolute lg:inset-0 lg:w-full lg:h-full object-cover"
+      src={aboutMePicture}
+      alt="About me"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <div class="w-full lg:basis-1/2 min-w-0 shrink flex flex-col justify-center">
+    <h3
+      class="text-lg lg:text-2xl 2xl:text-3xl mb-2 font-semibold text-center lg:text-left"
+    >
+      {ABOUT_ME.title}
+    </h3>
+    <div class="leading-relaxed space-y-3">
+      <p class="whitespace-pre-line text-wrap text-base 2xl:text-[1.1rem]">
+        {ABOUT_ME.description}
+      </p>
+    </div>
+  </div>
+</div>

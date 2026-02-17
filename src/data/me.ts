@@ -5,6 +5,7 @@ export {
   CONTACT_ID_TO_DATA,
   PERSONAL_INFO,
   CV_DATA,
+  ABOUT_ME,
 };
 import type { ImageMetadata } from "astro";
 import emailIcon from "@/assets/icons/common/email.svg";
@@ -29,7 +30,7 @@ interface PersonalInfo {
   name: string;
   title: string[];
   description: string;
-  profilePicturePath: ImageMetadata;
+  profilePicture: ImageMetadata;
   logo: ImageMetadata;
 }
 
@@ -37,7 +38,7 @@ const PERSONAL_INFO: PersonalInfo = {
   name: "Antonio Martínez Fernández",
   title: ["Full Stack Developer", "Python, Angular, Node.js & React"],
   description: "🎯 Transforming ideas into Software",
-  profilePicturePath: profileIcon,
+  profilePicture: profileIcon,
   logo: logoIcon,
 };
 
@@ -77,4 +78,19 @@ const CV_DATA: Readonly<CvInfo> = {
   label: "CV",
   url: `${import.meta.env.BASE_URL}/cv/CV_Antonio_Martinez_Fernandez.pdf`,
   iconPath: cvIcon,
+};
+
+const ABOUT_ME = {
+  title: "Hi I'm Antonio! 👋",
+  description: `My name is Antonio Martinez, and I'm a Full Stack Developer with over three years of real-world experience building integrated frontend-backend solutions.
+
+My main tech stack includes Python, FastAPI, Angular, React, and Node.js. I have worked in fast-paced international startups, taking ownership of product features end-to-end and collaborating closely with teams using my advanced English skills. I am fluent in both English and Spanish.
+
+Music is a big passion of mine—I dedicated three years to Spotify Electron, an open-source music streaming app I built from scratch. The project replicates the Spotify UI, adds new features such as allowing users to upload songs, and provides a platform for discovering emerging artists. I led the project and coordinated over 30 contributors from around the world, gaining experience in open-source leadership, collaboration, and community-driven development.
+
+I am a daily Linux user and enjoy understanding systems at a deeper level. I like experimenting with tools, optimizing workflows, and staying up to date with modern technologies and industry trends. I strongly believe in continuous improvement and strive to become at least 1% better every day, both technically and professionally.
+
+Outside of work, I enjoy sports and music. I regularly practice trail running, cycling, gym training, and padel.
+
+I hold a degree in Computer Science from the University of Murcia, where I specialized in Software Engineering.`,
 };

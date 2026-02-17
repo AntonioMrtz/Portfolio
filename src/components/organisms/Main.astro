@@ -1,5 +1,5 @@
 ---
-import { SECTIONS_ID_TO_DATA, type Section } from "@/data/sections";
+import { SECTIONS_ID_TO_DATA } from "@/data/sections";
 import SectionTemplate from "@/components/templates/SectionTemplate.astro";
 import Experience from "@/components/organisms/Experience.astro";
 import Home from "@/components/organisms/Home.astro";
@@ -63,13 +63,13 @@ const contactSection = SECTIONS_ID_TO_DATA.contact;
   </SectionTemplate>
 
   <!-- About me -->
-  <!-- <SectionTemplate
+  <SectionTemplate
     id={aboutMeSection.id}
     title={aboutMeSection.label}
     iconSrc={aboutMeSection.icon}
   >
     <AboutMe />
-  </SectionTemplate> -->
+  </SectionTemplate>
 
   <!-- Contact -->
   <SectionTemplate
