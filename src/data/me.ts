@@ -82,7 +82,7 @@ const CV_DATA: Readonly<CvInfo> = {
 
 const ABOUT_ME = {
   title: "Hi I'm Antonio! 👋",
-  description: `My name is Antonio Martinez, and I'm a Full Stack Developer with over three years of real-world experience building integrated frontend-backend solutions.
+  description: `My name is Antonio Martinez, and I'm a Full Stack Developer with +4 years of real-world experience building integrated frontend-backend solutions.
 
 My main tech stack includes Python, FastAPI, Angular, React, and Node.js. I have worked in fast-paced international startups, taking ownership of product features end-to-end and collaborating closely with teams using my advanced English skills. I am fluent in both English and Spanish.
 

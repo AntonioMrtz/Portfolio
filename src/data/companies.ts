@@ -86,7 +86,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
       description:
         "Participate in all stages of software development for ROSITA2, an embedded system for bioreactors, developing both frontend and backend solutions while ensuring seamless integration with hardware.\n\n- Development of Rest APIs and microservices using Python and FastAPI. Usage of Redis queues and events for fast and efficient microservices communication.\n- Design and development of a touchscreen and desktop application interface for real-time management of bioreactors with Angular (v12-19), Bootstrap and Neutralino. Successfully migrated all systems from Angular 12 to 19.\n- Software lead for bSmart devices such as CT1 and bBreath4 obtaining integrated backend-frontend solutions and working closely with electronics teams for integrating low level hardware software. Led meetings for retrospective analysis and future planning based on requirements and user feedback.\n- Contribute to architecture planning and decision-making for system design.\n- Worked extensively with technologies such as OPC UA and Asyncio.\n- Unit and integration tests with pytest as well as extensive testing with physical prototypes to ensure reliability and performance. Testing with Jasmine and Karma to validate frontend product requirements.",
       contractType: ContractType.FullTime,
-      dates: "Nov 2023 - Jul 2025",
+      dates: "October 2023 - Jul 2025",
       tech: ["python", "fastapi", "angular", "postgresql", "redis"],
     },
   },
