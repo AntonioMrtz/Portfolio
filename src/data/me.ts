@@ -34,9 +34,14 @@ interface PersonalInfo {
   logo: ImageMetadata;
 }
 
+const YEARS_OF_EXPERIENCE = new Date().getFullYear() - 2022; // I started working in 2022, so we calculate the years of experience based on that.
+
 const PERSONAL_INFO: PersonalInfo = {
   name: "Antonio Martínez Fernández",
-  title: ["Full Stack Developer", "Python, Angular, Node.js & React"],
+  title: [
+    `Full Stack Developer with +${YEARS_OF_EXPERIENCE} years experience`,
+    "Python, Angular, Node.js & React",
+  ],
   description: "🎯 Transforming ideas into Software",
   profilePicture: profileIcon,
   logo: logoIcon,
@@ -82,7 +87,7 @@ const CV_DATA: Readonly<CvInfo> = {
 
 const ABOUT_ME = {
   title: "Hi I'm Antonio! 👋",
-  description: `My name is Antonio Martinez, and I'm a Full Stack Developer with +4 years of real-world experience building integrated frontend-backend solutions.
+  description: `My name is Antonio Martinez, and I'm a Full Stack Developer with +${YEARS_OF_EXPERIENCE} years of real-world experience building integrated frontend-backend solutions.
 
 My main tech stack includes Python, FastAPI, Angular, React, and Node.js. I have worked in fast-paced international startups, taking ownership of product features end-to-end and collaborating closely with teams using my advanced English skills. I am fluent in both English and Spanish.
 
