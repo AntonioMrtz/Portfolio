@@ -9,8 +9,8 @@ Personal portfolio built with Astro and Tailwind CSS.
 - Github Actions
 - Astro Navbar component
 - Svg
-    - [Repo](https://www.svgrepo.com/)
-    - [Solar broken icons](https://www.svgrepo.com/collection/solar-broken-line-icons/)
+  - [Repo](https://www.svgrepo.com/)
+  - [Solar broken icons](https://www.svgrepo.com/collection/solar-broken-line-icons/)
 
 ## Getting Started
 
