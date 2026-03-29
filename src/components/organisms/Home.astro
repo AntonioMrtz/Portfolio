@@ -56,8 +56,8 @@ const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
         class="absolute w-[40%] sm:w-[45%] 2xl:w-[60%] h-auto rounded-r-4xl profile-shadow bottom-[7%]"
         src={PERSONAL_INFO.profilePicture}
         alt={`${PERSONAL_INFO.name} profile`}
-        width={PERSONAL_INFO.profilePicture.width}
-        height={PERSONAL_INFO.profilePicture.height}
+        width={PERSONAL_INFO.profilePicture.width / 3}
+        height={PERSONAL_INFO.profilePicture.height / 3}
         loading="eager"
         fetchpriority="high"
       />
