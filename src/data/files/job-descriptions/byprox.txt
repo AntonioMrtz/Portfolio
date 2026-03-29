@@ -1,0 +1,3 @@
+- Developed a full-stack travel application using PHP, JavaScript, and MySQL
+- Designed hierarchical navigation across locations and points of interest.
+- Built responsive UI with HTML, CSS, and JavaScript.

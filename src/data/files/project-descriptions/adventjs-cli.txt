@@ -1,0 +1,17 @@
+I created adventjs-cli, a command-line tool designed to streamline and automate the setup for each AdventJS challenge—so developers can focus on solving problems, not configuring environments.
+
+What adventjs-cli provides?
+
+With a single command, it automatically generates:
+
+- A TypeScript function template ready for your solution
+- A Markdown file with the full problem description
+- A Jest test file to validate your implementation
+
+The project comes preconfigured with:
+- Debugging tools
+- Jest testing environment
+- TypeScript setup
+- ESLint for code quality
+- Prettier for consistent formatting
+- GitHub Actions CI workflows

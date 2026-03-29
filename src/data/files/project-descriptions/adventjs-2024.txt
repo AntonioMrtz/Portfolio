@@ -1,0 +1,3 @@
+My solutions to the AdventJS 2024 challenge
+
+AdventJS is an annual event that helps developers improve their coding skills with 25 progressively harder challenges leading up to Christmas. The challenges are primarily focused on JavaScript and TypeScript, and in some cases Python. Each day, a new challenge is released, and participants are encouraged to solve it and share their solutions.

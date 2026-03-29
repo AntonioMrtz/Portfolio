@@ -1,0 +1,5 @@
+- Developed high-performance, reactive interfaces for a professional sports video analysis platform using Angular.
+- Built and took ownership of features from scratch to MVP and full production deployment in a fast-paced startup environment.
+- Managed complex state and real-time data flows using RxJS.
+- Delivered cross-platform applications using Angular, Electron, and Ionic
+- Collaborated closely with product and design teams to improve UX/UI and performance
