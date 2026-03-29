@@ -1,4 +1,6 @@
-# Portfolio
+<img src="src/assets/images/me/logoAM.png" alt="Website preview" width="64px">
+
+# 🎨 Portfolio
 
 Personal portfolio built with Astro and Tailwind CSS.
 
