@@ -1,0 +1,3 @@
+- Delivered a complete website from concept to production.
+- Designed UX/UI and built a responsive, performance-optimized frontend.
+- Managed deployment and launch of a production-ready solution.

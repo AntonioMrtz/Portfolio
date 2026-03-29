@@ -1,0 +1,6 @@
+- Led a 25+ contributor open-source project, managing workflows, PRs, and releases.
+- Designed a distributed music streaming architecture using AWS (S3, CloudFront, Lambda).
+- Built REST APIs with FastAPI, MongoDB, and JWT authentication.
+- Developed a cross-platform desktop app using React, TypeScript, and Electron.
+- Delivered a scalable system replicating core Spotify features with additional user-driven functionality.
+- Implemented CI/CD pipelines (GitHub Actions) and Dockerized environments.
