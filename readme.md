@@ -1,4 +1,4 @@
-<img src="src/assets/images/me/logoAM.png" alt="Website preview" width="64px">
+<img src="src/assets/images/me/logoAM.webp" alt="Website preview" width="64px">
 
 # 🎨 Portfolio
 

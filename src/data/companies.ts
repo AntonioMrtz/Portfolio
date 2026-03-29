@@ -1,10 +1,10 @@
 import type { ImageMetadata } from "astro";
 import type { TechId } from "./stack";
-import metricaSportsIcon from "@/assets/images/companies/metrica-sports.png";
+import metricaSportsIcon from "@/assets/images/companies/metrica-sports.webp";
 import spotifyElectronIcon from "@/assets/images/companies/spotify-electron.webp";
-import bionetIcon from "@/assets/images/companies/bionet.png";
+import bionetIcon from "@/assets/images/companies/bionet.webp";
 import mayorOpticaIcon from "@/assets/images/companies/mayor-optica.webp";
-import byproxIcon from "@/assets/images/companies/byprox.png";
+import byproxIcon from "@/assets/images/companies/byprox.webp";
 
 import metricaSportsJobDescription from "@/data/files/job-descriptions/metrica-sports.txt?raw";
 import spotifyElectronJobDescription from "@/data/files/job-descriptions/spotify-electron.txt?raw";

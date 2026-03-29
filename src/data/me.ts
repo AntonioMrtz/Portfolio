@@ -13,7 +13,7 @@ import githubIcon from "@/assets/icons/common/github.svg";
 import linkedinIcon from "@/assets/icons/common/linkedin.svg";
 import cvIcon from "@/assets/icons/common/cv.svg";
 import profileIcon from "@/assets/images/me/profile-pic-no-bg-tall.webp";
-import logoIcon from "@/assets/images/me/logoAM.png";
+import logoIcon from "@/assets/images/me/logoAM.webp";
 
 import aboutMeDescriptionRaw from "@/data/files/about-me.txt?raw";
 
