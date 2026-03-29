@@ -3,5 +3,4 @@
 - Acted as software lead for multiple devices, coordinating with electronics teams and stakeholders
 - Led the migration from Angular 12 to Angular 19, improving maintainability and performance
 - Contribute to architecture planning and decision-making for system design.
-- Worked extensively with technologies such as OPC UA and Asyncio.
 - Implemented backend testing (pytest) and frontend testing (Karma, Jasmine)
