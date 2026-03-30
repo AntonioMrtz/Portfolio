@@ -26,7 +26,8 @@
     "asyncio",
     "Udemy",
     "udemy",
-    "padel"
+    "padel",
+    "codegen"
   ],
   "editor.tabSize": 2,
   "editor.insertSpaces": true

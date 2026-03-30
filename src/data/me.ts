@@ -73,12 +73,14 @@ const CONTACT_ID_TO_DATA: Readonly<Record<ContactId, Contact>> = {
 };
 
 interface CvInfo {
+  id: string;
   label: string;
   url: string;
   iconPath: ImageMetadata;
 }
 
 const CV_DATA: Readonly<CvInfo> = {
+  id: "cv",
   label: "CV",
   url: `${import.meta.env.BASE_URL}/cv/CV_Antonio_Martinez_Fernandez.pdf`,
   iconPath: cvIcon,
