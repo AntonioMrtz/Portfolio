@@ -7,9 +7,10 @@ interface Props {
   iconSrc: ImageMetadata;
   url: string;
   copyUrl?: string;
+  id?: string;
 }
 
-const { text, iconSrc, url, copyUrl } = Astro.props;
+const { text, iconSrc, url, copyUrl, id } = Astro.props;
 ---
 
 <a
@@ -19,6 +20,7 @@ const { text, iconSrc, url, copyUrl } = Astro.props;
   target={copyUrl ? undefined : "_blank"}
   rel={copyUrl ? undefined : "noopener noreferrer"}
   id={`home-card-button-${text.toLowerCase()}`}
+  data-testid={`home-card-button-${id}`}
 >
   <!-- Content -->
   <div

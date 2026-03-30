@@ -13,6 +13,7 @@ Personal portfolio built with Astro and Tailwind CSS.
 - Svg
   - [Repo](https://www.svgrepo.com/)
   - [Solar broken icons](https://www.svgrepo.com/collection/solar-broken-line-icons/)
+- Playwright
 
 ## Getting Started
 
@@ -31,6 +32,7 @@ Open `http://localhost:4321/Portfolio` in your browser.
 - `npm run dev`: Start the dev server
 - `npm run build`: Build the site for production
 - `npm run preview`: Preview the production build locally
+- `npm run test:e2e`: Run e2e tests
 
 ## Github Pages build
 

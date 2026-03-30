@@ -70,6 +70,7 @@ const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
             iconSrc={card.iconPath}
             url={card.url}
             copyUrl={"copyUrl" in card ? card.copyUrl : undefined}
+            id={card.id}
           />
         ))
       }
