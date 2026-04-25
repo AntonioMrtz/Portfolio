@@ -1,6 +1,7 @@
 ---
 import LandingPageTemplate from "@/components/templates/LandingPageTemplate.astro";
 import "@/styles/global.css";
+import Font from "astro/components/Font.astro";
 ---
 
 <html lang="en">
@@ -79,6 +80,11 @@ import "@/styles/global.css";
       href={`${import.meta.env.BASE_URL}/favicon.ico`}
     />
     <meta name="generator" content={Astro.generator} />
+    <Font cssVariable="--font-ubuntu-light" />
+    <Font cssVariable="--font-ubuntu-regular" />
+    <Font cssVariable="--font-ubuntu-italic" />
+    <Font cssVariable="--font-ubuntu-medium" />
+    <Font cssVariable="--font-ubuntu-bold" />
   </head>
   <body>
     <LandingPageTemplate />
