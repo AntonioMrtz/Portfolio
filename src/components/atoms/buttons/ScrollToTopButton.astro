@@ -1,9 +1,11 @@
 ---
 import ArrowUpIcon from "@/assets/icons/common/arrow-up.svg?raw";
+
+const SCROLL_TO_TOP_ID = "scroll-to-top";
 ---
 
 <button
-  id="scroll-to-top"
+  id={SCROLL_TO_TOP_ID}
   class="scroll-to-top-button"
   aria-label="Back to top"
 >
@@ -63,8 +65,8 @@ import ArrowUpIcon from "@/assets/icons/common/arrow-up.svg?raw";
   }
 </style>
 
-<script>
-  const scrollButton = document.getElementById("scroll-to-top");
+<script define:vars={{ SCROLL_TO_TOP_ID }} is:inline>
+  const scrollButton = document.getElementById(SCROLL_TO_TOP_ID);
 
   if (scrollButton) {
     window.addEventListener("scroll", () => {

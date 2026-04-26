@@ -1,0 +1,95 @@
+---
+import ArrowDownIcon from "@/assets/icons/common/arrow-down.svg?raw";
+import { HOME_SECTION_ID, type SectionID } from "@/data/sections";
+import { TW_SCREEN_XL } from "@/styles/styles";
+
+const SCROLL_TO_EXPERIENCE_ID = "scroll-to-experience";
+const EXPERIENCE_ID: SectionID = "experience";
+---
+
+<a
+  id={SCROLL_TO_EXPERIENCE_ID}
+  class="scroll-down-button"
+  aria-label="Go to experience section"
+  href={`#${EXPERIENCE_ID}`}
+>
+  <Fragment set:html={ArrowDownIcon} />
+</a>
+
+<style>
+  @reference "tailwindcss";
+
+  .scroll-down-button {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 1000;
+
+    @apply rounded-xl;
+  }
+
+  @media (min-width: 1280px) {
+    .scroll-down-button {
+      display: flex;
+    }
+  }
+
+  .scroll-down-button.visible {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  :global(body.menu-open) .scroll-down-button {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+  }
+
+  .scroll-down-button:hover {
+    transform: translateX(-50%) translateY(-4px);
+  }
+
+  .scroll-down-button :global(svg) {
+    width: 100%;
+    height: 100%;
+    filter: var(--filter-secondary-purple-900);
+    transition: filter 0.3s ease;
+  }
+
+  .scroll-down-button:hover :global(svg) {
+    filter: var(--filter-accent-orange-500);
+  }
+</style>
+
+<script
+  define:vars={{ SCROLL_TO_EXPERIENCE_ID, TW_SCREEN_XL, HOME_SECTION_ID }}
+  is:inline
+>
+  const isSmallScreen = window.matchMedia(`(max-width: ${TW_SCREEN_XL})`);
+  if (isSmallScreen.matches) {
+    return;
+  }
+
+  const scrollButton = document.getElementById(SCROLL_TO_EXPERIENCE_ID);
+  const homeSection = document.getElementById(HOME_SECTION_ID);
+
+  if (scrollButton && homeSection) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY < 1) {
+        scrollButton.classList.remove("visible");
+      } else {
+        scrollButton.classList.add("visible");
+      }
+    });
+  }
+</script>

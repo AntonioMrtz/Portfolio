@@ -8,6 +8,7 @@ import {
 } from "@/data/me";
 import HomeCard from "@/components/molecules/home-card/HomeCard.astro";
 import { Image } from "astro:assets";
+import ContinueHomeButton from "../atoms/buttons/ContinueHomeButton.astro";
 
 const email = CONTACT_ID_TO_DATA.email;
 const linkedin = CONTACT_ID_TO_DATA.linkedin;
@@ -17,7 +18,9 @@ const cv = CV_DATA;
 const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
 ---
 
-<div class="flex flex-col w-full min-h-screen justify-center gap-4 home">
+<div
+  class="flex flex-col w-full min-h-screen justify-center gap-4 home relative"
+>
   <!-- Text -->
   <div
     class="flex flex-col gap-2 sm:gap-6 mb-6 sm:mb-16 lg:mb-0 home__text-container"
@@ -76,6 +79,7 @@ const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
       }
     </div>
   </div>
+  <ContinueHomeButton />
 </div>
 
 <style>

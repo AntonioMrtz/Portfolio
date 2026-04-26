@@ -5,7 +5,9 @@ import graduationCapIcon from "@/assets/icons/common/graduation-cap.svg";
 import aboutMeIcon from "@/assets/icons/common/hand-shaking.svg";
 import contactIcon from "@/assets/icons/common/mailbox.svg";
 
-export { type SectionID, type Section, SECTIONS_ID_TO_DATA };
+export { type SectionID, type Section, HOME_SECTION_ID, SECTIONS_ID_TO_DATA };
+
+const HOME_SECTION_ID = "home";
 
 type SectionID =
   | "experience"
