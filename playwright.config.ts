@@ -76,7 +76,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: "npm run build && npm run preview",
+    command: "npm run test:e2e:server",
     url: "http://localhost:4321/Portfolio/",
     reuseExistingServer: !process.env.CI,
   },

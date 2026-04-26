@@ -1,6 +1,6 @@
 // @ts-check
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig, fontProviders } from "astro/config";
+import { defineConfig, envField, fontProviders } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 
@@ -12,6 +12,15 @@ export default defineConfig({
   site: "https://antoniomrtz.github.io",
   base: "/Portfolio",
   integrations: [sitemap()],
+  env: {
+    schema: {
+      GA_ENABLED: envField.boolean({
+        context: "client",
+        access: "public",
+      }),
+    },
+    validateSecrets: true,
+  },
   fonts: [
     {
       provider: fontProviders.local(),
