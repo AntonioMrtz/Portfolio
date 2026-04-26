@@ -1,6 +1,7 @@
 import type { ImageMetadata } from "astro";
 import type { TechId } from "./stack";
-import adventjsIcon from "@/assets/images/companies/advent-js.webp";
+import adventjsIcon from "@/assets/images/companies/adventjs.webp";
+import adventjsCLIIcon from "@/assets/images/companies/adventjs-cli.webp";
 
 import adventjsCliDescription from "@/data/files/project-descriptions/adventjs-cli.txt?raw";
 import adventjs2024Description from "@/data/files/project-descriptions/adventjs-2024.txt?raw";
@@ -26,7 +27,7 @@ const PROJECT_ID_TO_DATA: Readonly<Record<ProjectId, Project>> = {
     description: adventjsCliDescription,
     websiteUrl: "https://adventjs.dev/",
     repoUrl: "https://github.com/AntonioMrtz/adventjs-cli",
-    iconUrl: adventjsIcon,
+    iconUrl: adventjsCLIIcon,
     tech: ["nodejs", "typescript", "github_actions", "jest"],
   },
   "adventjs-2024": {

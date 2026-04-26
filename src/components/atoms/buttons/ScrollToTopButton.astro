@@ -1,9 +1,11 @@
 ---
 import ArrowUpIcon from "@/assets/icons/common/arrow-up.svg?raw";
+
+const SCROLL_TO_TOP_ID = "scroll-to-top";
 ---
 
 <button
-  id="scroll-to-top"
+  id={SCROLL_TO_TOP_ID}
   class="scroll-to-top-button"
   aria-label="Back to top"
 >
@@ -54,18 +56,17 @@ import ArrowUpIcon from "@/assets/icons/common/arrow-up.svg?raw";
   .scroll-to-top-button :global(svg) {
     width: 1.8rem;
     height: 1.8rem;
-    filter: brightness(0) invert(1);
+    filter: var(--filter-neutral-white);
     transition: filter 0.3s ease;
   }
 
   .scroll-to-top-button:hover :global(svg) {
-    filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
-      hue-rotate(360deg) brightness(102%) contrast(101%);
+    filter: var(--filter-accent-orange-500);
   }
 </style>
 
-<script>
-  const scrollButton = document.getElementById("scroll-to-top");
+<script define:vars={{ SCROLL_TO_TOP_ID }} is:inline>
+  const scrollButton = document.getElementById(SCROLL_TO_TOP_ID);
 
   if (scrollButton) {
     window.addEventListener("scroll", () => {
