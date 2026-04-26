@@ -54,13 +54,12 @@ import ArrowUpIcon from "@/assets/icons/common/arrow-up.svg?raw";
   .scroll-to-top-button :global(svg) {
     width: 1.8rem;
     height: 1.8rem;
-    filter: brightness(0) invert(1);
+    filter: var(--filter-neutral-white);
     transition: filter 0.3s ease;
   }
 
   .scroll-to-top-button:hover :global(svg) {
-    filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
-      hue-rotate(360deg) brightness(102%) contrast(101%);
+    filter: var(--filter-accent-orange-500);
   }
 </style>
 

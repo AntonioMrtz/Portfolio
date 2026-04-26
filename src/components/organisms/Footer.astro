@@ -78,9 +78,7 @@ const github = CONTACT_ID_TO_DATA.github;
     color: var(--accent-orange-500) !important;
   }
   :global(.footer-item:hover .footer-icon) {
-    /* apply the accent-orange filter on hover (overrides brightness-0 invert) */
-    filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
-      hue-rotate(360deg) brightness(102%) contrast(101%);
+    filter: var(--filter-accent-orange-500);
   }
 
   :global(.footer-icon) {

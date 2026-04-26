@@ -51,8 +51,7 @@ const { contact } = Astro.props;
   }
 
   .group:hover img {
-    filter: brightness(0) saturate(100%) invert(65%) sepia(66%) saturate(2515%)
-      hue-rotate(360deg) brightness(102%) contrast(101%);
+    filter: var(--filter-accent-orange-500);
   }
 
   @media (max-width: 1023px) {
