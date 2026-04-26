@@ -12,7 +12,12 @@ interface Props {
 const { label, url, iconPath } = Astro.props as Props;
 ---
 
-<div class="footer-item">
+<a
+  class="footer-item footer-link"
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+>
   {
     iconPath ? (
       <Image
@@ -27,12 +32,7 @@ const { label, url, iconPath } = Astro.props as Props;
     ) : null
   }
 
-  <a
-    href={url}
-    class="footer-link footer-text"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <p class="footer-text">
     {label}
-  </a>
-</div>
+  </p>
+</a>
