@@ -52,6 +52,7 @@ function parseSubheaderData(subheader: string[]): string {
         height={160}
         loading="lazy"
         decoding="async"
+        format="webp"
       />
     </div>
     <div class="flex flex-col gap-6 max-w-xl min-w-0">
@@ -154,6 +155,7 @@ function parseSubheaderData(subheader: string[]): string {
 </style>
 
 <script
+  is:inline
   define:vars={{
     mdBreakpoint: TW_SCREEN_MD,
     forceCollapse: forceCollapseDescription ?? false,

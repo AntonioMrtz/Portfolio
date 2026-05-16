@@ -1,7 +1,7 @@
 import type { ImageMetadata } from "astro";
 import type { TechId } from "./stack";
 import adventjsIcon from "@/assets/images/companies/adventjs.webp";
-import adventjsCLIIcon from "@/assets/images/companies/adventjs-cli.webp";
+import adventjsCLIIcon from "@/assets/images/companies/adventjs-cli.jpeg";
 
 import adventjsCliDescription from "@/data/files/project-descriptions/adventjs-cli.txt?raw";
 import adventjs2024Description from "@/data/files/project-descriptions/adventjs-2024.txt?raw";
