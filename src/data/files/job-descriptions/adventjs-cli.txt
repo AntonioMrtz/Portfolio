@@ -1,0 +1,5 @@
+The all-in-one command-line tool for AdventJS challenges. Save hours of repetitive setup with a single command and focus on solving, not configuring.
+
+- Generates a TypeScript solution template, problem docs, and Jest tests.
+- Fully preconfigured environment with debugging, linting, formatting, and CI.
+- Consistent workflow every year, built from personal experience.

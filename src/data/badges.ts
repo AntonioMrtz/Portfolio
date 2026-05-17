@@ -81,6 +81,12 @@ const BADGE_ID_TO_DATA: Readonly<Record<TechId, Badge>> = {
     imageUrl:
       "https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white",
   },
+  vitest: {
+    id: "vitest",
+    name: "Vitest",
+    imageUrl:
+      "https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white",
+  },
   astro: {
     id: "astro",
     name: "Astro",

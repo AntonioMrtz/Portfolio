@@ -24,4 +24,5 @@ type TechId =
   | "english"
   | "nestjs"
   | "aws"
-  | "google_cloud";
+  | "google_cloud"
+  | "vitest";

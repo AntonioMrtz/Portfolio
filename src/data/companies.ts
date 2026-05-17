@@ -5,7 +5,9 @@ import spotifyElectronIcon from "@/assets/images/companies/spotify-electron.webp
 import bionetIcon from "@/assets/images/companies/bionet.webp";
 import mayorOpticaIcon from "@/assets/images/companies/mayor-optica.webp";
 import byproxIcon from "@/assets/images/companies/byprox.webp";
+import adventjsCLIIcon from "@/assets/images/companies/adventjs-cli.jpeg";
 
+import adventjsCliDescription from "@/data/files/job-descriptions/adventjs-cli.txt?raw";
 import metricaSportsJobDescription from "@/data/files/job-descriptions/metrica-sports.txt?raw";
 import spotifyElectronJobDescription from "@/data/files/job-descriptions/spotify-electron.txt?raw";
 import bionetJobDescription from "@/data/files/job-descriptions/bionet.txt?raw";
@@ -19,7 +21,8 @@ type CompanyId =
   | "metrica-sports"
   | "byprox"
   | "mayor-optica"
-  | "spotify-electron";
+  | "spotify-electron"
+  | "adventjs-cli";
 
 interface Company {
   id: CompanyId;
@@ -93,12 +96,28 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
       tech: ["python", "fastapi", "angular", "postgresql", "redis"],
     },
   },
+  "adventjs-cli": {
+    id: "adventjs-cli",
+    name: "AdventJS CLI",
+    websiteUrl: "https://antoniomrtz.github.io/adventjs-cli-web/",
+    repoUrl: "https://github.com/AntonioMrtz/adventjs-cli",
+    iconUrl: adventjsCLIIcon,
+    description:
+      "The all-in-one command-line tool for AdventJS challenges. Save hours of repetitive setup with a single command and focus on solving, not configuring.",
+    jobInfo: {
+      title: "Founder and Lead Developer (Node.js, TypeScript)",
+      contractType: ContractType.Freelance,
+      dates: "October 2025 - Present",
+      description: adventjsCliDescription,
+      tech: ["nodejs", "typescript", "github_actions", "vitest"],
+    },
+  },
   "mayor-optica": {
     id: "mayor-optica",
     name: "Mayor Óptica",
     websiteUrl: "https://antoniomrtz.github.io/MayorOpticaWeb/",
     repoUrl: "https://github.com/AntonioMrtz/MayorOpticaWeb",
-    description: "Optical center in Puente Tocinos, Murcia",
+    description: "Optical center in Puente Tocinos, Murcia.",
     iconUrl: mayorOpticaIcon,
     jobInfo: {
       title: "Frontend Developer",
@@ -112,7 +131,7 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
     id: "byprox",
     name: "Byprox",
     websiteUrl: "https://byprox.com/",
-    description: "Development of Custom INDUSTRY 4.0 Projects",
+    description: "Development of Custom INDUSTRY 4.0 Projects.",
     iconUrl: byproxIcon,
     jobInfo: {
       title: "Full-Stack Developer (PHP & JavaScript)",
