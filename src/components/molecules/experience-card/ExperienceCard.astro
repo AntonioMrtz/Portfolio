@@ -14,6 +14,7 @@ interface Props {
   forceCollapseDescription?: boolean;
   forceTechColumnDisplay?: boolean;
   fixedHeight?: number;
+  formatWebp?: boolean;
 }
 
 const {
@@ -26,6 +27,7 @@ const {
   forceCollapseDescription = false,
   forceTechColumnDisplay = false,
   fixedHeight,
+  formatWebp = true,
 } = Astro.props;
 
 function parseSubheaderData(subheader: string[]): string {
@@ -53,7 +55,7 @@ function parseSubheaderData(subheader: string[]): string {
         height={160}
         loading="lazy"
         decoding="async"
-        format="webp"
+        format={formatWebp ? "webp" : undefined}
       />
     </div>
     <div class="flex flex-col gap-6 max-w-xl min-w-0">
