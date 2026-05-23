@@ -28,15 +28,17 @@ import websiteIcon from "@/assets/icons/common/display.svg";
           turnIconWhite={true}
         />
       )}
-      <CardButton
-        slot="actions"
-        label="Website"
-        iconSrc={websiteIcon}
-        url={v.websiteUrl}
-        altText="Website"
-        type="secondary"
-        turnIconWhite={true}
-      />
+      {v.websiteUrl && (
+        <CardButton
+          slot="actions"
+          label="Website"
+          iconSrc={websiteIcon}
+          url={v.websiteUrl}
+          altText="Website"
+          type="secondary"
+          turnIconWhite={true}
+        />
+      )}
     </ExperienceCard>
   ))
 }

@@ -159,4 +159,22 @@ const BADGE_ID_TO_DATA: Readonly<Record<TechId, Badge>> = {
     imageUrl:
       "https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white",
   },
+  scrum: {
+    id: "scrum",
+    name: "Scrum",
+    imageUrl:
+      "https://img.shields.io/badge/Scrum-009FDA?style=for-the-badge&logo=scrumalliance&logoColor=white",
+  },
+  agile: {
+    id: "agile",
+    name: "Agile",
+    imageUrl:
+      "https://img.shields.io/badge/Agile-009FDA?style=for-the-badge&logo=jira&Color=white",
+  },
+  kanban: {
+    id: "kanban",
+    name: "Kanban",
+    imageUrl:
+      "https://img.shields.io/badge/Kanban-009FDA?style=for-the-badge&logo=trello&Color=white",
+  },
 };

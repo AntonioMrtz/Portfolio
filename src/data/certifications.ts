@@ -1,21 +1,30 @@
 import type { TechId } from "./stack";
+import openWebinarsIcon from "@/assets/images/certifications/open-webinars.webp";
 import udemyIcon from "@/assets/icons/certifications/udemy.svg";
 import mongoDbIcon from "@/assets/icons/certifications/mongodb.svg";
 import efIcon from "@/assets/icons/certifications/ef.svg";
 
-export { CERTIFICATION_ID_TO_DATA, type Certification };
+export { CERTIFICATION_ID_TO_DATA, type Certification, type CertificationId };
 
 type CertificationId =
   | "mongo-db-dev-path"
   | "ef-set"
   | "udemy-python-asyncio"
-  | "udemy-nestjs-microservices";
+  | "udemy-nestjs-microservices"
+  | "open-webinars-planning-poker"
+  | "open-webinars-product-owner"
+  | "open-webinars-advanced-scrum"
+  | "open-webinars-kanban"
+  | "open-webinars-technical-scrum"
+  | "open-webinars-scrum-managing-teams"
+  | "open-webinars-testing-vitest"
+  | "open-webinars-managing-agile-sprints";
 
 interface Certification {
   id: CertificationId;
   name: string;
   diplomaUrl?: string;
-  websiteUrl: string;
+  websiteUrl?: string;
   iconUrl: ImageMetadata;
   tech: TechId[];
 }
@@ -24,6 +33,62 @@ interface Certification {
 const CERTIFICATION_ID_TO_DATA: Readonly<
   Record<CertificationId, Certification>
 > = {
+  "open-webinars-planning-poker": {
+    id: "open-webinars-planning-poker",
+    name: "Agile Estimation with Planning Poker",
+    diplomaUrl: "https://openwebinars.net/cert/farX",
+    iconUrl: openWebinarsIcon,
+    tech: ["scrum", "agile"],
+  },
+  "open-webinars-product-owner": {
+    id: "open-webinars-product-owner",
+    name: "Product Owner Course in Practice",
+    diplomaUrl: "https://openwebinars.net/certificacion/q0n8lgO7",
+    iconUrl: openWebinarsIcon,
+    tech: ["scrum", "agile"],
+  },
+  "open-webinars-advanced-scrum": {
+    id: "open-webinars-advanced-scrum",
+    name: "Advanced Scrum Course",
+    diplomaUrl: "https://openwebinars.net/certificacion/KBLgUYf3",
+    iconUrl: openWebinarsIcon,
+    tech: ["scrum", "agile"],
+  },
+  "open-webinars-kanban": {
+    id: "open-webinars-kanban",
+    name: "Design and Use a Kanban Board",
+    diplomaUrl: "https://openwebinars.net/cert/qBrZ",
+    iconUrl: openWebinarsIcon,
+    tech: ["kanban"],
+  },
+  "open-webinars-technical-scrum": {
+    id: "open-webinars-technical-scrum",
+    name: "Technical Scrum Course",
+    diplomaUrl: "https://openwebinars.net/certificacion/TJvP6FPx",
+    iconUrl: openWebinarsIcon,
+    tech: ["scrum", "agile"],
+  },
+  "open-webinars-scrum-managing-teams": {
+    id: "open-webinars-scrum-managing-teams",
+    name: "Scrum: Managing Teams with Scrum",
+    diplomaUrl: "https://openwebinars.net/cert/vkZp",
+    iconUrl: openWebinarsIcon,
+    tech: ["scrum", "agile"],
+  },
+  "open-webinars-managing-agile-sprints": {
+    id: "open-webinars-managing-agile-sprints",
+    name: "Managing Agile Sprints with Scrum",
+    diplomaUrl: "https://openwebinars.net/cert/rJFi",
+    iconUrl: openWebinarsIcon,
+    tech: ["scrum", "agile"],
+  },
+  "open-webinars-testing-vitest": {
+    id: "open-webinars-testing-vitest",
+    name: "Testing with Vitest",
+    diplomaUrl: "https://openwebinars.net/certificacion/8euvD9vM",
+    iconUrl: openWebinarsIcon,
+    tech: ["vitest"],
+  },
   "udemy-nestjs-microservices": {
     id: "udemy-nestjs-microservices",
     name: "[In progress] NestJS Microservices — Build & Deploy a Scalable Backend",
