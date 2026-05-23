@@ -1,4 +1,7 @@
 {
-  "recommendations": ["astro-build.astro-vscode", "adrianwilczynski.alpine-js-intellisense"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "adrianwilczynski.alpine-js-intellisense"
+  ],
   "unwantedRecommendations": []
 }
