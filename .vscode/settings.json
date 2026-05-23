@@ -27,8 +27,12 @@
     "Udemy",
     "udemy",
     "padel",
-    "codegen"
+    "codegen",
+    "alpinejs"
   ],
   "editor.tabSize": 2,
-  "editor.insertSpaces": true
+  "editor.insertSpaces": true,
+  "html.customData": [
+    "../../.vscode/extensions/adrianwilczynski.alpine-js-intellisense-1.2.0/customData/html.json" //https://github.com/withastro/astro/issues/14674
+  ]
 }

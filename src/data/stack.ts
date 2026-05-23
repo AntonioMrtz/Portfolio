@@ -25,4 +25,7 @@ type TechId =
   | "nestjs"
   | "aws"
   | "google_cloud"
-  | "vitest";
+  | "vitest"
+  | "scrum"
+  | "agile"
+  | "kanban";

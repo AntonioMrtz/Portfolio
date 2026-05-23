@@ -2,7 +2,6 @@
 import { Image } from "astro:assets";
 import TechBadge from "@/components/atoms/badges/TechBadge.astro";
 import type { Badge } from "@/data/badges";
-import { TW_SCREEN_MD } from "@/styles/styles";
 import type { ImageMetadata } from "astro";
 
 interface Props {
@@ -28,7 +27,6 @@ const {
   forceTechColumnDisplay = false,
   fixedHeight,
 } = Astro.props;
-const collapseScopeId = crypto.randomUUID();
 
 function parseSubheaderData(subheader: string[]): string {
   return subheader.join(" | ");
@@ -36,9 +34,12 @@ function parseSubheaderData(subheader: string[]): string {
 ---
 
 <div
+  x-data="experienceCard"
+  data-force-collapse={forceCollapseDescription}
+  x-intersect:enter.once="revealed = true"
+  x-bind:class="{ 'visible': revealed }"
   class={`card-container card-reveal flex flex-col-reverse ${forceTechColumnDisplay ? "" : "lg:flex-row"} gap-8 justify-between p-4 sm:p-8 w-full m-0 rounded-xl`}
   style={fixedHeight ? `height: ${fixedHeight}px;` : undefined}
-  data-collapse-scope={collapseScopeId}
 >
   <div
     class={`flex flex-col ${forceTechColumnDisplay ? "" : "md:flex-row"} gap-8 lg:gap-12 min-w-0`}
@@ -68,10 +69,23 @@ function parseSubheaderData(subheader: string[]): string {
       </div>
       {
         description && (
-          <div class="description-container">
-            <p class="description whitespace-pre-line text-base 2xl:text-[1.2rem]">
+          <div
+            class="relative"
+            x-bind:class="shouldCollapse ? 'cursor-pointer' : ''"
+            x-on:click="toggle()"
+          >
+            <p
+              class="whitespace-pre-line text-base 2xl:text-[1.2rem] transition-[max-height,opacity] duration-[400ms,300ms] ease-in-out"
+              x-bind:class="!expanded && shouldCollapse ? 'max-h-32 overflow-hidden' : ''"
+            >
               {description}
             </p>
+            <div
+              x-show="!expanded && shouldCollapse"
+              x-transition:opacity
+              class="absolute bottom-0 left-0 right-0 h-8 pointer-events-none"
+              style="background: linear-gradient(to bottom, transparent, var(--card-bg))"
+            />
           </div>
         )
       }
@@ -89,8 +103,9 @@ function parseSubheaderData(subheader: string[]): string {
 
 <style>
   .card-container {
+    --card-bg: var(--neutral-gray-100);
     border: 1px solid var(--secondary-purple-900);
-    background: var(--neutral-gray-100);
+    background: var(--card-bg);
     box-shadow:
       5px 5px 0px var(--neutral-gray-500),
       -5px -5px 0px var(--neutral-white);
@@ -108,128 +123,4 @@ function parseSubheaderData(subheader: string[]): string {
     opacity: 1;
     transform: translateY(0);
   }
-
-  .description-container {
-    position: relative;
-  }
-
-  .description {
-    transition:
-      max-height 0.4s ease-in-out,
-      opacity 0.3s ease-in-out;
-  }
-
-  .description-container[data-collapse="true"] {
-    cursor: pointer;
-  }
-
-  .description-container[data-collapse="true"]:not(.expanded) .description {
-    max-height: 8rem;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .description-container[data-collapse="true"].expanded .description {
-    max-height: 100rem;
-  }
-
-  .description-container[data-collapse="true"]:not(.expanded)
-    .description::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2rem;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--neutral-gray-100)
-    );
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .description-container[data-collapse="true"].expanded .description::after {
-    opacity: 0;
-  }
 </style>
-
-<script
-  is:inline
-  define:vars={{
-    mdBreakpoint: TW_SCREEN_MD,
-    forceCollapse: forceCollapseDescription ?? false,
-    collapseScopeId,
-  }}
->
-  function initCardReveal() {
-    const card = document.querySelector(
-      `[data-collapse-scope="${collapseScopeId}"]`,
-    );
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      },
-    );
-
-    if (card) {
-      observer.observe(card);
-    }
-  }
-
-  function initDescriptionExpand() {
-    const scope = document.querySelector(
-      `[data-collapse-scope="${collapseScopeId}"]`,
-    );
-    const descriptionContainers = scope?.querySelectorAll(
-      ".description-container",
-    );
-
-    const isMobile = window.matchMedia(`(max-width: ${mdBreakpoint})`);
-
-    const applyCollapse = () => {
-      const shouldCollapse = forceCollapse || isMobile.matches;
-      descriptionContainers?.forEach((container) => {
-        container.setAttribute("data-collapse", String(shouldCollapse));
-        if (!shouldCollapse) {
-          container.classList.remove("expanded");
-        }
-      });
-    };
-
-    applyCollapse();
-    isMobile.addEventListener("change", applyCollapse);
-
-    descriptionContainers?.forEach((container) => {
-      container.addEventListener("click", () => {
-        if (container.getAttribute("data-collapse") === "true") {
-          container.classList.toggle("expanded");
-        }
-      });
-    });
-  }
-
-  function initCard() {
-    initCardReveal();
-    initDescriptionExpand();
-  }
-
-  // When DOM is ready
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initCard);
-  } else {
-    initCard();
-  }
-
-  // Re-run on Astro navigation
-  document.addEventListener("astro:page-load", initCard);
-</script>

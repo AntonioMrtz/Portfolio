@@ -4,6 +4,8 @@ import { defineConfig, envField, fontProviders } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 
+import alpinejs from "@astrojs/alpinejs";
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -11,7 +13,7 @@ export default defineConfig({
   },
   site: "https://antoniomrtz.github.io",
   base: "/Portfolio",
-  integrations: [sitemap()],
+  integrations: [sitemap(), alpinejs({ entrypoint: "/src/alpine" })],
   env: {
     schema: {
       GA_ENABLED: envField.boolean({
