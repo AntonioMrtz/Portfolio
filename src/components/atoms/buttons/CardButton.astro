@@ -27,7 +27,7 @@ const { type, label, iconSrc, iconSize, altText, url, turnIconWhite } =
   href={url}
   target="_blank"
   rel="noopener noreferrer"
-  class="flex flex-row gap-3 p-2 w-40 rounded-xl items-center justify-center hover:opacity-80 transition-all border-2 border-transparent hover:border-(--accent-orange-500)"
+  class="card-button flex flex-row gap-3 p-2 w-40 rounded-xl items-center justify-center"
   style={`background-color: var(${CARD_BUTTON_TYPE_TO_COLOR[type]})`}
 >
   <Image
@@ -44,7 +44,27 @@ const { type, label, iconSrc, iconSize, altText, url, turnIconWhite } =
 </a>
 
 <style>
-  a:active {
-    border-color: var(--accent-orange-500) !important;
+  @reference "tailwindcss";
+
+  .card-button {
+    border: 2px solid
+      color-mix(in srgb, var(--accent-orange-500) 20%, transparent);
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .card-button:hover {
+    border-color: var(--accent-orange-500);
+    transform: translateY(-2px);
+  }
+
+  .card-button:focus-visible {
+    outline: 2px solid var(--accent-orange-500);
+    outline-offset: 2px;
+  }
+
+  .card-button:active {
+    transform: scale(0.97);
   }
 </style>
