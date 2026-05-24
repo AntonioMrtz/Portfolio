@@ -5,7 +5,7 @@ interface ExperienceCard {
   revealed: boolean;
   expanded: boolean;
   isMobile: boolean;
-  readonly forceCollapse: boolean;
+  readonly collapsible: boolean;
   readonly shouldCollapse: boolean;
   init(): void;
   toggle(): void;
@@ -21,12 +21,12 @@ export default (Alpine: AlpineNS.Alpine) => {
       expanded: false,
       isMobile: false,
 
-      get forceCollapse() {
-        return this.$el.dataset.forceCollapse === "true";
+      get collapsible() {
+        return this.$el.dataset.collapsible === "true";
       },
 
       get shouldCollapse() {
-        return this.forceCollapse || this.isMobile;
+        return this.collapsible || this.isMobile;
       },
 
       init() {
