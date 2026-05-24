@@ -11,9 +11,10 @@ interface Props {
   subheader?: string[];
   description?: string;
   badges: Badge[];
-  forceCollapseDescription?: boolean;
-  forceTechColumnDisplay?: boolean;
-  fixedHeight?: number;
+  collapsible?: boolean;
+  verticalTech?: boolean;
+  noReveal?: boolean;
+  sx?: string;
   formatWebp?: boolean;
 }
 
@@ -24,9 +25,10 @@ const {
   subheader,
   description,
   badges,
-  forceCollapseDescription = false,
-  forceTechColumnDisplay = false,
-  fixedHeight,
+  collapsible = false,
+  verticalTech = false,
+  noReveal = false,
+  sx = "",
   formatWebp = true,
 } = Astro.props;
 
@@ -37,14 +39,13 @@ function parseSubheaderData(subheader: string[]): string {
 
 <div
   x-data="experienceCard"
-  data-force-collapse={forceCollapseDescription}
+  data-collapsible={collapsible}
   x-intersect:enter.once="revealed = true"
   x-bind:class="{ 'visible': revealed }"
-  class={`card-container card-reveal flex flex-col-reverse ${forceTechColumnDisplay ? "" : "lg:flex-row"} gap-8 justify-between p-4 sm:p-8 w-full m-0 rounded-xl`}
-  style={fixedHeight ? `height: ${fixedHeight}px;` : undefined}
+  class={`card-container ${noReveal ? "" : "card-reveal"} flex flex-col-reverse ${verticalTech ? "" : "lg:flex-row"} gap-8 justify-between p-4 sm:p-8 w-full m-0 rounded-xl ${sx}`}
 >
   <div
-    class={`flex flex-col ${forceTechColumnDisplay ? "" : "md:flex-row"} gap-8 lg:gap-12 min-w-0`}
+    class={`flex flex-col ${verticalTech ? "" : "md:flex-row"} gap-8 lg:gap-12 min-w-0`}
   >
     <div class="flex justify-center md:justify-start">
       <Image
@@ -97,7 +98,7 @@ function parseSubheaderData(subheader: string[]): string {
     </div>
   </div>
   <div
-    class={`flex flex-row ${forceTechColumnDisplay ? "" : "lg:flex-col"} flex-wrap gap-2`}
+    class={`flex flex-row ${verticalTech ? "" : "lg:flex-col"} flex-wrap gap-2`}
   >
     {badges.map((v) => <TechBadge imageUrl={v.imageUrl} altText={v.name} />)}
   </div>

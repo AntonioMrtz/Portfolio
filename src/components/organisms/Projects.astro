@@ -15,8 +15,8 @@ import websiteIcon from "@/assets/icons/common/display.svg";
       title={v.name}
       description={v.description}
       badges={v.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
-      forceCollapseDescription={true}
-      forceTechColumnDisplay={true}
+      collapsible={true}
+      verticalTech={true}
     >
       {v.repoUrl && (
         <CardButton

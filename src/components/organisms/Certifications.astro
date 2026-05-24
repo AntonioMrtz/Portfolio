@@ -5,40 +5,99 @@ import { BADGE_ID_TO_DATA } from "@/data/badges";
 import { CERTIFICATION_ID_TO_DATA } from "@/data/certifications";
 import certificateIcon from "@/assets/icons/certifications/certificate.svg";
 import websiteIcon from "@/assets/icons/common/display.svg";
+
+const certifications = Object.values(CERTIFICATION_ID_TO_DATA);
+const previewInitialItem = certifications[0]!;
 ---
 
-{
-  Object.values(CERTIFICATION_ID_TO_DATA).map((v) => (
-    <ExperienceCard
-      imgSrc={v.iconUrl}
-      imgAlt={`${v.name}`}
-      title={v.name}
-      badges={v.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
-      forceTechColumnDisplay={true}
-      fixedHeight={500}
-    >
-      {v.diplomaUrl && (
-        <CardButton
-          slot="actions"
-          label="Diploma"
-          iconSrc={certificateIcon}
-          url={v.diplomaUrl}
-          altText="Diploma"
-          type="primary"
-          turnIconWhite={true}
-        />
-      )}
-      {v.websiteUrl && (
-        <CardButton
-          slot="actions"
-          label="Website"
-          iconSrc={websiteIcon}
-          url={v.websiteUrl}
-          altText="Website"
-          type="secondary"
-          turnIconWhite={true}
-        />
-      )}
-    </ExperienceCard>
-  ))
-}
+<div
+  x-data={`{ active: '${previewInitialItem.id}' }`}
+  class="flex flex-col xl:flex-row gap-8 w-full"
+>
+  <div class="flex gap-8">
+    {
+      certifications.map((cert) => (
+        <div class="w-full" x-show={`active === '${cert.id}'`}>
+          <ExperienceCard
+            imgSrc={cert.iconUrl}
+            imgAlt={cert.name}
+            title={cert.name}
+            badges={cert.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
+            verticalTech={true}
+            noReveal={true}
+            sx="h-125 xl:min-w-175"
+          >
+            {cert.diplomaUrl && (
+              <CardButton
+                slot="actions"
+                label="Diploma"
+                iconSrc={certificateIcon}
+                url={cert.diplomaUrl}
+                altText="Diploma"
+                type="primary"
+                turnIconWhite={true}
+              />
+            )}
+
+            {cert.websiteUrl && (
+              <CardButton
+                slot="actions"
+                label="Website"
+                iconSrc={websiteIcon}
+                url={cert.websiteUrl}
+                altText="Website"
+                type="secondary"
+                turnIconWhite={true}
+              />
+            )}
+          </ExperienceCard>
+        </div>
+      ))
+    }
+  </div>
+  <div
+    class="grid grid-cols-4 content-center xl:content-start justify-center gap-4"
+  >
+    {
+      certifications.map((cert) => (
+        <button
+          @click={`active = '${cert.id}'`}
+          class="certification-button w-16 h-16 p-2 border border-(--neutral-gray-300) cursor-pointer rounded-lg"
+          x-bind:class={`active === '${cert.id}' ? 'certification-button-selected' : ''`}
+        >
+          <img
+            src={`${cert.iconUrl.src}`}
+            alt={`${cert.name}`}
+            class="w-12 h-12 object-contain rounded-lg"
+          />
+        </button>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .certification-button {
+    --shadow-opacity: 50%;
+
+    &:hover,
+    &:active {
+      --shadow-opacity: 90%;
+    }
+  }
+
+  .certification-button-selected {
+    border: 2px solid var(--accent-orange-500);
+  }
+
+  .certification-button:hover,
+  .certification-button:active,
+  .certification-button-selected {
+    box-shadow: 0 0 10px
+      color-mix(
+        in srgb,
+        var(--accent-orange-500) var(--shadow-opacity),
+        transparent
+      );
+  }
+</style>

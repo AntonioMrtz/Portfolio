@@ -12,8 +12,8 @@ import { EDUCATION_ID_TO_DATA } from "@/data/education";
       subheader={v.dates ? [v.entity, v.dates] : [v.entity]}
       description={v.description}
       badges={[]}
-      forceTechColumnDisplay={true}
-      fixedHeight={500}
+      verticalTech={true}
+      sx="h-[500px]"
       formatWebp={v.id !== "languages"}
     />
   ))
