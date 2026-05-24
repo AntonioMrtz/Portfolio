@@ -175,6 +175,6 @@ const BADGE_ID_TO_DATA: Readonly<Record<TechId, Badge>> = {
     id: "kanban",
     name: "Kanban",
     imageUrl:
-      "https://img.shields.io/badge/Kanban-009FDA?style=for-the-badge&logo=trello&Color=white",
+      "https://img.shields.io/badge/Kanban-009FDA?style=for-the-badge&logo=trello&logoColor=white",
   },
 };
