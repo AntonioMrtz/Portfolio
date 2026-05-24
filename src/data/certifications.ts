@@ -33,6 +33,41 @@ interface Certification {
 const CERTIFICATION_ID_TO_DATA: Readonly<
   Record<CertificationId, Certification>
 > = {
+  "mongo-db-dev-path": {
+    id: "mongo-db-dev-path",
+    name: "MongoDB Python Developer Path",
+    diplomaUrl: "https://learn.mongodb.com/c/li9YP1_MT72mPAgTZT11UQ",
+    websiteUrl:
+      "https://learn.mongodb.com/learning-paths/mongodb-python-developer-path",
+    iconUrl: mongoDbIcon,
+    tech: ["mongodb"],
+  },
+  "udemy-python-asyncio": {
+    id: "udemy-python-asyncio",
+    name: "Python asynchronous programming using AsyncIO module",
+    websiteUrl: "https://www.udemy.com/course/python-asyncio-high-level-api/",
+    diplomaUrl:
+      "https://www.udemy.com/certificate/UC-bd978c03-17fc-44b1-8edf-92308a7e90ee/",
+    iconUrl: udemyIcon,
+    tech: ["python"],
+  },
+  "udemy-nestjs-microservices": {
+    id: "udemy-nestjs-microservices",
+    name: "[In progress] NestJS Microservices — Build & Deploy a Scalable Backend",
+    websiteUrl:
+      "https://www.udemy.com/course/nestjs-microservices-build-deploy-a-scaleable-backend/",
+    diplomaUrl: "",
+    iconUrl: udemyIcon,
+    tech: ["nestjs", "nodejs", "jest", "mongodb", "google_cloud"],
+  },
+  "ef-set": {
+    id: "ef-set",
+    name: "EF SET English Certificate 88/100 (C2 Proficient)",
+    diplomaUrl: "https://cert.efset.org/URJMDR",
+    websiteUrl: "https://www.efset.org/es/ef-set-50/",
+    iconUrl: efIcon,
+    tech: ["english"],
+  },
   "open-webinars-planning-poker": {
     id: "open-webinars-planning-poker",
     name: "Agile Estimation with Planning Poker",
@@ -88,40 +123,5 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
     diplomaUrl: "https://openwebinars.net/certificacion/8euvD9vM",
     iconUrl: openWebinarsIcon,
     tech: ["vitest"],
-  },
-  "udemy-nestjs-microservices": {
-    id: "udemy-nestjs-microservices",
-    name: "[In progress] NestJS Microservices — Build & Deploy a Scalable Backend",
-    websiteUrl:
-      "https://www.udemy.com/course/nestjs-microservices-build-deploy-a-scaleable-backend/",
-    diplomaUrl: "",
-    iconUrl: udemyIcon,
-    tech: ["nestjs", "nodejs", "jest", "mongodb", "google_cloud"],
-  },
-  "mongo-db-dev-path": {
-    id: "mongo-db-dev-path",
-    name: "MongoDB Python Developer Path",
-    diplomaUrl: "https://learn.mongodb.com/c/li9YP1_MT72mPAgTZT11UQ",
-    websiteUrl:
-      "https://learn.mongodb.com/learning-paths/mongodb-python-developer-path",
-    iconUrl: mongoDbIcon,
-    tech: ["mongodb"],
-  },
-  "ef-set": {
-    id: "ef-set",
-    name: "EF SET English Certificate 88/100 (C2 Proficient)",
-    diplomaUrl: "https://cert.efset.org/URJMDR",
-    websiteUrl: "https://www.efset.org/es/ef-set-50/",
-    iconUrl: efIcon,
-    tech: ["english"],
-  },
-  "udemy-python-asyncio": {
-    id: "udemy-python-asyncio",
-    name: "Python asynchronous programming using AsyncIO module",
-    websiteUrl: "https://www.udemy.com/course/python-asyncio-high-level-api/",
-    diplomaUrl:
-      "https://www.udemy.com/certificate/UC-bd978c03-17fc-44b1-8edf-92308a7e90ee/",
-    iconUrl: udemyIcon,
-    tech: ["python"],
   },
 };
