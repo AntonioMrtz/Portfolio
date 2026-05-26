@@ -13,6 +13,9 @@ export default defineConfig({
   },
   site: "https://antoniomrtz.github.io",
   base: "/Portfolio",
+  build: {
+    inlineStylesheets: "always",
+  },
   integrations: [sitemap(), alpinejs({ entrypoint: "/src/alpine" })],
   env: {
     schema: {
