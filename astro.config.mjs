@@ -31,6 +31,7 @@ export default defineConfig({
       provider: fontProviders.local(),
       name: "Ubuntu-Light",
       cssVariable: "--font-ubuntu-light",
+      display: "block",
       options: {
         variants: [
           {
@@ -45,6 +46,7 @@ export default defineConfig({
       provider: fontProviders.local(),
       name: "Ubuntu-Regular",
       cssVariable: "--font-ubuntu-regular",
+      display: "block",
       options: {
         variants: [
           {
@@ -59,6 +61,7 @@ export default defineConfig({
       provider: fontProviders.local(),
       name: "Ubuntu-Italic",
       cssVariable: "--font-ubuntu-italic",
+      display: "block",
       options: {
         variants: [
           {
@@ -73,6 +76,7 @@ export default defineConfig({
       provider: fontProviders.local(),
       name: "Ubuntu-Medium",
       cssVariable: "--font-ubuntu-medium",
+      display: "block",
       options: {
         variants: [
           {
@@ -87,6 +91,7 @@ export default defineConfig({
       provider: fontProviders.local(),
       name: "Ubuntu-Bold",
       cssVariable: "--font-ubuntu-bold",
+      display: "block",
       options: {
         variants: [
           {
