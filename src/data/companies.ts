@@ -81,21 +81,6 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
       tech: ["python", "react", "fastapi", "mongodb", "aws"],
     },
   },
-  bionet: {
-    id: "bionet",
-    name: "Bionet",
-    websiteUrl: "https://bionet.com/",
-    description:
-      "BIONET is a leading manufacturer of laboratory, pilot and industrial equipment and software for the bioprocessing industry, as well as a provider of advanced bioprocess-related services for companies that want to produce biomolecules through microbial fermentation or through cell culturing processes.",
-    iconUrl: bionetIcon,
-    jobInfo: {
-      title: "Full-Stack Developer (Python & Angular & FastAPI)",
-      description: bionetJobDescription,
-      contractType: ContractType.FullTime,
-      dates: "October 2023 - Jul 2025",
-      tech: ["python", "fastapi", "angular", "postgresql", "redis"],
-    },
-  },
   "adventjs-cli": {
     id: "adventjs-cli",
     name: "AdventJS CLI",
@@ -110,6 +95,21 @@ const COMPANY_ID_TO_DATA: Readonly<Record<CompanyId, Company>> = {
       dates: "October 2025 - Present",
       description: adventjsCliDescription,
       tech: ["nodejs", "typescript", "github_actions", "vitest"],
+    },
+  },
+  bionet: {
+    id: "bionet",
+    name: "Bionet",
+    websiteUrl: "https://bionet.com/",
+    description:
+      "BIONET is a leading manufacturer of laboratory, pilot and industrial equipment and software for the bioprocessing industry, as well as a provider of advanced bioprocess-related services for companies that want to produce biomolecules through microbial fermentation or through cell culturing processes.",
+    iconUrl: bionetIcon,
+    jobInfo: {
+      title: "Full-Stack Developer (Python & Angular & FastAPI)",
+      description: bionetJobDescription,
+      contractType: ContractType.FullTime,
+      dates: "October 2023 - Jul 2025",
+      tech: ["python", "fastapi", "angular", "postgresql", "redis"],
     },
   },
   "mayor-optica": {
