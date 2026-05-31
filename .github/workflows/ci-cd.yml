@@ -16,4 +16,4 @@ jobs:
 
   cd:
     needs: [ci]
-    uses: ./.github/workflows/deploy-gh-pages.yml
+    uses: ./.github/workflows/cd.yml
