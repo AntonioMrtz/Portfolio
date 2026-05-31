@@ -2,7 +2,7 @@ name: Continuous Deployment to GitHub Pages
 
 on:
   workflow_call:
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
