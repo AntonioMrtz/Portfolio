@@ -54,8 +54,8 @@ const { text, iconSrc, url, copyUrl, id } = Astro.props;
       alt={text}
       width={48}
       height={48}
-      loading="eager"
-      fetchpriority="high"
+      loading="lazy"
+      fetchpriority="low"
     />
   </div>
 
@@ -99,25 +99,19 @@ const { text, iconSrc, url, copyUrl, id } = Astro.props;
       e.preventDefault();
       navigator.clipboard.writeText(copyUrl);
 
-      // Clear any existing timeouts
       if (buttonClickTimeout) clearTimeout(buttonClickTimeout);
 
-      // Temporarily disable hover effects
       button.classList.remove("group");
 
-      // Hide the original content and hover image, show the "Email copied" message
       content.style.opacity = "0";
       hoverImage.style.opacity = "0";
       copiedMessage.style.opacity = "1";
 
-      // Restore after 2 seconds
       buttonClickTimeout = setTimeout(() => {
         copiedMessage.style.opacity = "0";
-        // Reset all inline styles to allow CSS classes to control opacity again
         content.style.opacity = "";
         hoverImage.style.opacity = "";
         copiedMessage.style.opacity = "";
-        // Re-enable hover effects
         button.classList.add("group");
       }, 2000);
     });

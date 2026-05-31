@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 interface Props {
   imageUrl: string;
   altText: string;
@@ -15,7 +13,7 @@ const { imageUrl, altText, placement, width = 32, height = 32 } = Astro.props;
 <div
   class={`flex rounded-xl ${placement ? (placement === "left" ? "justify-start" : "justify-end") : "justify-end"} `}
 >
-  <Image
+  <img
     class="rounded-xl min-h-7 w-auto md:transition-transform lg:duration-200 md:ease-in-out lg:hover:scale-150"
     src={imageUrl}
     alt={altText}
@@ -23,5 +21,6 @@ const { imageUrl, altText, placement, width = 32, height = 32 } = Astro.props;
     height={height}
     loading="lazy"
     decoding="async"
+    fetchpriority="low"
   />
 </div>

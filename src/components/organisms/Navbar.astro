@@ -33,6 +33,7 @@ const HAMBURGER_ICON_HEIGHT = 42;
           src={PERSONAL_INFO.logo}
           alt={`${PERSONAL_INFO.name}`}
           loading="eager"
+          fetchpriority="high"
           width={128}
           height={128}
         />
@@ -47,6 +48,7 @@ const HAMBURGER_ICON_HEIGHT = 42;
               alt="Open menu"
               class="filter-secondary-purple-600 cursor-pointer"
               loading="eager"
+              fetchpriority="high"
             />
           </OpenIcon>
           <CloseIcon>
@@ -57,6 +59,7 @@ const HAMBURGER_ICON_HEIGHT = 42;
               alt="Close menu"
               class="filter-neutral-gray-300 cursor-pointer"
               loading="eager"
+              fetchpriority="high"
             />
           </CloseIcon>
         </MenuIcon>
