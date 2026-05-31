@@ -29,8 +29,8 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.local(),
-      name: "Ubuntu-Light",
-      cssVariable: "--font-ubuntu-light",
+      name: "Ubuntu",
+      cssVariable: "--font-ubuntu",
       options: {
         variants: [
           {
@@ -38,57 +38,21 @@ export default defineConfig({
             weight: 300,
             style: "normal",
           },
-        ],
-      },
-    },
-    {
-      provider: fontProviders.local(),
-      name: "Ubuntu-Regular",
-      cssVariable: "--font-ubuntu-regular",
-      options: {
-        variants: [
           {
             src: ["./src/assets/fonts/Ubuntu-Regular.ttf"],
             weight: 400,
             style: "normal",
           },
-        ],
-      },
-    },
-    {
-      provider: fontProviders.local(),
-      name: "Ubuntu-Italic",
-      cssVariable: "--font-ubuntu-italic",
-      options: {
-        variants: [
           {
             src: ["./src/assets/fonts/Ubuntu-Italic.ttf"],
             weight: 400,
             style: "italic",
           },
-        ],
-      },
-    },
-    {
-      provider: fontProviders.local(),
-      name: "Ubuntu-Medium",
-      cssVariable: "--font-ubuntu-medium",
-      options: {
-        variants: [
           {
             src: ["./src/assets/fonts/Ubuntu-Medium.ttf"],
             weight: 500,
             style: "normal",
           },
-        ],
-      },
-    },
-    {
-      provider: fontProviders.local(),
-      name: "Ubuntu-Bold",
-      cssVariable: "--font-ubuntu-bold",
-      options: {
-        variants: [
           {
             src: ["./src/assets/fonts/Ubuntu-Bold.ttf"],
             weight: 700,

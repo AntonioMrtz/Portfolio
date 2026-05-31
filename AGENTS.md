@@ -56,7 +56,7 @@ This is a personal portfolio built with Astro and Tailwind CSS. It features modu
 ### Build & Deployment
 
 - Astro config: `astro.config.mjs`
-- Tailwind config: `tailwind.config.js`
+- Tailwind config: CSS-first in `src/styles/global.css` (`@theme inline`)
 - GitHub Pages deployment: see [Astro docs](https://docs.astro.build/en/guides/deploy/github/)
 
 ---

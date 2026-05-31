@@ -33,3 +33,7 @@
 
   color: var(--secondary-purple-900);
 }
+
+@theme inline {
+  --font-sans: var(--font-ubuntu), system-ui, sans-serif;
+}
