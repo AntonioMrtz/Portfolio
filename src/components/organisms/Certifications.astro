@@ -15,10 +15,19 @@ const previewInitialItem = certifications[0]!;
   x-data={`{ active: '${previewInitialItem.id}' }`}
   class="flex flex-col xl:flex-row gap-8 w-full"
 >
-  <div class="flex gap-8">
+  <div class="grid grid-cols-1">
     {
       certifications.map((cert) => (
-        <div class="w-full" x-show={`active === '${cert.id}'`}>
+        <div
+          class="col-start-1 row-start-1"
+          x-show={`active === '${cert.id}'`}
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+        >
           <ExperienceCard
             imgSrc={cert.iconUrl}
             imgAlt={cert.name}
@@ -27,7 +36,8 @@ const previewInitialItem = certifications[0]!;
             badges={cert.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
             verticalTech={true}
             noReveal={true}
-            sx="xl:h-[700px]"
+            collapsible={true}
+            sx="h-[700px]"
           >
             <CardActions slot="actions">
               {cert.diplomaUrl ? (
