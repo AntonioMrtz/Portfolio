@@ -76,20 +76,19 @@ const EXPERIENCE_ID: SectionID = "experience";
   is:inline
 >
   const isSmallScreen = window.matchMedia(`(max-width: ${TW_SCREEN_XL})`);
-  if (isSmallScreen.matches) {
-    return;
-  }
 
-  const scrollButton = document.getElementById(SCROLL_TO_EXPERIENCE_ID);
-  const homeSection = document.getElementById(HOME_SECTION_ID);
+  if (!isSmallScreen.matches) {
+    const scrollButton = document.getElementById(SCROLL_TO_EXPERIENCE_ID);
+    const homeSection = document.getElementById(HOME_SECTION_ID);
 
-  if (scrollButton && homeSection) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY < 1) {
-        scrollButton.classList.remove("visible");
-      } else {
-        scrollButton.classList.add("visible");
-      }
-    });
+    if (scrollButton && homeSection) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY < 1) {
+          scrollButton.classList.remove("visible");
+        } else {
+          scrollButton.classList.add("visible");
+        }
+      });
+    }
   }
 </script>
