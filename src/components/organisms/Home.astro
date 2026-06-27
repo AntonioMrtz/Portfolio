@@ -7,7 +7,7 @@ import {
   type CvInfo,
 } from "@/data/me";
 import HomeCard from "@/components/molecules/home-card/HomeCard.astro";
-import { Image } from "astro:assets";
+import { getImage, Image } from "astro:assets";
 import ContinueHomeButton from "../atoms/buttons/ContinueHomeButton.astro";
 
 const email = CONTACT_ID_TO_DATA.email;
@@ -16,6 +16,14 @@ const github = CONTACT_ID_TO_DATA.github;
 const cv = CV_DATA;
 
 const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
+
+const size = PERSONAL_INFO.profilePicture.width / 3;
+
+const profilePicture = await getImage({
+  width: size,
+  height: size,
+  src: PERSONAL_INFO.profilePicture.src,
+});
 ---
 
 <div
@@ -57,12 +65,12 @@ const HOME_CARDS: (Contact | CvInfo)[] = [email, linkedin, github, cv];
       </div>
       <Image
         class="absolute w-[40%] sm:w-[45%] 2xl:w-[60%] h-auto rounded-r-4xl profile-shadow bottom-[7%]"
-        src={PERSONAL_INFO.profilePicture}
+        src={profilePicture.src}
         alt={`${PERSONAL_INFO.name} profile`}
-        width={PERSONAL_INFO.profilePicture.width / 3}
-        height={PERSONAL_INFO.profilePicture.height / 3}
         loading="eager"
         fetchpriority="high"
+        width={size}
+        height={size}
       />
     </div>
     <div class="grid grid-cols-2 gap-6 w-[65%] xl:p-[5%]">
