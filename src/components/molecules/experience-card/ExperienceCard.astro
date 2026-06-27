@@ -56,7 +56,11 @@ function parseSubheaderData(subheader: string[]): string {
         height={160}
         loading="lazy"
         decoding="async"
-        format={formatWebp ? "webp" : undefined}
+        format={imgSrc.format === "svg"
+          ? "svg"
+          : formatWebp
+            ? "webp"
+            : undefined}
       />
     </div>
     <div class="flex flex-col gap-6 max-w-xl min-w-0">
