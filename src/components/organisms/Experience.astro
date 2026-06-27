@@ -1,6 +1,7 @@
 ---
 import { COMPANY_ID_TO_DATA } from "@/data/companies";
 import ExperienceCard from "@/components/molecules/experience-card/ExperienceCard.astro";
+import CardActions from "@/components/molecules/card-actions/CardActions.astro";
 import { BADGE_ID_TO_DATA } from "@/data/badges";
 import CardButton from "@/components/atoms/buttons/CardButton.astro";
 import githubIcon from "@/assets/icons/common/github.svg";
@@ -17,28 +18,28 @@ import websiteIcon from "@/assets/icons/common/display.svg";
       description={v.jobInfo.description}
       badges={v.jobInfo.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
     >
-      {v.repoUrl && (
-        <CardButton
-          slot="actions"
-          label="Github"
-          iconSrc={githubIcon}
-          url={v.repoUrl}
-          altText="Github"
-          type="primary"
-          turnIconWhite={true}
-        />
-      )}
-      {v.websiteUrl && (
-        <CardButton
-          slot="actions"
-          label="Website"
-          url={v.websiteUrl}
-          iconSrc={websiteIcon}
-          altText="Website"
-          type="secondary"
-          turnIconWhite={true}
-        />
-      )}
+      <CardActions slot="actions">
+        {v.repoUrl && (
+          <CardButton
+            label="Github"
+            iconSrc={githubIcon}
+            url={v.repoUrl}
+            altText="Github"
+            type="primary"
+            turnIconWhite={true}
+          />
+        )}
+        {v.websiteUrl && (
+          <CardButton
+            label="Website"
+            url={v.websiteUrl}
+            iconSrc={websiteIcon}
+            altText="Website"
+            type="secondary"
+            turnIconWhite={true}
+          />
+        )}
+      </CardActions>
     </ExperienceCard>
   ))
 }

@@ -5,6 +5,7 @@ import { BADGE_ID_TO_DATA } from "@/data/badges";
 import { CERTIFICATION_ID_TO_DATA } from "@/data/certifications";
 import certificateIcon from "@/assets/icons/certifications/certificate.svg";
 import websiteIcon from "@/assets/icons/common/display.svg";
+import CardActions from "../molecules/card-actions/CardActions.astro";
 
 const certifications = Object.values(CERTIFICATION_ID_TO_DATA);
 const previewInitialItem = certifications[0]!;
@@ -27,29 +28,29 @@ const previewInitialItem = certifications[0]!;
             noReveal={true}
             sx="h-125 xl:min-w-175"
           >
-            {cert.diplomaUrl && (
-              <CardButton
-                slot="actions"
-                label="Diploma"
-                iconSrc={certificateIcon}
-                url={cert.diplomaUrl}
-                altText="Diploma"
-                type="primary"
-                turnIconWhite={true}
-              />
-            )}
+            <CardActions slot="actions">
+              {cert.diplomaUrl ? (
+                <CardButton
+                  label="Diploma"
+                  iconSrc={certificateIcon}
+                  url={cert.diplomaUrl}
+                  altText="Diploma"
+                  type="primary"
+                  turnIconWhite={true}
+                />
+              ) : null}
 
-            {cert.websiteUrl && (
-              <CardButton
-                slot="actions"
-                label="Website"
-                iconSrc={websiteIcon}
-                url={cert.websiteUrl}
-                altText="Website"
-                type="secondary"
-                turnIconWhite={true}
-              />
-            )}
+              {cert.websiteUrl && (
+                <CardButton
+                  label="Website"
+                  iconSrc={websiteIcon}
+                  url={cert.websiteUrl}
+                  altText="Website"
+                  type="secondary"
+                  turnIconWhite={true}
+                />
+              )}
+            </CardActions>
           </ExperienceCard>
         </div>
       ))
