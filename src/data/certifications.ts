@@ -5,6 +5,21 @@ import mongoDbIcon from "@/assets/icons/certifications/mongodb.svg";
 import efIcon from "@/assets/icons/certifications/ef.svg";
 import scrumManagerLogo from "@/assets/images/certifications/scrum-manager.webp";
 
+import scrumManagerExpertDescription from "@/data/files/certification-descriptions/scrum-manager-expert.txt?raw";
+import mongoDbDevPathDescription from "@/data/files/certification-descriptions/mongo-db-dev-path.txt?raw";
+import efSetDescription from "@/data/files/certification-descriptions/ef-set.txt?raw";
+import udemyPythonAsyncioDescription from "@/data/files/certification-descriptions/udemy-python-asyncio.txt?raw";
+import udemyNestjsMicroservicesDescription from "@/data/files/certification-descriptions/udemy-nestjs-microservices.txt?raw";
+import openWebinarsPlanningPokerDescription from "@/data/files/certification-descriptions/open-webinars-planning-poker.txt?raw";
+import openWebinarsProductOwnerDescription from "@/data/files/certification-descriptions/open-webinars-product-owner.txt?raw";
+import openWebinarsAdvancedScrumDescription from "@/data/files/certification-descriptions/open-webinars-advanced-scrum.txt?raw";
+import openWebinarsKanbanDescription from "@/data/files/certification-descriptions/open-webinars-kanban.txt?raw";
+import openWebinarsTechnicalScrumDescription from "@/data/files/certification-descriptions/open-webinars-technical-scrum.txt?raw";
+import openWebinarsScrumManagingTeamsDescription from "@/data/files/certification-descriptions/open-webinars-scrum-managing-teams.txt?raw";
+import openWebinarsTestingVitestDescription from "@/data/files/certification-descriptions/open-webinars-testing-vitest.txt?raw";
+import openWebinarsManagingAgileSprintsDescription from "@/data/files/certification-descriptions/open-webinars-managing-agile-sprints.txt?raw";
+import openWebinarsServerlessAwsLambdaDescription from "@/data/files/certification-descriptions/open-webinars-serverless-aws-lambda.txt?raw";
+
 export { CERTIFICATION_ID_TO_DATA, type Certification, type CertificationId };
 
 type CertificationId =
@@ -26,6 +41,7 @@ type CertificationId =
 interface Certification {
   id: CertificationId;
   name: string;
+  description: string;
   diplomaUrl?: string;
   websiteUrl?: string;
   iconUrl: ImageMetadata;
@@ -39,6 +55,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "scrum-manager-expert": {
     id: "scrum-manager-expert",
     name: "Scrum Manager Expert",
+    description: scrumManagerExpertDescription,
     diplomaUrl:
       "https://scrummanager.com/website/c/verify-cert.php?code=67c428b92a68a7.90719240",
     websiteUrl: "https://www.scrummanager.com/",
@@ -48,6 +65,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "mongo-db-dev-path": {
     id: "mongo-db-dev-path",
     name: "MongoDB Python Developer Path",
+    description: mongoDbDevPathDescription,
     diplomaUrl: "https://learn.mongodb.com/c/li9YP1_MT72mPAgTZT11UQ",
     websiteUrl:
       "https://learn.mongodb.com/learning-paths/mongodb-python-developer-path",
@@ -57,6 +75,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "udemy-python-asyncio": {
     id: "udemy-python-asyncio",
     name: "Python asynchronous programming using AsyncIO module",
+    description: udemyPythonAsyncioDescription,
     websiteUrl: "https://www.udemy.com/course/python-asyncio-high-level-api/",
     diplomaUrl:
       "https://www.udemy.com/certificate/UC-bd978c03-17fc-44b1-8edf-92308a7e90ee/",
@@ -66,6 +85,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "udemy-nestjs-microservices": {
     id: "udemy-nestjs-microservices",
     name: "[In progress] NestJS Microservices — Build & Deploy a Scalable Backend",
+    description: udemyNestjsMicroservicesDescription,
     websiteUrl:
       "https://www.udemy.com/course/nestjs-microservices-build-deploy-a-scaleable-backend/",
     diplomaUrl: "",
@@ -75,6 +95,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "ef-set": {
     id: "ef-set",
     name: "EF SET English Certificate 88/100 (C2 Proficient)",
+    description: efSetDescription,
     diplomaUrl: "https://cert.efset.org/URJMDR",
     websiteUrl: "https://www.efset.org/es/ef-set-50/",
     iconUrl: efIcon,
@@ -83,6 +104,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "open-webinars-serverless-aws-lambda": {
     id: "open-webinars-serverless-aws-lambda",
     name: "Serverless architecture with AWS Lambda",
+    description: openWebinarsServerlessAwsLambdaDescription,
     websiteUrl:
       "https://academia.openwebinars.net/portada/arquitectura-serverless-aws-lambda/",
     diplomaUrl: "https://openwebinars.net/certificacion/Vb4JWZNo",
@@ -92,6 +114,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "open-webinars-planning-poker": {
     id: "open-webinars-planning-poker",
     name: "Agile Estimation with Planning Poker",
+    description: openWebinarsPlanningPokerDescription,
     websiteUrl:
       "https://academia.openwebinars.net/portada/estimacion-agil-planning-poker/",
     diplomaUrl: "https://openwebinars.net/cert/farX",
@@ -101,6 +124,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "open-webinars-product-owner": {
     id: "open-webinars-product-owner",
     name: "Product Owner Course in Practice",
+    description: openWebinarsProductOwnerDescription,
     websiteUrl:
       "https://academia.openwebinars.net/portada/product-owner-practica/",
     diplomaUrl: "https://openwebinars.net/certificacion/q0n8lgO7",
@@ -110,6 +134,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "open-webinars-advanced-scrum": {
     id: "open-webinars-advanced-scrum",
     name: "Advanced Scrum Course",
+    description: openWebinarsAdvancedScrumDescription,
     websiteUrl: "https://academia.openwebinars.net/portada/scrum-avanzado/",
     diplomaUrl: "https://openwebinars.net/certificacion/KBLgUYf3",
     iconUrl: openWebinarsIcon,
@@ -118,6 +143,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "open-webinars-kanban": {
     id: "open-webinars-kanban",
     name: "Design and Use a Kanban Board",
+    description: openWebinarsKanbanDescription,
     websiteUrl:
       "https://academia.openwebinars.net/portada/diseno-tablero-kanban/",
     diplomaUrl: "https://openwebinars.net/cert/qBrZ",
@@ -127,6 +153,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "open-webinars-technical-scrum": {
     id: "open-webinars-technical-scrum",
     name: "Technical Scrum Course",
+    description: openWebinarsTechnicalScrumDescription,
     websiteUrl: "https://academia.openwebinars.net/portada/scrum/",
     diplomaUrl: "https://openwebinars.net/certificacion/TJvP6FPx",
     iconUrl: openWebinarsIcon,
@@ -135,6 +162,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "open-webinars-scrum-managing-teams": {
     id: "open-webinars-scrum-managing-teams",
     name: "Scrum: Managing Teams with Scrum",
+    description: openWebinarsScrumManagingTeamsDescription,
     websiteUrl:
       "https://academia.openwebinars.net/portada/scrum-gestion-equipos/",
     diplomaUrl: "https://openwebinars.net/cert/vkZp",
@@ -144,6 +172,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "open-webinars-managing-agile-sprints": {
     id: "open-webinars-managing-agile-sprints",
     name: "Managing Agile Sprints with Scrum",
+    description: openWebinarsManagingAgileSprintsDescription,
     diplomaUrl: "https://openwebinars.net/cert/rJFi",
     websiteUrl:
       "https://academia.openwebinars.net/portada/planificar-iteraciones-proyecto-agil/",
@@ -153,6 +182,7 @@ const CERTIFICATION_ID_TO_DATA: Readonly<
   "open-webinars-testing-vitest": {
     id: "open-webinars-testing-vitest",
     name: "Testing with Vitest",
+    description: openWebinarsTestingVitestDescription,
     websiteUrl: "https://academia.openwebinars.net/portada/testing-vitest",
     diplomaUrl: "https://openwebinars.net/certificacion/8euvD9vM",
     iconUrl: openWebinarsIcon,

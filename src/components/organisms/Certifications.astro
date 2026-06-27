@@ -23,10 +23,11 @@ const previewInitialItem = certifications[0]!;
             imgSrc={cert.iconUrl}
             imgAlt={cert.name}
             title={cert.name}
+            description={cert.description}
             badges={cert.tech.map((techId) => BADGE_ID_TO_DATA[techId])}
             verticalTech={true}
             noReveal={true}
-            sx="h-125 xl:min-w-175"
+            sx="xl:h-[700px]"
           >
             <CardActions slot="actions">
               {cert.diplomaUrl ? (
