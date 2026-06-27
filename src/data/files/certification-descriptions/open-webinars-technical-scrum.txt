@@ -1,0 +1,1 @@
+Foundational Scrum course covering philosophy, roles (Product Owner, Scrum Master, Development Team), events (Sprints, daily meetings, reviews, retrospectives), and artifacts.

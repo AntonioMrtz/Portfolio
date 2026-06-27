@@ -1,0 +1,1 @@
+Production-grade course on building and deploying scalable NestJS microservices with TCP transport, JWT authentication, Stripe payments, MongoDB persistence, Kubernetes deployment, and CI/CD pipelines.

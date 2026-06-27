@@ -1,0 +1,1 @@
+Comprehensive testing course covering Vitest fundamentals, unit testing, integration testing, E2E testing, mocking, and Test Driven Development with JavaScript, React, and Vue.

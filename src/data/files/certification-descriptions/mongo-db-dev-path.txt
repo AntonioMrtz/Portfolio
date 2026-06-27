@@ -1,0 +1,1 @@
+Comprehensive learning path covering MongoDB fundamentals, document model, CRUD operations, indexing, aggregation pipelines, transactions, and Atlas Search, all applied with Python.

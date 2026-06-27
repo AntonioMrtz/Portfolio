@@ -1,0 +1,1 @@
+Workshop on agile estimation using Planning Poker technique, covering relative estimation, affinity estimation, and practical examples to avoid common estimation pitfalls.

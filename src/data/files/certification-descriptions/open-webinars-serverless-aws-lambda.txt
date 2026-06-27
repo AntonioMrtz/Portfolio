@@ -1,0 +1,1 @@
+Course on serverless architecture with AWS Lambda, covering FaaS fundamentals, API Gateway, S3, DynamoDB, and building auto-scaling, cost-effective serverless applications.
